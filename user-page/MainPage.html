@@ -49,26 +49,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Leave Request</title>
+    <title>Leave Request</title> <link rel="shortcut icon" href="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/305918915_553367866582031_1921203957582869077_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=7Ed85C3SpFUAX-02P8-&_nc_ht=scontent.fpnh24-1.fna&oh=00_AT82Pe0cKZpRDpmqS5CaDVlrJBb10xsKk5naf2jYHRBphw&oe=63379DFB" type="image/x-icon">
     <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/master.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <img src="assets/img/...." alt="App logo" class="app-logo">
+                <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
             </div>
             <ul class="list-unstyled components text-secondary">
                 <li>
-                    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                    <a id="dashboard" href="dashboard.html"><span class="material-icons">dashboard</span> Dashboard</a>
                 </li>
                 <li>
-                    <a href="tables.html"><i class="fas fa-table"></i> Tables</a>
+                    <a href="tables.html"><span id="dashboard-icon" class="material-icons">person</span>User</a>
                 </li>
                 <li>
-                    <a href="users.html"><i class="fas fa-user-friends"></i>Users</a>
+                    <a href="users.html"> <span id="dashboard-icon" class="material-icons">inbox</span> InBox</a>
                 </li>
             </ul>
         </nav>
@@ -76,21 +77,21 @@
             <!-- navbar navigation component -->
             <nav class="navbar navbar-expand-lg navbar-white bg-white">
                 <button type="button" id="sidebarCollapse" class="btn btn-light">
-                    <i class="fas fa-bars"></i><span></span>
+                    <i class="fas fa-bars"></i><span class="material-icons">menu</span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ms-auto">
                         <li class="nav-item dropdown">
                             <div class="nav-dropdown">
                                 <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-user"></i> <span>Jnint</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
+                                    <span class="material-icons">face</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                     <ul class="nav-list">
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a></li>
+                                        <li><a href="" class="dropdown-item"><span class="material-icons">person</span> Profile</a></li>
+                                        <li><a href="" class="dropdown-item"><span class="material-icons">settings</span> Settings</a></li>
                                         <div class="dropdown-divider"></div>
-                                        <li><a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                        <li><a href="" class="dropdown-item"><span class="material-icons">logout</span> Logout</a></li>
                                     </ul>
                                 </div>
                             </div>

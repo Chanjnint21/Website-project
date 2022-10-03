@@ -1,10 +1,6 @@
 (function() {
-    'use strict';
-
-    // Toggle sidebar on Menu button click
-    $('#sidebarCollapse').on('click', function() {
-        $('#sidebar').toggleClass('active');
-        $('#body').toggleClass('active');
+    document.getElementById("sidebarCollapse").addEventListener('click', (e) => {
+        document.getElementById("sidebar").classList.toggle("active");
+        document.getElementById("body").classList.toggle("active");
     });
 })();
-
