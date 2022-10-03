@@ -1,0 +1,169 @@
+<!-- <!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Permission</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/305918915_553367866582031_1921203957582869077_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=7Ed85C3SpFUAX-02P8-&_nc_ht=scontent.fpnh24-1.fna&oh=00_AT82Pe0cKZpRDpmqS5CaDVlrJBb10xsKk5naf2jYHRBphw&oe=63379DFB" type="image/x-icon">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="MainPage.css" teye="text/css" rel="stylesheet">
+        <script src="script.js" ></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <button class="menu-btn" data-menu-btn>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAAkZJREFUeF7t209LwzAYBvAExnoTBL/BHDocw7sozk/kcSf/nDx68+OIomcPHU0c/Qii4nmsrxQ27GGua0PevIGn16W0/eXJuybLtMKxUUDDZ7MAgGoSAiAAuRURJAgJQoLcBJAgNz/UICQICXITQILc/FCDpCYoTdPd0Wj07da//s8OkiBjzAMRjbvd7lm/3//w/5jtr8AOZIy5V0pdlrdMRO/SkViBsiy701pPqv0pHYkNyFp7TUQ368IuGYkFyFo7IaK7TZVAKpJ3IGNMWW/KulN7SETyDpRlmdVaH9bq/DVIi6IYD4fDrwbneGvqHWg2m+0tFotXpdRBg6eYFkVxLgHJO1CJEjMSC1DMSGxAsSKxAsWIxA5UQXpSSh1JL9xBgEqUcjbf6XRepCMFA3JBSpLktNfr/TRIX+umQYEckN6SJLngQAoOJB1JBJBkJDFAUpFEAUlEEgdUQXpUSh03+PrxUrhFAuV5vjOfz58BtCYeknDK2xOVoOXbtYihteo7MUAtpx5e6k412CKApOKIGGItcaZc87GgCWqLw7leHQwoBpxgQ2y5iI8Fs3VvwbH9wsE6xGLDYR1iMeKwAcWKwwIUMw4LkDEmV0rtN1i2mGqtx4PB4LPBOd6aei/STbe/ENGJhE0LrJPVbZAk7g1iGWKrnrDWXhHR7bqxIBWHFai8GDZxblEqsQ14OyRsJK9zwl8R6oQi+dz7e1AkDv/eJoBqehBAAHIb5EgQEoQEuQkgQW5+qEFIEBLkJoAEufmhBtX4/QI6A4xYpRQSagAAAABJRU5ErkJggg==" class="menu-icon" />
+            </button>
+            <img class="soramitsu" src="https://static.tildacdn.com/tild6631-3830-4336-b664-373834303236/soramitsu-logo-6year.svg">
+        </header>
+        <div class="container">
+            <aside class="sidebar" data-sidebar>
+                <ul class="icons">
+                    <li class="sidebar-list-item">
+                        <a>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAX1JREFUaEPtmeFNAzEMRl8nACaADWATGAE2gA26Ad2gjACTwAgwATAByFKRStSLfYmvvpOcX5V6Tvz82b5csmLhY7Vw/0mAaAWtClwAj8AVIL9bxhfwADy1GA/ZWADE4Vfg1GnhO08IC8AzcO3k/N80bhAWgE/H6O/HwQXCAvBTRN9is29S2rtCWJyZEkBgupSYA0AXRASARHx7oCk0KREBIGveekFEAYgALhCRAC4Q0QDdEB4AWputvQe0F7xa2HMHkA3gWY3yGADvwLkW6sr/VR+PAXADrIHLRojJARr9GjTTauqfoYcCCVBEIBUoU0KLSE+fl7XKNNbWc6+BBIiugcUrkG00OoVSgWgFFl/ECZAppLSRUXsTh5Y0ar38HnCI+Njdr/tu1JvBPYXkaOPE20vjfB/anZylBqa4YjL6zwsgpxqDwwIgl3xvASp8725F5VypC0CMBWKzm7DnkMoSeUkbCdg9UHX+0PeoZYFZPWNJoVk5XDqTANHy/AIBgm8xDHv1QgAAAABJRU5ErkJggg=="/>
+                            <div>Permission Form</div>
+                        </a>
+                    </li>
+                    <li class="sidebar-list-item">
+                        <a>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAXtJREFUaEPtmeFRwzAMhb9OACPABnQCYALYBNigGwCTABMAE8AGsAFlArh3R7i0dWM7cuLkTv6Vu1iynt5zKykLZr4WM48fB1CbQWdgqgwcAbfACaDnmusTeAduAD1vrJCEFPAbcFgz6sDZa2C5DSIE4BG4mFjwTThPwGU7thCArwlmv4lZEjqOAfhJkNmYBHXGE2LAARSmxxmo/W/tDDgDxkvtEnIJuYQ6KmgvJYzySDE3/wrFDlGndBfbtOf99V/nl2O+oZoUCcWc79ToMYPW+48eLWtxAIqnDwt9sq+zBgEgx+fAS2L2z4DnxL2dfXwJCbUPUFbvI4FdGe7MoAy0+1ZdajXgzRhEkw4NCgTQOqYZTEI9FZFt5gCyU1bYwBkonNBsd85AdsoKGzgDhROa5e57e/AcKiVUz5xmuR1v8yugOup/hQBo/v4wXkxZJ+0UjPsmDgKhukWfmA6yjhhmszK/ClW7tUcmZrgOwJxCowNnwJhAs/nsGfgFSiJMMYfFmoQAAAAASUVORK5CYII="/>
+                            <div>InBox</div>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <main class="content">
+                <div>
+                    <h1>permission form</h1>
+                </div>
+            </main>
+        </div>
+    </body>
+</html> -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Leave Request</title>
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/master.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/img/...." alt="App logo" class="app-logo">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="tables.html"><i class="fas fa-table"></i> Tables</a>
+                </li>
+                <li>
+                    <a href="users.html"><i class="fas fa-user-friends"></i>Users</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="body">
+            <!-- navbar navigation component -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-bars"></i><span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user"></i> <span>Jnint</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 page-header">
+                            <h2 class="page-title">Dashboard</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="teal fas fa-shopping-cart"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail">
+                                                <p class="detail-subtitle">Total leave</p>
+                                                <span class="number">6 times</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                            <i class="fas fa-calendar"></i> For this Year
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="olive fas fa-money-bill-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail">
+                                                <p class="detail-subtitle">Remaining A/L</p>
+                                                <span class="number">12</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                            <i class="fas fa-calendar"></i> For this Year
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
