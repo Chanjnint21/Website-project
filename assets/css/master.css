@@ -1,6 +1,7 @@
 
 @import "../components/navbar/navbar-dropdowns.css";
 @import "../components/sidebar/sidebar-default.css";
+@import "../components/Table/table.css";
 
 
 @font-face {
@@ -341,4 +342,14 @@ a:focus {
         flex-direction: row;
     }
 }
+
+/*------------------------------------------------------------------
+[12. Adjuct icon] 
+*/
+
+span.material-icons {
+    width: 30px;
+    vertical-align: middle;
+}
+
 
