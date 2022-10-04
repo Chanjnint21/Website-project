@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------
+[1. Table button] 
+*/
+
+
+.table input{
+    background: none;
+    border: none;
+    color: green;
+    margin: 0;
+    padding: 0;
+}
+
+.table input:hover{
+    background-color: #f4f6fa;
+    opacity: 0.5;
+}
+.table a{
+    color: rgb(67, 67, 251);
+}
