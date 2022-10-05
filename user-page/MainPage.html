@@ -67,7 +67,7 @@
                         <a href="MainPage.html"><span id="dashboard "class="material-icons">dashboard</span> Dashboard</a>
                     </li>
                     <li class="list2" >
-                        <a href="tables.html"><span id="person-icon" class="material-icons">person</span>User</a>
+                        <a href="UserPage.html"><span id="person-icon" class="material-icons">person</span>User</a>
                     </li>
                     <li class="list3">
                         <a href="RequestTable.html"> <span id="inbox-icon" class="material-icons">inbox</span> Request Box</a>
@@ -81,13 +81,13 @@
                 <button type="button" id="sidebarCollapse" class="btn btn-light">
                     <span class="material-icons">menu</span>
                 </button>
+                <span class="page-title">Dashboard</span>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ms-auto">
                         <li class="nav-item dropdown">
                             <div class="nav-dropdown">
                                 <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
                                     <span>Lim Chanjnint</span>
-                                    <!-- <img class="images" src="https://t4.ftcdn.net/jpg/00/84/67/19/360_F_84671939_jxymoYZO8Oeacc3JRBDE8bSXBWj0ZfA9.jpg"> -->
                                     <span class="material-icons">face</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu">
@@ -95,7 +95,7 @@
                                         <li><a href="" class="dropdown-item"><span class="material-icons">person</span> Profile</a></li>
                                         <li><a href="" class="dropdown-item"><span class="material-icons">settings</span> Settings</a></li>
                                         <div class="dropdown-divider"></div>
-                                        <li><a href="" class="dropdown-item"><span class="material-icons">logout</span> Logout</a></li>
+                                        <li><a href="../login-page/LogIn.html" class="dropdown-item"><span class="material-icons">logout</span> Logout</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -108,26 +108,19 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 page-header">
-                            <h2 class="page-title">Dashboard</h2>
+                            <h2 class="page-title">Overview</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
                             <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="icon-big text-center">
-                                                <i class="teal fas fa-shopping-cart"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
+                                <div class="content text-center">
+                                        <div class="row">
                                             <div class="detail">
-                                                <p class="detail-subtitle">Total leave</p>
-                                                <span class="number">6 times</span>
+                                                <p class="detail-subtitle">Total Request</p>
+                                                <span class="number"> 7 </span>
                                             </div>
                                         </div>
-                                    </div>
                                     <div class="footer">
                                         <hr />
                                         <div class="stats">
@@ -139,20 +132,49 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
                             <div class="card">
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="icon-big text-center">
-                                                <i class="olive fas fa-money-bill-alt"></i>
+                                <div class="content text-center">
+                                        <div class="row">
+                                            <div class="detail">
+                                                <p class="detail-subtitle">Total Approve</p>
+                                                <span class="number"> 5 </span>
                                             </div>
                                         </div>
-                                        <div class="col-sm-8">
-                                            <div class="detail">
-                                                <p class="detail-subtitle">Remaining A/L</p>
-                                                <span class="number">12</span>
-                                            </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                            <i class="fas fa-calendar"></i> For this Year
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                            <div class="card">
+                                <div class="content text-center">
+                                        <div class="row">
+                                            <div class="detail">
+                                                <p class="detail-subtitle">Total Reject</p>
+                                                <span class="number"> 2 </span>
+                                            </div>
+                                        </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                            <i class="fas fa-calendar"></i> For this Year
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                            <div class="card">
+                                <div class="content text-center">
+                                        <div class="row">
+                                            <div class="detail">
+                                                <p class="detail-subtitle">Total Pending</p>
+                                                <span class="number"> 3 </span>
+                                            </div>
+                                        </div>
                                     <div class="footer">
                                         <hr />
                                         <div class="stats">
@@ -163,6 +185,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="dropdown-divider"></div>
                 </div>
             </div>
         </div>
@@ -170,5 +193,4 @@
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>
-
 </html>
