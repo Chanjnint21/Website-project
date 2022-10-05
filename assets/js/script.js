@@ -18,6 +18,7 @@ function btn1(){
     else {
         elem.value = "Reject";
         elem.style.color='red';
+        document.getElementsByTagName("tr")[1].remove();
     }
 }
 
@@ -30,6 +31,7 @@ function btn2(){
     else {
         elem.value = "Reject";
         elem.style.color='red';
+        document.getElementsByTagName("tr")[2].remove();
     }
 }
 
@@ -42,5 +44,8 @@ function btn3(){
     else {
         elem.value = "Reject";
         elem.style.color='red';
+        document.getElementsByTagName("tr")[3].remove();
     }
 }
+
+
