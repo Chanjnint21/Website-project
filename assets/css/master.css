@@ -2,6 +2,7 @@
 @import "../components/navbar/navbar-dropdowns.css";
 @import "../components/sidebar/sidebar-default.css";
 @import "../components/Table/table.css";
+@import "../components/Profile/modal.css";
 
 
 
@@ -353,4 +354,10 @@ span.material-icons {
     vertical-align: middle;
 }
 
+.nav-item.nav-link.dropdown-toggle.text-secondary img{
+    width: 30px;
+    padding: 3px;
+    margin: 0;
+    opacity: 0.5;
+}
 

@@ -1,0 +1,13 @@
+.modal-body{
+    display:flex;
+    align-items: center;
+}
+.modal-body img{
+    width: 100px;
+    margin: 20px;
+    padding:0;
+}
+.modal-body img:hover{
+    background-color: aliceblue;
+    opacity: 0.5;
+}

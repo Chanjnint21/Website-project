@@ -48,4 +48,12 @@ function btn3(){
     }
 }
 
+var tbl = document.getElementById('x');
+if(tbl.rows.length==0){
+    document.getElementById("text").innerHTML = 'No Request';
+}
+
+document.getElementById('#myModal').on('shown.bs.modal', function () {
+    document.getElementById('#myInput').trigger('focus')
+  })
 
