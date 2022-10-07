@@ -92,7 +92,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                     <ul class="nav-list">
-                                        <li><button type="button" class="dropdown-item" data-toggle="modal" data-target="#myModal"><span class="material-icons">person</span> Profile</button></li>
+                                        <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal"><span class="material-icons">person</span> Profile</a></li>
                                         <li><a href="" class="dropdown-item"><span class="material-icons">settings</span> Settings</a></li>
                                         <div class="dropdown-divider"></div>
                                         <li><a href="../login-page/LogIn.html" class="dropdown-item"><span class="material-icons">logout</span> Logout</a></li>
@@ -104,8 +104,9 @@
                 </div>
             </nav>
             <!-- end of navbar navigation -->
+            
+            <!-- Profile Modal -->
             <div  class="modal" id="myModal">
-                <!-- Modal -->
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -114,17 +115,67 @@
                                 <span aria-hidden="true">&times;</span>
                             </button> -->
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body profile">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
                                 <span><h3>Lim Chanjnint</h3></span>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-danger">Save changes</button>
                             </div>
                         </div>
                     </div>
             </div>
+
+            <!-- view detailed of Request Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Thida Sary's Form</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        
+                    </div>
+                        <div class="modal-body">
+                            <b>First name :</b> Sery 
+                            <br>      
+                            <b>Last Name :</b> Thida 
+                            <br>
+                            <b>Contact Number :</b> 081808091
+                            <br>
+                            <b>Email :</b> Thida.aaaa@gmail.com
+                            <br>
+                            <b>Date of Event :</b> 12/11/2022 - 15/11/2022
+                            <br><br>
+                            <b>Reason :</b>
+                            <div class="card">
+                                <div class="card-body p-3">
+                                    <p>Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
+                                        Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
+                                        and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
+                                    </p>
+                                </div>
+                                    <div class="card-footer">
+                                        File : <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" target="_blank">Medical_record.pdf</a>
+                                    </div>
+                            </div>
+                        </div>
+                    <div class="modal-footer">
+                        <form>
+                            <div class="form-group">
+                              <label for="message-text" class="col-form-label">Comment:</label>
+                              <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-secondary" onclick="btn3()" value="Reject" id="Apr-btn3" data-dismiss="modal">Reject</button>
+                        <button type="button" class="btn btn-danger" onclick="btn3()" value="Approve" id="Apr-btn3" data-dismiss="modal">Approve</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
             <div class="content">
                 <div class="table-container">
                     <!-- <div class="row">
@@ -139,40 +190,45 @@
                                 <th scope="col">First Name</th>
                                 <th scope="col">Last Name</th>
                                 <th scope="col">Title</th>
-                                <th scope="col">Date</th>
+                                <th scope="col">Request Date</th>
                                 <th scope="col">Request</th>
                               </tr>
                             </thead>
-                            <p id="text"></p>
                             <tbody class="table-group-divider">
                               <tr>
                                 <th scope="row">1</th>
                                 <td>Mark</td>
                                 <td>Otto</td>
-                                <td>Pchum Benh <a href="#">view details...</a></td>
+                                <td>Pchum Benh</td>
                                 <td>24 / 09 / 2022</td>
                                 <td>
-                                    <input onclick="btn1()" type="button" value="Approve" id="Apr-btn1"></input>
+                                    <input onclick="btn1()" type="button" value="Approve" class="btn btn-danger" id="Apr-btn1"></input>
+                                    <input onclick="btn1()" type="button" value="Reject" class="btn btn-secondary" id="Apr-btn1"></input>
+                                    <span class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
                                 </td>
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
                                 <td>Jacob</td>
                                 <td>Thornton</td>
-                                <td>KNY <a href="#">view details...</a></td>
+                                <td>KNY</td>
                                 <td>13 / 04 / 2022</td>
                                 <td>
-                                    <input onclick="btn2()" type="button" value="Approve" id="Apr-btn2"></input>
+                                    <input onclick="btn2()" type="button" value="Approve" class="btn btn-danger" id="Apr-btn2"></input>
+                                    <input onclick="btn2()" type="button" value="Reject" class="btn btn-secondary" id="Apr-btn2"></input>
+                                    <span class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
                                 </td>
                               </tr>
                               <tr>
                                 <th scope="row">3</th>
                                 <td>Sary</td>
                                 <td>thida</td>
-                                <td>Water Festival <a href="#">view details...</a></td>
+                                <td>Water Festival</td>
                                 <td>11 / 11 / 2022</td>
                                 <td>
-                                    <input onclick="btn3()" type="button" value="Approve" id="Apr-btn3"></input>
+                                    <input onclick="btn3()" type="button" value="Approve" class="btn btn-danger" id="Apr-btn3"></input>
+                                    <input onclick="btn3()" type="button" value="Reject" class="btn btn-secondary" id="Apr-btn3"></input>
+                                    <span class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
                                 </td>
                               </tr>
                             </tbody>

@@ -1,13 +1,25 @@
-.modal-body{
+.modal-body.profile{
     display:flex;
     align-items: center;
 }
+
 .modal-body img{
     width: 100px;
     margin: 20px;
     padding:0;
 }
+
 .modal-body img:hover{
     background-color: aliceblue;
     opacity: 0.5;
+}
+
+.modal-header button{
+    border: none;
+    background: none;
+}
+.modal-header button:hover{
+    background-color: rgb(235, 235, 235);
+    opacity: 0.5;
+
 }
