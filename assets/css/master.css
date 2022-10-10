@@ -101,12 +101,12 @@ body {
 
 .page-title {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.5555556;
 }
 
 .detail-subtitle {
-    font-size: .8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     line-height: 1.6;
 }
@@ -115,7 +115,6 @@ body {
 [7. Dashboard Cards / .card] 
 */
 .card {
-    margin-bottom: 15px;
     box-shadow: rgba(35, 46, 60, .04) 0 2px 4px 0;
 }
 
@@ -362,3 +361,15 @@ span.material-icons {
     opacity: 0.5;
 }
 
+/*------------------------------------------------------------------
+[12. Form card / material] 
+*/
+
+.card-body.form {
+    padding: 50px;
+}
+
+.card-body.form label{
+    color: black;
+    font-size: 1.2rem;
+}
