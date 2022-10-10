@@ -18,8 +18,27 @@
     border: none;
     background: none;
 }
-.modal-header button:hover{
-    background-color: rgb(235, 235, 235);
-    opacity: 0.5;
 
-}
+button{
+    position: relative;
+  }
+button::after{
+    content: attr(data-title);
+    position: absolute;
+    background: #444;
+    color: #fff;
+    left: 0;
+    top: 100%;
+    font-size: 12px;
+    width: auto;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 300ms;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+  }
+button:hover::after{
+    opacity: 1;
+    transform: translateY(5px);
+  }
