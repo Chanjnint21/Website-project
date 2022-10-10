@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Leave Request</title> <link rel="shortcut icon" href="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico" type="image/x-icon">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/master.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <div class="col">
+                    <li class="items">
+                        <a href="MainPage.html"><span id="dashboard "class="material-icons">dashboard</span> Dashboard</a>
+                    </li>
+                    <li class="list2" >
+                        <a href="Form.html"><span id="person-icon" class="material-icons">description</span>Permission Form</a>
+                    </li>
+                    <li class="list3">
+                        <a href="Inbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> InBox</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+        <div id="body">
+            <!-- navbar navigation component -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <span class="material-icons">menu</span>
+                </button>
+                <span class="page-title">Permission Form</span>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <div class="nav-dropdown">
+                                <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Lim Chanjnint</span>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                                    <ul class="nav-list">
+                                        <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal"><span class="material-icons">person</span> Profile</a></li>
+                                        <!-- <li><a href="" class="dropdown-item"><span class="material-icons">settings</span> Settings</a></li> -->
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="../login-page/LogIn.html" class="dropdown-item"><span class="material-icons">logout</span> Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
+            <div  class="modal" id="myModal">
+                <!-- Modal -->
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title">Profile</h5>
+                            </div>
+                            <div class="modal-body profile">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
+                                <span><h3>Lim Chanjnint</h3></span>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="content">
+                <div class="container">
+                    <form class="card form">
+                        <div class="card-headern text-center">
+                            <h1>Paper Form</h1>
+                        </div>
+                        <div class="card-body form">
+                            <div class="row pb-3">
+                                <div class="col w-50">
+                                    <label class="w-100">First Name :</label>
+                                    <input class="w-75 p-2 my-2" type="text" required>
+                                </div>
+                                <div class="col">
+                                    <label class="w-100">Last Name : </label>
+                                    <input class="w-75 p-2 my-2" type="text" required>
+                                </div> 
+                            </div>
+                            <div class="row pb-3">
+                                <label>Contact :</label>
+                                <div class="col">
+                                    <input class="my-2 p-2" type="text" placeholder="Phone number*" required> 
+                                    <br>
+                                    <input class="my-2 p-2" type="text" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <label for="date">Date of Event :</label>
+                                <div class="col my-2">
+                                    From <input class="w-25" type="date" id="date" name="date" required>
+                                    To <input class="w-25" type="date" id="date" name="date" required>
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <label for="date">Reason :</label>
+                                <div class="col my-2">
+                                    <textarea class="w-100" id="reason" placeholder="reason of permission..." row="3" col="100"></textarea>
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <label for="date">Attachment(optional) :</label>
+                                <div class="col my-2">
+                                    <input type="file" id="uploadfile">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <input class="btn btn-danger w-auto" type="submit" value="Submit" required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
