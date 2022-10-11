@@ -71,7 +71,7 @@
                         
                     </li>
                     <li class="items">
-                        <a href="UserPage.html"><span id="person-icon" class="material-icons">history</span>History</a>
+                        <a href="History.html"><span id="person-icon" class="material-icons">history</span>History</a>
                     </li>
                 </div>
             </ul>
@@ -180,22 +180,18 @@
             </div>
 
             <div class="content">
-                <div class="table-container">
-                    <!-- <div class="row">
-                        <div class="col-md-12 page-header">
-                            <h2 class="page-title">Request Box</h2>
-                        </div>
-                    </div> -->
-                        <table class="table" id="x">
-                            <thead class="table-header">
-                              <tr>
-                                <th data-sortable="true" data-sorter="alphanum" scope="col">#</th>
-                                <th scope="col">First Name</th>
-                                <th scope="col">Last Name</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Request Date</th>
-                                <th scope="col">Request</th>
-                              </tr>
+                <div class="container">
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="x">
+                            <thead class="table-header w-100">
+                                <tr>
+                                  <th data-sortable="true" data-sorter="alphanum" scope="col">#</th>
+                                  <th scope="col w-20">First Name</th>
+                                  <th scope="col w-20">Last Name</th>                                
+                                  <th scope="col w-20">Title</th>
+                                  <th scope="col w-20">Request Date</th>
+                                  <th scope="col w-20">Request</th>
+                                </tr>
                             </thead>
                             <tbody class="table-group-divider">
                                 <tr>
@@ -232,10 +228,11 @@
                                         <input onclick="btn3()" type="button" value="Approve" class="btn btn-danger" id="Apr-btn3"></input>
                                         <input onclick="btn3()" type="button" value="Reject" class="btn btn-secondary" id="Apr-btn3"></input>
                                         <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
-                                    </td>
+                                    </td>                                
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
                 </div>
             </div>
         </div>
