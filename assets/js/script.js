@@ -57,4 +57,13 @@ if(tbl.rows.length==0){
 }
 
 
+//----------------------------------------------------- date count ---------------------------------------------
 
+function countdays () {
+    var dateend = new Date (document.getElementById("leave_date").value);
+    var datestart = new Date (document.getElementById("back_date").value);
+    var counttime =  datestart.getTime()- dateend.getTime();
+    var countdays = counttime / (1000 * 3600 * 24);
+    document.getElementById("noOfDays").setAttribute("value", isNaN(countdays) ? '' : countdays);
+    document.getElementById("noOfDays").innerHTML = 'Leave in total of : ' + countdays + "days";
+  }
