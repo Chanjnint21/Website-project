@@ -1,50 +1,5 @@
-<!-- <!DOCTYPE html>
-<html>
-    
-    <head>
-        <title>Permission</title>
-        <meta charset="utf-8">
-        <link rel="shortcut icon" href="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/305918915_553367866582031_1921203957582869077_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=7Ed85C3SpFUAX-02P8-&_nc_ht=scontent.fpnh24-1.fna&oh=00_AT82Pe0cKZpRDpmqS5CaDVlrJBb10xsKk5naf2jYHRBphw&oe=63379DFB" type="image/x-icon">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link href="MainPage.css" teye="text/css" rel="stylesheet">
-        <script src="script.js" ></script>
-    </head>
-
-    <body>
-        <header class="header">
-            <button class="menu-btn" data-menu-btn>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAAkZJREFUeF7t209LwzAYBvAExnoTBL/BHDocw7sozk/kcSf/nDx68+OIomcPHU0c/Qii4nmsrxQ27GGua0PevIGn16W0/eXJuybLtMKxUUDDZ7MAgGoSAiAAuRURJAgJQoLcBJAgNz/UICQICXITQILc/FCDpCYoTdPd0Wj07da//s8OkiBjzAMRjbvd7lm/3//w/5jtr8AOZIy5V0pdlrdMRO/SkViBsiy701pPqv0pHYkNyFp7TUQ368IuGYkFyFo7IaK7TZVAKpJ3IGNMWW/KulN7SETyDpRlmdVaH9bq/DVIi6IYD4fDrwbneGvqHWg2m+0tFotXpdRBg6eYFkVxLgHJO1CJEjMSC1DMSGxAsSKxAsWIxA5UQXpSSh1JL9xBgEqUcjbf6XRepCMFA3JBSpLktNfr/TRIX+umQYEckN6SJLngQAoOJB1JBJBkJDFAUpFEAUlEEgdUQXpUSh03+PrxUrhFAuV5vjOfz58BtCYeknDK2xOVoOXbtYihteo7MUAtpx5e6k412CKApOKIGGItcaZc87GgCWqLw7leHQwoBpxgQ2y5iI8Fs3VvwbH9wsE6xGLDYR1iMeKwAcWKwwIUMw4LkDEmV0rtN1i2mGqtx4PB4LPBOd6aei/STbe/ENGJhE0LrJPVbZAk7g1iGWKrnrDWXhHR7bqxIBWHFai8GDZxblEqsQ14OyRsJK9zwl8R6oQi+dz7e1AkDv/eJoBqehBAAHIb5EgQEoQEuQkgQW5+qEFIEBLkJoAEufmhBtX4/QI6A4xYpRQSagAAAABJRU5ErkJggg==" class="menu-icon" />
-            </button>
-            <img class="soramitsu" src="https://static.tildacdn.com/tild6631-3830-4336-b664-373834303236/soramitsu-logo-6year.svg">
-        </header>
-        <div class="container">
-            <aside class="sidebar" data-sidebar>
-                <ul class="icons">
-                    <li class="sidebar-list-item">
-                        <a>
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAX1JREFUaEPtmeFNAzEMRl8nACaADWATGAE2gA26Ad2gjACTwAgwATAByFKRStSLfYmvvpOcX5V6Tvz82b5csmLhY7Vw/0mAaAWtClwAj8AVIL9bxhfwADy1GA/ZWADE4Vfg1GnhO08IC8AzcO3k/N80bhAWgE/H6O/HwQXCAvBTRN9is29S2rtCWJyZEkBgupSYA0AXRASARHx7oCk0KREBIGveekFEAYgALhCRAC4Q0QDdEB4AWputvQe0F7xa2HMHkA3gWY3yGADvwLkW6sr/VR+PAXADrIHLRojJARr9GjTTauqfoYcCCVBEIBUoU0KLSE+fl7XKNNbWc6+BBIiugcUrkG00OoVSgWgFFl/ECZAppLSRUXsTh5Y0ar38HnCI+Njdr/tu1JvBPYXkaOPE20vjfB/anZylBqa4YjL6zwsgpxqDwwIgl3xvASp8725F5VypC0CMBWKzm7DnkMoSeUkbCdg9UHX+0PeoZYFZPWNJoVk5XDqTANHy/AIBgm8xDHv1QgAAAABJRU5ErkJggg=="/>
-                            <div>Permission Form</div>
-                        </a>
-                    </li>
-                    <li class="sidebar-list-item">
-                        <a>
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAXtJREFUaEPtmeFRwzAMhb9OACPABnQCYALYBNigGwCTABMAE8AGsAFlArh3R7i0dWM7cuLkTv6Vu1iynt5zKykLZr4WM48fB1CbQWdgqgwcAbfACaDnmusTeAduAD1vrJCEFPAbcFgz6sDZa2C5DSIE4BG4mFjwTThPwGU7thCArwlmv4lZEjqOAfhJkNmYBHXGE2LAARSmxxmo/W/tDDgDxkvtEnIJuYQ6KmgvJYzySDE3/wrFDlGndBfbtOf99V/nl2O+oZoUCcWc79ToMYPW+48eLWtxAIqnDwt9sq+zBgEgx+fAS2L2z4DnxL2dfXwJCbUPUFbvI4FdGe7MoAy0+1ZdajXgzRhEkw4NCgTQOqYZTEI9FZFt5gCyU1bYwBkonNBsd85AdsoKGzgDhROa5e57e/AcKiVUz5xmuR1v8yugOup/hQBo/v4wXkxZJ+0UjPsmDgKhukWfmA6yjhhmszK/ClW7tUcmZrgOwJxCowNnwJhAs/nsGfgFSiJMMYfFmoQAAAAASUVORK5CYII="/>
-                            <div>InBox</div>
-                        </a>
-                    </li>
-                </ul>
-            </aside>
-            <main class="content">
-                <div>
-                    <h1>permission form</h1>
-                </div>
-            </main>
-        </div>
-    </body>
-</html> -->
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -63,14 +18,14 @@
             </div>
             <ul class="list-unstyled components text-secondary">
                 <div class="col">
-                    <li class="items">
+                    <li class="items1">
                         <a href="MainPage.html"><span id="dashboard "class="material-icons">dashboard</span> Dashboard</a>
                     </li>
-                    <li class="items" >
+                    <li class="items2" >
                         <a href="RequestTable.html"> <span id="inbox-icon" class="material-icons">inbox</span> Request Box</a>
                         
                     </li>
-                    <li class="items">
+                    <li class="items3">
                         <a href="History.html"><span id="person-icon" class="material-icons">history</span>History</a>
                     </li>
                 </div>
@@ -133,49 +88,53 @@
             <!-- view detailed of Request Modal -->
             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Thida Sary's Form</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        
-                    </div>
-                        <div class="modal-body">
-                            <b>First name :</b> Sery 
-                            <br>      
-                            <b>Last Name :</b> Thida 
-                            <br>
-                            <b>Contact Number :</b> 081808091
-                            <br>
-                            <b>Email :</b> Thida.aaaa@gmail.com
-                            <br>
-                            <b>Date of Event :</b> 12/11/2022 - 15/11/2022
-                            <br><br>
-                            <b>Reason :</b>
-                            <div class="card">
-                                <div class="card-body p-3">
-                                    <p>Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
-                                        Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
-                                        and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
-                                    </p>
-                                </div>
-                                    <div class="card-footer">
-                                        File : <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" target="_blank">Medical_record.pdf</a>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Thida Sary's Form</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            
+                        </div>
+                            <div class="modal-body">
+                                <b>First name :</b> Sery 
+                                <br>      
+                                <b>Last Name :</b> Thida 
+                                <br>
+                                <b>Contact Number :</b> 081808091
+                                <br>
+                                <b>Email :</b> Thida.aaaa@gmail.com
+                                <br>
+                                <b>Date of Event :</b> 12/11/2022 - 15/11/2022
+                                <br><br>
+                                <b>Reason :</b>
+                                <div class="card">
+                                    <div class="card-body p-3">
+                                        <p>Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
+                                            Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
+                                            and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
+                                        </p>
                                     </div>
+                                        <div class="card-footer">
+                                            File : <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" target="_blank">Medical_record.pdf</a>
+                                        </div>
+                                </div>
+                            </div>
+                        <div class="modal-footer">
+                            <div class="col">
+                                <form>
+                                    <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Comment:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col">
+                                <input type="button" class="btn btn-secondary" onclick="btn3()" value="Reject" id="Apr-btn3" data-dismiss="modal">
+                            <input type="button" class="btn btn-danger" onclick="btn3()" value="Approve" id="Apr-btn3" data-dismiss="modal">
                             </div>
                         </div>
-                    <div class="modal-footer">
-                        <form>
-                            <div class="form-group">
-                              <label for="message-text" class="col-form-label">Comment:</label>
-                              <textarea class="form-control" id="message-text"></textarea>
-                            </div>
-                        </form>
-                        <button type="button" class="btn btn-secondary" onclick="btn3()" value="Reject" id="Apr-btn3" data-dismiss="modal">Reject</button>
-                        <button type="button" class="btn btn-danger" onclick="btn3()" value="Approve" id="Apr-btn3" data-dismiss="modal">Approve</button>
                     </div>
-                </div>
                 </div>
             </div>
 
@@ -243,5 +202,10 @@
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>
-
 </html>
+<style>
+    .items2{
+        color:white;
+        background: #f55252;
+    }
+</style>
