@@ -370,6 +370,6 @@ span.material-icons {
 }
 
 .card-body.form label{
-    color: black;
+    color: rgb(40, 40, 40);
     font-size: 1.2rem;
 }
