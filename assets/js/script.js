@@ -7,20 +7,10 @@
     });
 })();
 
-//----------------------------------------------------- button change color ---------------------------------------------
+//----------------------------------------------------- button in request page ---------------------------------------------
 
 function btn1(){
-    var elem = document.getElementById("Apr-btn1");
     document.getElementsByTagName("tr")[1].remove();
-    // if (elem.value=="Reject"){
-    //     elem.value = "Approve";
-    //     elem.style.color='green';
-    // } 
-    // else {
-    //     elem.value = "Reject";
-    //     elem.style.color='red';
-    //     document.getElementsByTagName("tr")[1].remove();
-    // }
 }
 
 function btn2(){
@@ -38,8 +28,10 @@ function btn2(){
 }
 
 function btn3(){
-    var elem = document.getElementById("Apr-btn3");
-    document.getElementsByTagName("tr")[3].remove();
+    var btn = document.getElementById("demo");
+    btn.value="Approve"
+    btn.style.color="green";
+    document.getElementById("demo").innerHTML= "Approve";
     // if (elem.value=="Reject"){
     //     elem.value = "Approve";
     //     elem.style.color='green';
@@ -50,6 +42,20 @@ function btn3(){
     //     document.getElementsByTagName("tr")[3].remove();
     // }
 }
+//----------------------------------------------------- button in request page ---------------------------------------------
+function status1(){
+    var elem = document.getElementById("stat-btn1");
+    if (elem.value=="Reject"){
+        elem.value = "Approve";
+        elem.style.color='green';
+    } 
+    else {
+        elem.value = "Reject";
+        elem.style.color='red';
+    }
+}
+
+
 
 var tbl = document.getElementById('x');
 if(tbl.rows.length==0){
