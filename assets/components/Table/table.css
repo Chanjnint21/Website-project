@@ -10,7 +10,7 @@
 [2. Table button] 
 */
 
-/* .table input{
+.appr-btn{
     background: none;
     border: none;
     color: green;
@@ -18,16 +18,33 @@
     padding: 0;
 }
 
-.table input:hover{
-    background-color: #39465e;
+.appr-btn:hover{
     opacity: 0.5; 
-} */
+} 
+
+.rej-btn{
+    background: none;
+    border: none;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+
+.rej-btn:hover{
+    opacity: 0.5; 
+} 
+
 .table a{
     color: rgb(67, 67, 251);
 }
 
 .table .material-icons{
     opacity: 0.5;
-
 }
 
+.table button{
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}

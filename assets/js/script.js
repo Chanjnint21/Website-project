@@ -7,51 +7,86 @@
     });
 })();
 
-//----------------------------------------------------- button in request page ---------------------------------------------
+//----------------------------------------------------- button in (details) request page ---------------------------------------------
 
-function btn1(){
-    document.getElementsByTagName("tr")[1].remove();
-}
+    document.getElementById("Reject").addEventListener("click", btn)
+    function btn(){
+        var Rbtn = document.getElementById("demo1");
+        Rbtn.value="Reject"
+        Rbtn.style.color="red";
+        document.getElementById("demo1").innerHTML= "Reject";
+    }
+    document.getElementById("Approve").addEventListener("click", btn)
+    function btn(){
+        var btn = document.getElementById("demo1");
+        btn.value="Approve"
+        btn.style.color="green";
+        document.getElementById("demo1").innerHTML= "Approve";
+    }
+
+
+// function btn1(){
+//     var btn = document.getElementById("demo1");
+//     btn.value="Approve"
+//     btn.style.color="green";
+//     document.getElementById("demo1").innerHTML= "Approve";
+// }
 
 function btn2(){
-    var elem = document.getElementById("Apr-btn2");
-    document.getElementsByTagName("tr")[2].remove();
-    // if (elem.value=="Reject"){
-    //     elem.value = "Approve";
-    //     elem.style.color='green';
-    // } 
-    // else {
-    //     elem.value = "Reject";
-    //     elem.style.color='red';
-    //     document.getElementsByTagName("tr")[2].remove();
+    var btn = document.getElementById("demo2");
+    btn.value="Approve"
+    btn.style.color="green";
+    document.getElementById("demo2").innerHTML= "Approve";
     // }
 }
 
 function btn3(){
-    var btn = document.getElementById("demo");
+    var btn = document.getElementById("demo3");
     btn.value="Approve"
     btn.style.color="green";
-    document.getElementById("demo").innerHTML= "Approve";
-    // if (elem.value=="Reject"){
-    //     elem.value = "Approve";
-    //     elem.style.color='green';
-    // } 
-    // else {
-    //     elem.value = "Reject";
-    //     elem.style.color='red';
+    document.getElementById("demo3").innerHTML= "Approve";
     //     document.getElementsByTagName("tr")[3].remove();
-    // }
 }
 //----------------------------------------------------- button in request page ---------------------------------------------
 function status1(){
-    var elem = document.getElementById("stat-btn1");
+    var elem = document.getElementById("demo1");
     if (elem.value=="Reject"){
         elem.value = "Approve";
         elem.style.color='green';
+        document.getElementById("demo1").innerHTML= "Approve";
     } 
     else {
         elem.value = "Reject";
         elem.style.color='red';
+        document.getElementById("demo1").innerHTML= "Reject";
+    }
+}
+
+function status2(){
+    var elem = document.getElementById("demo2");
+    if (elem.value=="Reject"){
+        elem.value = "Approve";
+        elem.style.color='green';
+        document.getElementById("demo2").innerHTML= "Approve";
+    } 
+    else {
+        elem.value = "Reject";
+        elem.style.color='red';
+        document.getElementById("demo2").innerHTML= "Reject";
+    }
+}
+
+function status3(){
+    var elem = document.getElementById("demo3");
+    if (elem.value=="Reject"){
+        elem.value = "Approve";
+        elem.style.color='green';
+        document.getElementById("demo3").innerHTML= "Approve";
+    } 
+    else {
+        elem.value = "Reject";
+        elem.style.color='red';
+        document.getElementById("demo3").innerHTML= "Reject";
     }
 }
 

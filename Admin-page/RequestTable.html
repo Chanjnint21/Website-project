@@ -94,7 +94,6 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            
                         </div>
                             <div class="modal-body">
                                 <b>First name :</b> Sery 
@@ -130,26 +129,26 @@
                                 </form>
                             </div>
                             <div class="col">
-                                <input type="button" class="btn btn-secondary" onclick="btn3()" value="Reject" id="Apr-btn3" data-dismiss="modal">
-                            <input type="button" class="btn btn-danger" onclick="btn3()" value="Approve" id="Apr-btn3" data-dismiss="modal">
+                                <input type="button" class="btn btn-secondary" onclick="btn1()" value="Reject"  data-dismiss="modal" id="Reject">
+                                <input type="button" class="btn btn-danger" onclick="btn1()" value="Approve"  data-dismiss="modal" id="Approve">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="content">
                 <div class="container">
                     <div class="table-responsive">
                         <table class="table table-hover" id="x">
                             <thead class="table-header w-100">
                                 <tr>
-                                  <th data-sortable="true" data-sorter="alphanum" scope="col">#</th>
+                                  <th scope="col">#</th>
                                   <th scope="col w-20">First Name</th>
                                   <th scope="col w-20">Last Name</th>                                
                                   <th scope="col w-20">Title</th>
                                   <th scope="col w-20">Request Date</th>
-                                  <th scope="col w-20">Request</th>
+                                  <th scope="col w-20">Status</th>
+                                  <th col w-20> Details</th>
                                 </tr>
                             </thead>
                             <tbody class="table-group-divider">
@@ -160,10 +159,11 @@
                                     <td>Pchum Benh</td>
                                     <td>24 / 09 / 2022</td>
                                     <td>
-                                        <input onclick="btn1()" type="button" value="Approve" class="btn btn-danger" id="Apr-btn1"></input>
-                                        <input onclick="btn1()" type="button" value="Reject" class="btn btn-secondary" id="Apr-btn1"></input>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
+                                        <!-- <input onclick="btn1()" type="button" value="Approve" class="btn btn-danger"></input>
+                                        <input onclick="btn1()" type="button" value="Reject" class="btn btn-secondary" ></input> -->
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">reviews</span>
                                     </td>
+                                    <td><button data-title="change status" onclick="status1()"><p id="demo1" value=""></p></button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -172,10 +172,11 @@
                                     <td>KNY</td>
                                     <td>13 / 04 / 2022</td>
                                     <td>
-                                        <input onclick="btn2()" type="button" value="Approve" class="btn btn-danger" id="Apr-btn2"></input>
-                                        <input onclick="btn2()" type="button" value="Reject" class="btn btn-secondary" id="Apr-btn2"></input>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
+                                        <!-- <input onclick="btn2()" type="button" value="Approve" class="btn btn-danger"></input>
+                                        <input onclick="btn2()" type="button" value="Reject" class="btn btn-secondary"></input> -->
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">reviews</span>
                                     </td>
+                                    <td><button data-title="change status" onclick="status2()"><p id="demo2" value=""></p></button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -184,10 +185,11 @@
                                     <td>Water Festival</td>
                                     <td>11 / 11 / 2022</td>
                                     <td>
-                                        <input onclick="btn3()" type="button" value="Approve" class="btn btn-danger" id="Apr-btn3"></input>
-                                        <input onclick="btn3()" type="button" value="Reject" class="btn btn-secondary" id="Apr-btn3"></input>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
-                                    </td>                                
+                                        <!-- <input onclick="btn3()" type="button" value="Approve" class="btn btn-danger"></input>
+                                        <input onclick="btn3()" type="button" value="Reject" class="btn btn-secondary"></input> -->
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">reviews</span>
+                                    </td>  
+                                    <td><button data-title="change status" onclick="status3()"><p id="demo3" value=""></p></button></td>                             
                                 </tr>
                             </tbody>
                         </table>
@@ -196,11 +198,13 @@
             </div>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="extensions/natural-sorting/bootstrap-table-natural-sorting.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
+    
 </body>
 </html>
 <style>
