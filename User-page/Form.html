@@ -13,7 +13,7 @@
 
 <body>
     <div class="wrapper">
-        <nav id="sidebar">
+        <nav id="sidebar" class="position-fixed">
             <div class="sidebar-header">
                 <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
             </div>
@@ -33,7 +33,7 @@
         </nav>
         <div id="body">
             <!-- navbar navigation component -->
-            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+            <nav class="fixed-top navbar navbar-expand-lg navbar-white bg-white">
                 <!-- <button type="button" id="sidebarCollapse" class="btn btn-light">
                     <span class="material-icons" >menu</span>
                 </button> -->
@@ -144,3 +144,15 @@
     <script src="../assets/js/script.js"></script>
 </body>
 </html>
+<style>
+body {
+    padding-top: 60px;
+}
+.card {
+    margin-left: 55px;
+}
+.sticky-offset {
+    top: 56px;
+}
+
+</style>
