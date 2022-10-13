@@ -82,3 +82,8 @@ a[aria-expanded="true"] {
 .sidebar-header img{
     width: 200px;
 }
+
+.item{
+    color:white;
+    background: #f55252;
+}
