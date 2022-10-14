@@ -9,15 +9,15 @@
 
 //----------------------------------------------------- button in (details) request page ---------------------------------------------
 
-    document.getElementById("Reject").addEventListener("click", btn)
-    function btn(){
-        var Rbtn = document.getElementById("demo1");
-        Rbtn.value="Reject"
-        Rbtn.style.color="red";
+    document.getElementById("Reject").addEventListener("click", Rbtn)
+    function Rbtn(){
+        var btn = document.getElementById("demo1");
+        btn.value="Reject"
+        btn.style.color="red";
         document.getElementById("demo1").innerHTML= "Reject";
     }
-    document.getElementById("Approve").addEventListener("click", btn)
-    function btn(){
+    document.getElementById("Approve").addEventListener("click", Abtn)
+    function Abtn(){
         var btn = document.getElementById("demo1");
         btn.value="Approve"
         btn.style.color="green";

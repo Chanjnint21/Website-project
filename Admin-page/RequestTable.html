@@ -147,8 +147,8 @@
                                   <th scope="col w-20">Last Name</th>                                
                                   <th scope="col w-20">Title</th>
                                   <th scope="col w-20">Request Date</th>
-                                  <th scope="col w-20">Status</th>
-                                  <th col w-20> Details</th>
+                                  <th scope="col w-20">Details</th>
+                                  <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody class="table-group-divider">
@@ -163,7 +163,7 @@
                                         <input onclick="btn1()" type="button" value="Reject" class="btn btn-secondary" ></input> -->
                                         <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">reviews</span>
                                     </td>
-                                    <td><button data-title="change status" onclick="status1()"><p id="demo1" value=""></p></button></td>
+                                    <td><button data-toggle="modal" data-target="#comfirm-modal" data-title="change status"><p id="demo1" value=""></p></button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -176,7 +176,7 @@
                                         <input onclick="btn2()" type="button" value="Reject" class="btn btn-secondary"></input> -->
                                         <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">reviews</span>
                                     </td>
-                                    <td><button data-title="change status" onclick="status2()"><p id="demo2" value=""></p></button></td>
+                                    <td><button data-toggle="modal" data-target="#comfirm-modal" data-title="change status"><p id="demo2" value=""></p></button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -189,10 +189,28 @@
                                         <input onclick="btn3()" type="button" value="Reject" class="btn btn-secondary"></input> -->
                                         <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">reviews</span>
                                     </td>  
-                                    <td><button data-title="change status" onclick="status3()"><p id="demo3" value=""></p></button></td>                             
+                                    <td><button data-toggle="modal" data-target="#comfirm-modal" data-title="change status" ><p id="demo3" value=""></p></button></td>                             
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <!-- comfirm modal -->
+                    <div  class="modal" id="comfirm-modal">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title">Status</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <h5>Do you want to change the status?</h5>
+                                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="No">
+                                    <input type="button" class="btn btn-danger" onclick="status1()" value="Yes" data-dismiss="modal">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
