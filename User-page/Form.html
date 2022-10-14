@@ -13,7 +13,7 @@
 
 <body>
     <div class="wrapper">
-        <nav id="sidebar" class="position-fixed">
+        <nav id="sidebar" class="overflow-hidden">
             <div class="sidebar-header">
                 <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
             </div>
@@ -82,20 +82,19 @@
                     </div>
             </div>
             <div class="content">
-                <div class="container">
-                    <form class="card overflow-auto">
+                <div class="container ">
+                    <form class="card ">
                         <div class="card-headern text-center">
                             <h1>Paper Form</h1>
                         </div>
-                        <div class="card-body form">
+                        <div class="card-body form scroll">
                             <div class="row pb-3">
+                                <label class="w-100">Full Name: </label>
                                 <div class="col w-50">
-                                    <label class="w-100">First Name :</label>
-                                    <input class="w-75 p-2 my-2" type="text" required>
+                                    <input class="w-75 p-2 my-2" type="text" placeholder="First Name" required>
                                 </div>
                                 <div class="col">
-                                    <label class="w-100">Last Name : </label>
-                                    <input class="w-75 p-2 my-2" type="text" required>
+                                    <input class="w-75 p-2 my-2" type="text" placeholder="Last Name" required>
                                 </div> 
                             </div>
                             <div class="row pb-3">
@@ -147,9 +146,6 @@
 <style>
 body {
     padding-top: 60px;
-}
-.card {
-    margin-left: 55px;
 }
 .sticky-offset {
     top: 56px;

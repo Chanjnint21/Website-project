@@ -43,6 +43,7 @@ body {
     font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: 1rem;
     color: #444;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -372,4 +373,8 @@ span.material-icons {
 .card-body.form label{
     color: rgb(40, 40, 40);
     font-size: 1.2rem;
+}
+
+.scroll {
+    overflow-y: auto;
 }
