@@ -97,7 +97,7 @@ body {
 }
 
 .page-header {
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .page-title {
@@ -233,7 +233,6 @@ a:focus {
     color: #007bff;
     background-color: #fff;
     border-bottom: 2px solid #22a1f9;
-
 }
 
 .tab-content {
@@ -254,6 +253,10 @@ a:focus {
 
 .license span {
     margin-bottom: 1em;
+}
+
+.navbar img{
+    width: 200px;
 }
 
 /*------------------------------------------------------------------
@@ -366,15 +369,20 @@ span.material-icons {
 [12. Form card / material] 
 */
 
-.card-body.form {
-    padding: 50px;
-}
+.form-card-body input{
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 0 10px;
 
-.card-body.form label{
-    color: rgb(40, 40, 40);
-    font-size: 1.2rem;
+}
+.name{
+    align-items: center;
+    color: #007bff;
 }
 
 .scroll {
     overflow-y: auto;
 }
+.required {
+    color: red;
+  }
