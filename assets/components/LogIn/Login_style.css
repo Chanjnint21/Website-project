@@ -29,13 +29,7 @@ html, body{
     position: relative;
     margin: 1.5rem 0;
   }
-input {
-    border: none;
-    outline: none;
-    padding: 0.3rem 0.75rem;
-    font-size: 1.5rem;
-}
-
+  
 .username,
 .password {
     border: 1px solid #ccc;
