@@ -14,9 +14,9 @@
 <body>
     <div class="wrapper">
         <nav id="sidebar" class="overflow-hidden">
-            <div class="sidebar-header">
+            <!-- <div class="sidebar-header">
                 <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
-            </div>
+            </div> -->
             <ul class="list-unstyled components text-secondary">
                 <div class="col">
                     <li>
@@ -38,7 +38,7 @@
                     <span class="material-icons" >menu</span>
                 </button> -->
                 <span type="button" class="material-icons" id="sidebarCollapse" >menu</span>
-                <span class="page-title">Permission Form</span>
+                <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ms-auto">
                         <li class="nav-item dropdown">
@@ -79,60 +79,96 @@
                                 <input type="button" class="btn btn-danger" value="Save Chnage">
                             </div>
                         </div>
-                    </div>
+                    </div> 
             </div>
             <div class="content">
-                <div class="container ">
-                    <form class="card ">
-                        <div class="card-headern text-center">
-                            <h1>Paper Form</h1>
-                        </div>
-                        <div class="card-body form scroll">
-                            <div class="row pb-3">
-                                <label class="w-100">Full Name: </label>
-                                <div class="col w-50">
-                                    <input class="w-75 p-2 my-2" type="text" placeholder="First Name" required>
-                                </div>
-                                <div class="col">
-                                    <input class="w-75 p-2 my-2" type="text" placeholder="Last Name" required>
-                                </div> 
+                <div class="container">
+                <div class="page-header">
+                    <span class="page-title">Permission Form</span>
+                </div>
+                    <div class="form-card overflow-auto">
+                        <form>
+                            <div class="form-card-header">
+                                <p>Paper Form</p>
                             </div>
-                            <div class="row pb-3">
-                                <label>Contact :</label>
-                                <div class="col my-2">
-                                    <input class="w-30 my-2 p-2" type="text" placeholder="Phone number*" required> 
-                                    <br>
-                                    <input class="w-30 my-2 p-2" type="text" placeholder="Email">
+                            <div class="form-card-body">
+                                <div class="row">
+                                    <label>Name:<span class="required">*</span></label>
+                                    <div class="col">
+                                        <div class="input-group">
+                                            <input type="text" id="firstname" class="form-type" placeholder=" " required/>
+                                            <label for="firstname">First name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group">
+                                            <input type="text" id="lastname" class="form-type" placeholder=" " required/>
+                                            <label for="lastname">Last name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row pb-3">
+                                    <label>Contact: <span class="required">*</span></label>
+                                    <div class="col">
+                                        <div class="input-group">
+                                            <input type="text" id="phone" class="form-type" placeholder=" " required/>
+                                            <label for="phone">Phone number</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group">
+                                            <input type="text" id="email" class="form-type" placeholder=" " required/>
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row pb-3">
+                                    <label for="date">Leave Date:<span class="required">*</span></label>
+                                    <div class="col">
+                                        <div class="input-group">
+                                            <input class="form-type" type="date" name="leave_date" id="leave_date" onchange="countdays()" required>
+                                            <label for="From">From</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group">
+                                            <input class="form-type"  name="back_date" id="back_date" onchange="countdays()" onclick="noOfDays" type="date" required>
+                                            <label for="email">To</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group">
+                                            <input class="form-type"  name="noOfDays" id="noOfDays" type="text" readonly>
+                                            <label for="email">Total Leave (days)</label>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col my-2">
+                                        From <input class="w-25" type="date" name="leave_date" id="leave_date" onchange="countdays()" required>
+                                        To <input class="w-25"  name="back_date" id="back_date" onchange="countdays()" onclick="noOfDays" type="date" required>
+                                        <br>
+                                        <b><p name="noOfDays" id="noOfDays" readonly></p></b>
+                                    </div> -->
+                                </div>
+                                <div class="row pb-3">
+                                    <label for="date">Reason of Leave:<span class="required">*</span></label>
+                                    <div class="col mt-4">
+                                        <textarea class="form-type" id="reason" placeholder="Type your reason here..." row="10" col="1"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row pb-3">
+                                    <label for="date">Attachment(optional) :</label>
+                                    <div class="col">
+                                        <input class="form-type" type="file" id="uploadfile">
+                                    </div>
+                                </div>
+                                <div class="row pb-5">
+                                    <div class="col text-center">
+                                        <input class="btn btn-danger w-auto" type="submit" value="Submit" required>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row pb-3">
-                                <label for="date">Date of Event :</label>
-                                <div class="col my-2">
-                                    From <input class="w-25" type="date" name="leave_date" id="leave_date" onchange="countdays()" required>
-                                    To <input class="w-25"  name="back_date" id="back_date" onchange="countdays()" onclick="noOfDays" type="date" required>
-                                    <br>
-                                    <b><p name="noOfDays" id="noOfDays" readonly></p></b>
-                                </div>
-                            </div>
-                            <div class="row pb-3">
-                                <label for="date">Reason :</label>
-                                <div class="col my-2">
-                                    <textarea class="w-100" id="reason" placeholder="reason of permission..." row="3" col="100"></textarea>
-                                </div>
-                            </div>
-                            <div class="row pb-3">
-                                <label for="date">Attachment(optional) :</label>
-                                <div class="col my-2">
-                                    <input type="file" id="uploadfile">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col text-center">
-                                    <input class="btn btn-danger w-auto" type="submit" value="Submit" required>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

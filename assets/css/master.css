@@ -68,6 +68,7 @@ body {
     min-height: 54px;
     box-shadow: none;
     border-bottom: 1px solid rgba(101, 109, 119, .16);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 }
 
 /*------------------------------------------------------------------
@@ -369,20 +370,76 @@ span.material-icons {
 [12. Form card / material] 
 */
 
-.form-card-body input{
-    border: 1px solid;
-    border-radius: 20px;
-    padding: 0 10px;
-
-}
-.name{
-    align-items: center;
-    color: #007bff;
+input {
+    border: none;
+    outline: none;
+    padding: 0.3rem 0.75rem;
+    font-size: 1.5rem;
 }
 
-.scroll {
-    overflow-y: auto;
+textarea{
+    width: 10px;
+    height: 20vh;
 }
+
+.form-card{
+    background-color: white;
+    height: 85vh;
+    margin: 0;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+}
+.form-card-header{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-card-body{
+    padding: 0 50px;
+    font-size: medium;
+}
+.input-group {
+    position: relative;
+    margin: 1.5rem 0;
+  }
+
 .required {
     color: red;
   }
+
+.form-type {
+    /* padding: 0; */
+      border: 1px solid #bfbfbf;
+      width: 100%;
+      font-size: 1rem;
+  }
+    
+.form-type + label,
+.password +label {
+      position: absolute;
+      top: 50%;
+      font-size: 15px;
+      transform: translateY(-50%);
+      left: 0.75rem;
+      color: #bfbfbf;
+      padding: 0 0.125rem;
+      transition: 0.4s;
+      font-weight: normal;
+    }
+    
+    .form-type:focus,
+    .password:focus {
+      border-color: #bfbfbf;
+    }
+    
+    .form-type:focus + label,
+    .form-type:not(:placeholder-shown) + label{
+      top: 0;
+      transition: 0.3s;
+      background-color: #fff;
+      color: #ccc;
+      font-size: 12px;
+    }
