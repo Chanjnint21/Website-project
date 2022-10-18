@@ -11,6 +11,7 @@
     color: #fff;
     transition: all 0.3s;
     border-right: 1px solid #e6ecf5;
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
 }
 
 #sidebar.active {
@@ -46,8 +47,9 @@
 
 #sidebar ul li a:hover,
 #sidebar ul li a.active {
-    color: #fff;
-    background: #f55252;
+    color: #ffffff;
+    background: #ccc;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 }
 
 #sidebar ul li.active>a,
@@ -86,4 +88,5 @@ a[aria-expanded="true"] {
 .item{
     color:white;
     background: #f55252;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%)
 }
