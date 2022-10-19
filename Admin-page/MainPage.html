@@ -57,13 +57,13 @@
 
 <body>
     <div class="wrapper">
-        <nav id="sidebar">
-            <div class="sidebar-header">
+        <nav id="sidebar" class="overflow-hidden">
+            <!-- <div class="sidebar-header">
                 <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
-            </div>
+            </div> -->
             <ul class="list-unstyled components text-secondary">
                 <div class="col">
-                    <li class="item">
+                    <li  class="item" >
                         <a href="MainPage.html"><span id="dashboard "class="material-icons">dashboard</span> Dashboard</a>
                     </li>
                     <li>
@@ -72,17 +72,20 @@
                     <li>
                         <a href="History.html"><span id="person-icon" class="material-icons">history</span>History</a>
                     </li>
+                    <li>
+                        <a class="switch" href="../User-page/UserMainPage.html"><span id="person-icon" class="material-icons">trending_flat</span>Switch to admin</a>
+                    </li>  
                 </div>
             </ul>
         </nav>
         <div id="body">
             <!-- navbar navigation component -->
-            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+            <nav class="fixed-top navbar navbar-expand-lg navbar-white bg-white">
                 <!-- <button type="button" id="sidebarCollapse" class="btn btn-light">
-                    <span class="material-icons">menu</span>
+                    <span class="material-icons" >menu</span>
                 </button> -->
                 <span type="button" class="material-icons" id="sidebarCollapse" >menu</span>
-                <span class="page-title">Dashboard</span>
+                <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ms-auto">
                         <li class="nav-item dropdown">
@@ -120,10 +123,10 @@
                                 <span><h3>Lim Chanjnint</h3></span>
                             </div>
                             <div class="modal-footer">
-                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-danger">Save changes</button> -->
+                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
                                 <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close">
                                 <input type="button" class="btn btn-danger" value="Save Chnage">
+                                <!-- <button type="button" class="btn btn-danger">Save changes</button> -->
                             </div>
                         </div>
                     </div>
@@ -220,4 +223,3 @@
     <script src="../assets/js/script.js"></script>
 </body>
 </html>
-

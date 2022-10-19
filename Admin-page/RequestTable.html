@@ -12,33 +12,35 @@
 
 <body>
     <div class="wrapper">
-        <nav id="sidebar">
-            <div class="sidebar-header">
+        <nav id="sidebar" class="overflow-hidden">
+            <!-- <div class="sidebar-header">
                 <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
-            </div>
+            </div> -->
             <ul class="list-unstyled components text-secondary">
                 <div class="col">
                     <li>
                         <a href="MainPage.html"><span id="dashboard "class="material-icons">dashboard</span> Dashboard</a>
                     </li>
-                    <li class="item" >
+                    <li class="item">
                         <a href="RequestTable.html"> <span id="inbox-icon" class="material-icons">inbox</span> Request Box</a>
-                        
                     </li>
                     <li>
                         <a href="History.html"><span id="person-icon" class="material-icons">history</span>History</a>
                     </li>
+                    <li>
+                        <a class="switch" href="../User-page/UserMainPage.html"><span id="person-icon" class="material-icons">trending_flat</span>Switch to admin</a>
+                    </li>    
                 </div>
             </ul>
         </nav>
         <div id="body">
             <!-- navbar navigation component -->
-            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+            <nav class="fixed-top navbar navbar-expand-lg navbar-white bg-white">
                 <!-- <button type="button" id="sidebarCollapse" class="btn btn-light">
-                    <span class="material-icons">menu</span>
+                    <span class="material-icons" >menu</span>
                 </button> -->
                 <span type="button" class="material-icons" id="sidebarCollapse" >menu</span>
-                <span class="page-title">Request Box</span>
+                <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ms-auto">
                         <li class="nav-item dropdown">
@@ -50,6 +52,7 @@
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                     <ul class="nav-list">
                                         <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal"><span type="button" class="material-icons">person</span> Profile</a></li>
+                                        <!-- <li><a href="" class="dropdown-item"><span class="material-icons">settings</span> Settings</a></li> -->
                                         <div class="dropdown-divider"></div>
                                         <li><a href="../login-page/LogIn.html" class="dropdown-item"><span type="button" class="material-icons">logout</span> Logout</a></li>
                                     </ul>

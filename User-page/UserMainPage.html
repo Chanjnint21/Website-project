@@ -13,32 +13,35 @@
 
 <body>
     <div class="wrapper">
-        <nav id="sidebar">
-            <div class="sidebar-header">
+        <nav id="sidebar" class="overflow-hidden">
+            <!-- <div class="sidebar-header">
                 <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
-            </div>
+            </div> -->
             <ul class="list-unstyled components text-secondary">
                 <div class="col">
                     <li class="item">
                         <a href="UserMainPage.html"><span id="dashboard "class="material-icons">dashboard</span> Dashboard</a>
                     </li>
-                    <li>
+                    <li >
                         <a href="Form.html"><span id="person-icon" class="material-icons">description</span>Permission Form</a>
                     </li>
-                    <li class="items3">
+                    <li>
                         <a href="Inbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> InBox</a>
                     </li>
+                    <li>
+                        <a class="switch" href="../Admin-page/MainPage.html"><span id="person-icon" class="material-icons">trending_flat</span>Switch to user</a>
+                    </li> 
                 </div>
             </ul>
         </nav>
         <div id="body">
             <!-- navbar navigation component -->
-            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+            <nav class="fixed-top navbar navbar-expand-lg navbar-white bg-white">
                 <!-- <button type="button" id="sidebarCollapse" class="btn btn-light">
-                    <span class="material-icons">menu</span>
+                    <span class="material-icons" >menu</span>
                 </button> -->
                 <span type="button" class="material-icons" id="sidebarCollapse" >menu</span>
-                <span class="page-title">Dashboard</span>
+                <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ms-auto">
                         <li class="nav-item dropdown">
