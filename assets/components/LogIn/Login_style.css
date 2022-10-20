@@ -17,13 +17,14 @@ html, body{
     width: 500px;
 }
 
-.login-card-header{
+.login-card-header {
     padding: 20px;
 }
 
 .login-card-body{
     padding: 0 50px;
 }
+
 .login-card-body h2{
   padding: 10px;
   color: #ff4343;
