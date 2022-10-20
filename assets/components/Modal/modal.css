@@ -42,3 +42,14 @@ button:hover::after{
     opacity: 1;
     transform: translateY(5px);
   }
+
+.Yes-no {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #444;
+}
+
+.Yes-no:hover {
+    color: red;
+}
