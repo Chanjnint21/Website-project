@@ -26,10 +26,10 @@
                         <a href="Form.html"><span id="person-icon" class="material-icons">description</span>Permission Form</a>
                     </li>
                     <li  class="item">
-                        <a href="Inbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> InBox</a>
+                        <a href="Inbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> InBox<span class="badge">2</span></a>
                     </li>
                     <li>
-                        <a class="switch" href="../Admin-page/MainPage.html"><span id="person-icon" class="material-icons">trending_flat</span>Switch to user</a>
+                        <a class="switch" href="../Admin-page/MainPage.html"><span id="person-icon" class="material-icons">trending_flat</span>Switch to Admin</a>
                     </li> 
                 </div>
             </ul>
@@ -88,8 +88,7 @@
                         </div>
                     </div>
             </div>
-
-            <!-- view detailed of Request Modal -->
+            <!-- View Details of Request Modal (PENDING STATUS) -->
             <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -98,7 +97,6 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
                             <span aria-hidden="true">&times;</span>
                           </button>
-                        
                     </div>
                         <div class="modal-body">
                             <b>First name :</b> Sery 
@@ -125,7 +123,7 @@
                             </div>
                         </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="btn3()" value="Reject" id="Apr-btn3" data-dismiss="modal" data-title="delete" id="delete">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" data-title="delete" id="delete" data-toggle="modal" data-target="#comfirm-modal">
                             <span class="material-icons">delete</span>
                         </button>
                         <button type="button" class="btn btn-secondary" id="edit" data-title="Edit">
@@ -137,11 +135,54 @@
                 </div>
                 </div>
             </div>
+
+            <!-- View Details of Request Modal (STATUS) -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Mark Otto's Form</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                    </div>
+                    <div class="modal-body">
+                        <b>First name :</b> Sery 
+                        <br>      
+                        <b>Last Name :</b> Thida 
+                        <br>
+                        <b>Contact Number :</b> 081808091
+                        <br>
+                        <b>Email :</b> Thida.aaaa@gmail.com
+                        <br>
+                        <b>Date of Event :</b> 12/11/2022 - 15/11/2022
+                        <br><br>
+                        <b>Reason :</b>
+                        <div class="card">
+                            <div class="card-body p-3">
+                                <p>Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
+                                    Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
+                                    and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
+                                </p>
+                            </div>
+                                <div class="card-footer">
+                                    File : <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" target="_blank">Medical_record.pdf</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" data-dismiss="modal" class="btn btn-danger" value="Close">
+                        <!-- <button type="button" class="btn btn-danger">Save Change</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
             
             <div class="content">
                 <div class="container">
                     <div class="page-header">
                         <span class="page-title">InBox</span>
+                        <div class="dropdown-divider"></div>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-hover" id="x">
@@ -153,29 +194,10 @@
                                   <th scope="col w-20">Title</th>
                                   <th scope="col w-20">Request Date</th>
                                   <th scope="col w-20">Request</th>
+                                  <th scope="col" >Status</th>
                                 </tr>
                             </thead>
                             <tbody class="table-group-divider">
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>Pchum Benh</td>
-                                    <td>24 / 09 / 2022</td>
-                                    <td>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>KNY</td>
-                                    <td>13 / 04 / 2022</td>
-                                    <td>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
-                                    </td>
-                                </tr>
                                 <tr>
                                     <th scope="row">3</th>
                                     <td>Sary</td>
@@ -184,11 +206,57 @@
                                     <td>11 / 11 / 2022</td>
                                     <td>
                                         <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
-                                    </td>                                
+                                    </td>      
+                                    <td>PENDING</td>                          
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>KNY</td>
+                                    <td>13 / 04 / 2022</td>
+                                    <td>
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalCenter">_reviews</span>
+                                    </td>
+                                    <td style="color: Red;">REJECT</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>Pchum Benh</td>
+                                    <td>24 / 09 / 2022</td>
+                                    <td>
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalCenter">_reviews</span>
+                                    </td>
+                                    <td style="color: green;">APPROVE</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>Pchum Benh</td>
+                                    <td>24 / 09 / 2022</td>
+                                    <td>
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalCenter">_reviews</span>
+                                    </td>
+                                    <td style="color: green;">APPROVE</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </div>
+            <!-- Delete comfirm Yes/No modal -->
+            <div class="modal fade" id="comfirm-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <h5>Are you sure?</h5>
+                        <input type="button" class="Yes-no" data-dismiss="modal" value="No" />
+                        <input type="button" class="Yes-no" data-dismiss="modal" onclick="del()" value="Yes" />
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
