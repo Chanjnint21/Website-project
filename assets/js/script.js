@@ -108,3 +108,8 @@ function countdays () {
     document.getElementById("noOfDays").setAttribute("value", isNaN(countdays) ? '' : countdays);
     document.getElementById("noOfDays").innerHTML = countdays + "days";
   }
+
+//--------------------------------------------------- comfirm modal ---------------------------------------------
+function del(){
+    document.getElementsByTagName("tr")[3].remove();
+}
