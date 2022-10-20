@@ -2,7 +2,7 @@
 @import "../components/navbar/navbar-dropdowns.css";
 @import "../components/sidebar/sidebar-default.css";
 @import "../components/Table/table.css";
-@import "../components/Profile/modal.css";
+@import "../components/Modal/modal.css";
 @import "../components/LogIn/Login_style.css";
 
 
@@ -118,7 +118,8 @@ body {
 [7. Dashboard Cards / .card] 
 */
 .card {
-    box-shadow: rgba(35, 46, 60, .04) 0 2px 4px 0;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+    border-radius: 10px;
 }
 
 .card .content {
@@ -380,7 +381,7 @@ input {
 
 textarea{
     width: 10px;
-    height: 20vh;
+    height: 15vh;
 }
 
 .form-card{
