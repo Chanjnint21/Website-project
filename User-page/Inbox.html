@@ -89,7 +89,116 @@
                     </div>
             </div>
             <!-- View Details of Request Modal (PENDING STATUS) -->
-            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal fade bd-example-modal-lg" id="modal-pending" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Mark Otto's Form</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>First name</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p> Sery</p>
+                                    </div>  
+                                </div>   
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Phone</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p> 081808091</p>
+                                    </div>  
+                                </div> 
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Last Name</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p> Thida</p>
+                                    </div>  
+                                </div>                                 
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Email</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p> Thida.aaaa@gmail.com</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Request</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p> 3 Days</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Date</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p> 12/Nov/2022 - 15/Nov/2022</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <!-- <hr/> -->
+                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-12">
+                                        <b>Reason</b>
+                                    </div>
+                                    <div class="col-lg-10 col-md-9 col-sm-12">
+                                        <p>Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
+                                            Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
+                                            and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
+                                        </p>
+                                    </div>  
+                                </div> 
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-12">
+                                        <b>Attachment</b>
+                                    </div>
+                                    <div class="col-lg-10 col-md-9 col-sm-12">
+                                        <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" target="_blank">Medical_record.pdf</a>
+                                    </div>  
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" data-title="delete" id="delete" data-toggle="modal" data-target="#comfirm-modal">
+                            <span class="material-icons">delete</span>
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="edit" data-title="Edit">
+                            <span class="material-icons">edit_note</span>
+                        </button>
+                        <input type="button" class="btn btn-danger" value="Save Chnage">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -130,15 +239,14 @@
                             <span class="material-icons">edit_note</span>
                         </button>
                         <input type="button" class="btn btn-danger" value="Save Chnage">
-                        <!-- <button type="button" class="btn btn-danger">Save Change</button> -->
                     </div>
                 </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- View Details of Request Modal (STATUS) -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal fade bd-example-modal-lg" id="modal-reviewed" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Mark Otto's Form</h5>
@@ -147,37 +255,113 @@
                           </button>
                     </div>
                     <div class="modal-body">
-                        <b>First name :</b> Sery 
-                        <br>      
-                        <b>Last Name :</b> Thida 
-                        <br>
-                        <b>Contact Number :</b> 081808091
-                        <br>
-                        <b>Email :</b> Thida.aaaa@gmail.com
-                        <br>
-                        <b>Date of Event :</b> 12/11/2022 - 15/11/2022
-                        <br><br>
-                        <b>Reason :</b>
-                        <div class="card">
-                            <div class="card-body p-3">
-                                <p>Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
-                                    Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
-                                    and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
-                                </p>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>First name</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="firstname"> Chanjnint</p>
+                                    </div>  
+                                </div>   
                             </div>
-                                <div class="card-footer">
-                                    File : <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" target="_blank">Medical_record.pdf</a>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Phone</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="phone"> 081808091</p>
+                                    </div>  
+                                </div> 
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Last Name</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="lastname"> Lim</p>
+                                    </div>  
+                                </div>                                 
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Email</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="email"> Thida.aaaa@gmail.com</p>
+                                    </div>  
                                 </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Request</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="leaveDate"> 3 Days</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Date</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="date"> 12/Nov/2022 - 15/Nov/2022</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <!-- <hr/> -->
+                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-12">
+                                        <b>Reason</b>
+                                    </div>
+                                    <div class="col-lg-10 col-md-9 col-sm-12">
+                                        <p id="reason">Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
+                                            Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
+                                            and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
+                                        </p>
+                                    </div>  
+                                </div> 
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-12">
+                                        <b>Attachment</b>
+                                    </div>
+                                    <div class="col-lg-10 col-md-9 col-sm-12">
+                                        <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" target="_blank">Medical_record.pdf</a>
+                                    </div>  
+                                </div> 
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <input type="button" data-dismiss="modal" class="btn btn-danger" value="Close">
-                        <!-- <button type="button" class="btn btn-danger">Save Change</button> -->
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                    <b>Comment:</b>
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-12">
+                                    <p id="comment" readonly> No comment...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col text-end">
+                            <input type="button" data-dismiss="modal" class="btn btn-secondary" value="Close">
+                        </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            
+            </div>
+
+            <!-- Content -->
             <div class="content">
                 <div class="container">
                     <div class="page-header">
@@ -205,7 +389,7 @@
                                     <td>Water Festival</td>
                                     <td>11 / 11 / 2022</td>
                                     <td>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">_reviews</span>
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-pending">_reviews</span>
                                     </td>      
                                     <td>PENDING</td>                          
                                 </tr>
@@ -216,7 +400,7 @@
                                     <td>KNY</td>
                                     <td>13 / 04 / 2022</td>
                                     <td>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalCenter">_reviews</span>
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">_reviews</span>
                                     </td>
                                     <td style="color: Red;">REJECT</td>
                                 </tr>
@@ -227,7 +411,7 @@
                                     <td>Pchum Benh</td>
                                     <td>24 / 09 / 2022</td>
                                     <td>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalCenter">_reviews</span>
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">_reviews</span>
                                     </td>
                                     <td style="color: green;">APPROVE</td>
                                 </tr>
@@ -238,7 +422,7 @@
                                     <td>Pchum Benh</td>
                                     <td>24 / 09 / 2022</td>
                                     <td>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalCenter">_reviews</span>
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">_reviews</span>
                                     </td>
                                     <td style="color: green;">APPROVE</td>
                                 </tr>

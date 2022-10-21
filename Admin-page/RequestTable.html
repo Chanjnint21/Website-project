@@ -89,56 +89,124 @@
             </div>
 
             <!-- view detailed of Request Modal -->
-            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+            <div class="modal fade bd-example-modal-lg" id="modal-reviewed" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Thida Sary's Form</h5>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Mark Otto's Form</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                            <div class="modal-body">
-                                <b>First name :</b> Sery 
-                                <br>      
-                                <b>Last Name :</b> Thida 
-                                <br>
-                                <b>Contact Number :</b> 081808091
-                                <br>
-                                <b>Email :</b> Thida.aaaa@gmail.com
-                                <br>
-                                <b>Date of Event :</b> 12/11/2022 - 15/11/2022
-                                <br><br>
-                                <b>Reason :</b>
-                                <div class="card">
-                                    <div class="card-body p-3">
-                                        <p>Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
-                                            Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
-                                            and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
-                                        </p>
-                                    </div>
-                                        <div class="card-footer">
-                                            File : <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" target="_blank">Medical_record.pdf</a>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>First name</b> 
                                         </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="firstname"> Chanjnint</p>
+                                        </div>  
+                                    </div>   
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Phone</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="phone"> 081808091</p>
+                                        </div>  
+                                    </div> 
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Last Name</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="lastname"> Lim</p>
+                                        </div>  
+                                    </div>                                 
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Email</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="email"> Thida.aaaa@gmail.com</p>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Request</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="leaveDate"> 3 Days</p>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Date</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="date"> 12/Nov/2022 - 15/Nov/2022</p>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <!-- <hr/> -->
+                                <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 col-sm-12">
+                                            <b>Reason</b>
+                                        </div>
+                                        <div class="col-lg-10 col-md-9 col-sm-12">
+                                            <p id="reason">Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
+                                                Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
+                                                and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
+                                            </p>
+                                        </div>  
+                                    </div> 
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 col-sm-12">
+                                            <b>Attachment</b>
+                                        </div>
+                                        <div class="col-lg-10 col-md-9 col-sm-12">
+                                            <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" target="_blank">Medical_record.pdf</a>
+                                        </div>  
+                                    </div> 
                                 </div>
                             </div>
+                        </div>
                         <div class="modal-footer">
                             <div class="col">
-                                <form>
-                                    <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Comment:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <b>Comment:</b>
                                     </div>
-                                </form>
+                                    <div class="col-lg-9 col-md-9 col-sm-12">
+                                        <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col">
-                                <input type="button" class="btn btn-secondary" onclick="btn1()" value="Reject"  data-dismiss="modal" id="Reject">
-                                <input type="button" class="btn btn-danger" onclick="btn1()" value="Approve"  data-dismiss="modal" id="Approve">
+                            <div class="col text-center">
+                                <input type="button" class="btn btn-danger" onclick="btn1()" value="Reject"  data-dismiss="modal" id="Reject">
+                                <input type="button" class="btn btn-success" onclick="btn1()" value="Approve"  data-dismiss="modal" id="Approve">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- content -->
             <div class="content">
                 <div class="container">
                     <div class="page-header">
@@ -148,13 +216,13 @@
                         <table class="table table-hover" id="x">
                             <thead class="table-header w-100">
                                 <tr>
-                                  <th scope="col">#</th>
-                                  <th scope="col w-20">First Name</th>
-                                  <th scope="col w-20">Last Name</th>                                
-                                  <th scope="col w-20">Title</th>
-                                  <th scope="col w-20">Request Date</th>
-                                  <th scope="col w-20">Details</th>
-                                  <th scope="col">Status</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col w-20">First Name</th>
+                                    <th scope="col w-20">Last Name</th>                                
+                                    <th scope="col w-20">Title</th>
+                                    <th scope="col w-20">Request Date</th>
+                                    <th scope="col w-20">Details</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody class="table-group-divider">
@@ -167,7 +235,7 @@
                                     <td>
                                         <!-- <input onclick="btn1()" type="button" value="Approve" class="btn btn-danger"></input>
                                         <input onclick="btn1()" type="button" value="Reject" class="btn btn-secondary" ></input> -->
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">reviews</span>
+                                        <span type="button" data-toggle="modal" data-target="#modal-reviewed">view details..</span>
                                     </td>
                                     <td><button data-toggle="modal" data-target="#comfirm-modal" data-title="change status"><p id="demo1" value=""></p></button></td>
                                 </tr>
@@ -180,7 +248,7 @@
                                     <td>
                                         <!-- <input onclick="btn2()" type="button" value="Approve" class="btn btn-danger"></input>
                                         <input onclick="btn2()" type="button" value="Reject" class="btn btn-secondary"></input> -->
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">reviews</span>
+                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">visibility</span>
                                     </td>
                                     <td><button data-toggle="modal" data-target="#comfirm-modal" data-title="change status"><p id="demo2" value=""></p></button></td>
                                 </tr>
@@ -193,7 +261,7 @@
                                     <td>
                                         <!-- <input onclick="btn3()" type="button" value="Approve" class="btn btn-danger"></input>
                                         <input onclick="btn3()" type="button" value="Reject" class="btn btn-secondary"></input> -->
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#exampleModalLong">reviews</span>
+                                        <img src="https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png" type="button" data-toggle="modal" data-target="#modal-reviewed"/>
                                     </td>  
                                     <td><button data-toggle="modal" data-target="#comfirm-modal" data-title="change status" ><p id="demo3" value=""></p></button></td>                             
                                 </tr>

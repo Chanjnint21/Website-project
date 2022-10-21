@@ -369,7 +369,7 @@ span.material-icons {
 }
 
 /*------------------------------------------------------------------
-[12. Form card / material] 
+[12. Paper Form card / material] 
 */
 
 input {
@@ -419,8 +419,7 @@ textarea{
       font-size: 1rem;
   }
     
-.form-type + label,
-.password +label {
+.form-type + label{
       position: absolute;
       top: 50%;
       font-size: 15px;
@@ -432,8 +431,7 @@ textarea{
       font-weight: normal;
     }
     
-    .form-type:focus,
-    .password:focus {
+    .form-type:focus{
       border-color: #bfbfbf;
     }
     
@@ -445,3 +443,7 @@ textarea{
       color: #ccc;
       font-size: 12px;
     }
+
+/*------------------------------------------------------------------
+[12. Modal] 
+*/
