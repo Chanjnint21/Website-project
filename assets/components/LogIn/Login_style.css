@@ -78,6 +78,13 @@ html, body{
     border-radius: 50%;
 }
 
+i{
+  color: red;
+  cursor: pointer;
+  margin-right: -25rem;
+  top: 0;
+}
+
 
 /* .username,
 .password {
