@@ -14,9 +14,6 @@
 <body>
     <div class="wrapper">
         <nav id="sidebar" class="overflow-hidden">
-            <!-- <div class="sidebar-header">
-                <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
-            </div> -->
             <ul class="list-unstyled components text-secondary">
                 <div class="col">
                     <li>
@@ -37,9 +34,6 @@
         <div id="body">
             <!-- navbar navigation component -->
             <nav class="fixed-top navbar navbar-expand-lg navbar-white bg-white">
-                <!-- <button type="button" id="sidebarCollapse" class="btn btn-light">
-                    <span class="material-icons" >menu</span>
-                </button> -->
                 <span type="button" class="material-icons" id="sidebarCollapse">menu</span>
                 <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -76,8 +70,6 @@
                                 <span><h3>Lim Chanjnint</h3></span>
                             </div>
                             <div class="modal-footer">
-                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-danger">Save changes</button> -->
                                 <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close">
                                 <input type="button" class="btn btn-danger" value="Save Chnage">
                             </div>
@@ -131,32 +123,26 @@
                                     <div class="col-sm-12 col-md-6 col-lg-4">
                                         <div class="input-group">
                                             <input class="form-type" type="date" name="leave_date" id="leave_date" onchange="countdays()" required>
-                                            <label for="From">From</label>
+                                            <label for="leaveday">From</label>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-4">
                                         <div class="input-group">
                                             <input class="form-type"  name="back_date" id="back_date" onchange="countdays()" onclick="noOfDays" type="date" required>
-                                            <label for="email">To</label>
+                                            <label for="backday">To</label>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-4">
                                         <div class="input-group">
-                                            <input class="form-type"  name="noOfDays" id="noOfDays" type="text" readonly>
-                                            <label for="email">Total Leave (days)</label>
+                                            <input class="form-type" name="noOfDays" id="noOfDays" type="text" readonly>
+                                            <label for="totalleave">Total Leave (days)</label>
                                         </div>
                                     </div>
-                                    <!-- <div class="col my-2">
-                                        From <input class="w-25" type="date" name="leave_date" id="leave_date" onchange="countdays()" required>
-                                        To <input class="w-25"  name="back_date" id="back_date" onchange="countdays()" onclick="noOfDays" type="date" required>
-                                        <br>
-                                        <b><p name="noOfDays" id="noOfDays" readonly></p></b>
-                                    </div> -->
                                 </div>
                                 <div class="row pb-3">
                                     <label for="date">Reason of Leave:<span class="required">*</span></label>
                                     <div class="col mt-4">
-                                        <textarea class="form-type px-2" id="reason" placeholder="Type your reason here..." row="10" col="1"></textarea>
+                                        <textarea id="reason" class="form-type px-2" id="reason" placeholder="Type your reason here..." row="10" col="1"></textarea>
                                     </div>
                                 </div>
                                 <div class="row pb-3">
@@ -167,7 +153,7 @@
                                 </div>
                                 <div class="row pb-5">
                                     <div class="col text-center">
-                                        <input class="btn btn-danger w-auto" type="submit" value="Submit" required>
+                                        <input class="btn btn-danger w-auto" onclick="store()" type="submit" value="Submit" required>
                                     </div>
                                 </div>
                             </div>
@@ -183,12 +169,28 @@
     <script src="../assets/js/script.js"></script>
 </body>
 </html>
-<!-- <style>
-body {
-    padding-top: 60px;
-}
-.sticky-offset {
-    top: 56px;
-}
+<script>
+    function store(){
 
-</style> -->
+
+        var inputFname= document.getElementById("firstname");
+        var inputLname= document.getElementById("lastname");
+        var inputPhone= document.getElementById("phone");
+        var inputEmail= document.getElementById("email");
+        var inputLeaveDate= document.getElementById("leave_date");
+        var inputBackDate= document.getElementById("back_date");
+        var inputTotalleave= document.getElementById("noOfDays");
+        var inputReason= document.getElementById("reason");
+
+        localStorage.setItem("firstname", inputFname.value);
+        localStorage.setItem("lastname", inputLname.value);
+        localStorage.setItem("phone", inputPhone.value);
+        localStorage.setItem("email", inputEmail.value);
+        localStorage.setItem("From", inputLeaveDate.value);
+        localStorage.setItem("To", inputBackDate.value);
+        localStorage.setItem("Total Leave", inputTotalleave.value);
+        localStorage.setItem("reason", inputReason.value);
+
+        // var storedValue = localStorage.getItem("email");
+    }
+</script>

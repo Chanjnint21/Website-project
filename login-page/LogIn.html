@@ -23,7 +23,7 @@
                             <div class="form-group" >
                                 <input type="password" id="password" class="password" placeholder=" "required>
                                 <label for="password" >Passwords</label>
-                                <i><span class="material-icons toggle" id="eye">
+                                <i><span class="material-icons show" id="eye">
                                     visibility_off
                                     </span></i>
                             </div>
@@ -39,11 +39,47 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <a href="../Admin-page/MainPage.html"><input type="button" class="btn btn-danger" value="Log In"></a>
+                                <input type="submit" onclick="LogIN()" class="btn btn-danger" value="Log In">
                             </div>
                         </form>
                     </div>
             </div>
-        <script src="../assets/js/script.js"></script>
     </body>
 </html>
+<script>
+    function LogIN(){
+        var inputname= document.getElementById("username");
+        var inputpassword= document.getElementById("password");
+
+        localStorage.setItem("Username", inputname.value);
+        localStorage.setItem("Password", inputpassword.value);
+
+        var User = localStorage.getItem("Username", inputname.value);
+        var Pass = localStorage.getItem("Password", inputpassword.value);
+
+        var us, pas;
+        us = "limchanjnint@gmail.com"
+        pas = 12345;
+        if (us == User && pas == Pass){
+            // alert("Sucessful Log In !!");
+            window.location.pathname = 'login-page/ForgotPass.html';
+            // location.replace("https://www.google.com/search?q=local+storage&rlz=1C5CHFA_enKH1022KH1023&oq=Local+storage&aqs=chrome.0.35i39i457j35i39j0i67l2j0i20i263i512j69i60j69i61j69i60.4870j0j7&sourceid=chrome&ie=UTF-8");
+        } else {
+            alert("Invalid Input");
+        }
+    }
+</script>
+<script>
+    //----------------------------------------------------- hide/show side bar ---------------------------------------------
+ document.getElementById("eye").addEventListener('click', sdsds) 
+    function sdsds(){
+        var password = document.getElementById("password");
+        if (password.type ==="password"){
+            password.type ="text";
+            document.getElementById("eye").innerHTML = "visibility";
+        } else {
+            password.type = "password";
+            document.getElementById("eye").innerHTML = "visibility_off";
+        }
+}
+</script>
