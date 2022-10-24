@@ -1,25 +1,9 @@
-//----------------------------------------------------- hide/show password ---------------------------------------------
-const toggle = document.querySelector(".toggle");
-const password = document.querySelector(".password");
-
-toggle.addEventListener('click', () =>{
-    if (password.type ==="password"){
-        password.type ="text";
-        document.getElementById("eye").innerHTML = "visibility";
-    } else {
-        password.type = "password";
-        document.getElementById("eye").innerHTML = "visibility_off";
-    }
-})
-//----------------------------------------------------- hide/show side bar ---------------------------------------------
-
 (function() {
     document.getElementById("sidebarCollapse").addEventListener('click', (e) => {
         document.getElementById("sidebar").classList.toggle("active");
         document.getElementById("body").classList.toggle("active");
     });
 })();
-
 //----------------------------------------------------- button in (details) request page ---------------------------------------------
 
     document.getElementById("Reject").addEventListener("click", Rbtn)
@@ -126,3 +110,5 @@ function countdays () {
 function del(){
     document.getElementsByTagName("tr")[3].remove();
 }
+
+//--------------------------------------------------- show/hide password ---------------------------------------------
