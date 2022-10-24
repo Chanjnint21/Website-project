@@ -1,3 +1,16 @@
+//----------------------------------------------------- hide/show password ---------------------------------------------
+const toggle = document.querySelector(".toggle");
+const password = document.querySelector(".password");
+
+toggle.addEventListener('click', () =>{
+    if (password.type ==="password"){
+        password.type ="text";
+        document.getElementById("eye").innerHTML = "visibility";
+    } else {
+        password.type = "password";
+        document.getElementById("eye").innerHTML = "visibility_off";
+    }
+})
 //----------------------------------------------------- hide/show side bar ---------------------------------------------
 
 (function() {

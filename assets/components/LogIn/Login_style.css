@@ -79,10 +79,13 @@ html, body{
 }
 
 i{
-  color: red;
+  color: #ccc;
   cursor: pointer;
-  margin-right: -25rem;
-  top: 0;
+  position: absolute;
+  transform: translate(0, -50%);
+  right: 10px;
+  top: 50%;
+  /* opacity: 0.5; */
 }
 
 
