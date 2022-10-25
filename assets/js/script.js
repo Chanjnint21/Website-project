@@ -1,5 +1,5 @@
 (function() {
-    document.getElementById("sidebarCollapse").addEventListener('click', (e) => {
+    document.getElementById("sidebarCollapse").addEventListener('click', (x) => {
         document.getElementById("sidebar").classList.toggle("active");
         document.getElementById("body").classList.toggle("active");
     });
@@ -111,4 +111,46 @@ function del(){
     document.getElementsByTagName("tr")[3].remove();
 }
 
-//--------------------------------------------------- show/hide password ---------------------------------------------
+//--------------------------------------------------- hide/show password ---------------------------------------------
+function visbility(){
+    var Eye = document.getElementById("eye");
+    Eye.addEventListener('click', show_hide()) 
+    function show_hide(){
+        var password = document.getElementById("password");
+        if (password.type ==="password"){
+            password.type ="text";
+            document.getElementById("eye").innerHTML = "visibility";
+        } else {
+            password.type = "password";
+            document.getElementById("eye").innerHTML = "visibility_off";
+        }
+}
+}
+
+//--------------------------------------------------- store form input into local storage ---------------------------------------------
+function movepage(){
+    const Paperform = document.getElementById("paperform");
+    var inputFname= document.getElementById("firstname");
+    var inputLname= document.getElementById("lastname");
+    var inputPhone= document.getElementById("phone");
+    var inputEmail= document.getElementById("email");
+    var inputLeaveDate= document.getElementById("leave_date");
+    var inputBackDate= document.getElementById("back_date");
+    var inputTotalleave= document.getElementById("noOfDays");
+    var inputReason= document.getElementById("reason");
+
+    Paperform.addEventListener('submit', function(e){
+        e.preventDefault();
+        
+        localStorage.setItem("firstname", inputFname.value);
+        localStorage.setItem("lastname", inputLname.value);
+        localStorage.setItem("phone", inputPhone.value);
+        localStorage.setItem("email", inputEmail.value);
+        localStorage.setItem("From", inputLeaveDate.value);
+        localStorage.setItem("To", inputBackDate.value);
+        localStorage.setItem("Total Leave", inputTotalleave.value);
+        localStorage.setItem("reason", inputReason.value);
+        
+        window.location.href = "Inbox.html";
+    })
+}
