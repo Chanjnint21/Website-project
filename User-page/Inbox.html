@@ -1,408 +1,418 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Leave Request</title> <link rel="shortcut icon" href="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico" type="image/x-icon">
+        <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/master.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Leave Request</title> <link rel="shortcut icon" href="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico" type="image/x-icon">
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/master.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body>
-    <div class="wrapper">
-        <nav id="sidebar" class="overflow-hidden">
-            <!-- <div class="sidebar-header">
-                <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
-            </div> -->
-            <ul class="list-unstyled components text-secondary">
-                <div class="col">
-                    <li>
-                        <a href="UserMainPage.html"><span id="dashboard "class="material-icons">dashboard</span> Dashboard</a>
-                    </li>
-                    <li >
-                        <a href="Form.html"><span id="person-icon" class="material-icons">description</span>Permission Form</a>
-                    </li>
-                    <li  class="item">
-                        <a href="Inbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> InBox<span class="badge">2</span></a>
-                    </li>
-                    <li>
-                        <a class="switch" href="../Admin-page/MainPage.html"><span id="person-icon" class="material-icons">trending_flat</span>Switch to Admin</a>
-                    </li> 
-                </div>
-            </ul>
-        </nav>
-        <div id="body">
-            <!-- navbar navigation component -->
-            <nav class="fixed-top navbar navbar-expand-lg navbar-white bg-white">
-                <!-- <button type="button" id="sidebarCollapse" class="btn btn-light">
-                    <span class="material-icons" >menu</span>
-                </button> -->
-                <span type="button" class="material-icons" id="sidebarCollapse" >menu</span>
-                <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav ms-auto">
-                        <li class="nav-item dropdown">
-                            <div class="nav-dropdown">
-                                <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>Lim Chanjnint</span>
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end nav-link-menu">
-                                    <ul class="nav-list">
-                                        <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal"><span type="button" class="material-icons">person</span> Profile</a></li>
-                                        <!-- <li><a href="" class="dropdown-item"><span class="material-icons">settings</span> Settings</a></li> -->
-                                        <div class="dropdown-divider"></div>
-                                        <li><a href="../login-page/LogIn.html" class="dropdown-item"><span type="button" class="material-icons">logout</span> Logout</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+    <body>
+        <div class="wrapper">
+            <nav id="sidebar" class="overflow-hidden">
+                <!-- <div class="sidebar-header">
+                    <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
+                </div> -->
+                <ul class="list-unstyled components text-secondary">
+                    <div class="col">
+                        <li>
+                            <a href="UserMainPage.html"><span id="dashboard "class="material-icons">dashboard</span> Dashboard</a>
                         </li>
-                    </ul>
-                </div>
+                        <li >
+                            <a href="Form.html"><span id="person-icon" class="material-icons">description</span>Permission Form</a>
+                        </li>
+                        <li  class="item">
+                            <a href="Inbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> InBox<span class="badge">2</span></a>
+                        </li>
+                        <li>
+                            <a class="switch" href="../Admin-page/MainPage.html"><span id="person-icon" class="material-icons">trending_flat</span>Switch to Admin</a>
+                        </li> 
+                    </div>
+                </ul>
             </nav>
-            <!-- end of navbar navigation -->
-            
-            <!-- Profile Modal -->
-            <div  class="modal" id="myModal">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title">Profile</h5>
-                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div id="body">
+                <!-- navbar navigation component -->
+                <nav class="fixed-top navbar navbar-expand-lg navbar-white bg-white">
+                    <!-- <button type="button" id="sidebarCollapse" class="btn btn-light">
+                        <span class="material-icons" >menu</span>
+                    </button> -->
+                    <span type="button" class="material-icons" id="sidebarCollapse" >menu</span>
+                    <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <div class="nav-dropdown">
+                                    <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span>Lim Chanjnint</span>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                                        <ul class="nav-list">
+                                            <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal"><span type="button" class="material-icons">person</span> Profile</a></li>
+                                            <!-- <li><a href="" class="dropdown-item"><span class="material-icons">settings</span> Settings</a></li> -->
+                                            <div class="dropdown-divider"></div>
+                                            <li><a href="../login-page/LogIn.html" class="dropdown-item"><span type="button" class="material-icons">logout</span> Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- end of navbar navigation -->
+                
+                <!-- Profile Modal -->
+                <div  class="modal" id="myModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title">Profile</h5>
+                                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button> -->
+                                </div>
+                                <div class="modal-body profile">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
+                                    <span><h3>Lim Chanjnint</h3></span>
+                                </div>
+                                <div class="modal-footer">
+                                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-danger">Save changes</button> -->
+                                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close">
+                                    <input type="button" class="btn btn-danger" value="Save Chnage">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <!-- View Details of Request Modal (PENDING STATUS) -->
+                <div class="modal fade bd-example-modal-lg" id="modal-pending" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Mark Otto's Form</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
                                 <span aria-hidden="true">&times;</span>
-                            </button> -->
-                            </div>
-                            <div class="modal-body profile">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
-                                <span><h3>Lim Chanjnint</h3></span>
-                            </div>
-                            <div class="modal-footer">
-                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-danger">Save changes</button> -->
-                                <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close">
-                                <input type="button" class="btn btn-danger" value="Save Chnage">
-                            </div>
+                            </button>
                         </div>
-                    </div>
-            </div>
-            <!-- View Details of Request Modal (PENDING STATUS) -->
-            <div class="modal fade bd-example-modal-lg" id="modal-pending" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Mark Otto's Form</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>First name</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="req_fname"> Sery</p>
-                                    </div>  
-                                </div>   
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>Phone</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="req_phone"> 081808091</p>
-                                    </div>  
-                                </div> 
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>Last Name</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="req_lname" > Thida</p>
-                                    </div>  
-                                </div>                                 
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>Email</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="req_email"> </p>
-                                    </div>  
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>Request</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="req_totalleave"> 3 Days</p>
-                                    </div>  
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>Date</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="req_date"> 12/Nov/2022 - 15/Nov/2022</p>
-                                    </div>  
-                                </div>
-                            </div>
-                            <!-- <hr/> -->
-                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-2 col-md-3 col-sm-12">
-                                        <b>Reason</b>
-                                    </div>
-                                    <div class="col-lg-10 col-md-9 col-sm-12">
-                                        <p id="req_reason">Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
-                                            Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
-                                            and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
-                                        </p>
-                                    </div>  
-                                </div> 
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-2 col-md-3 col-sm-12">
-                                        <b>Attachment</b>
-                                    </div>
-                                    <div class="col-lg-10 col-md-9 col-sm-12">
-                                        <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" id="req_attachment" target="_blank">Medical_record.pdf</a>
-                                    </div>  
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" data-title="delete" id="delete" data-toggle="modal" data-target="#comfirm-modal">
-                            <span class="material-icons">delete</span>
-                        </button>
-                        <button type="button" class="btn btn-secondary" id="edit" data-title="Edit">
-                            <span class="material-icons">edit_note</span>
-                        </button>
-                        <input type="button" class="btn btn-danger" value="Save Chnage">
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <!-- View Details of Request Modal (STATUS) -->
-            <div class="modal fade bd-example-modal-lg" id="modal-reviewed" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Mark Otto's Form</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>First name</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="firstname"> Chanjnint</p>
-                                    </div>  
-                                </div>   
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>Phone</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="phone"> 081808091</p>
-                                    </div>  
-                                </div> 
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>Last Name</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="lastname"> Lim</p>
-                                    </div>  
-                                </div>                                 
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>Email</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="email"> Thida.aaaa@gmail.com</p>
-                                    </div>  
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>Request</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="leaveDate"> 3 Days</p>
-                                    </div>  
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <b>Date</b> 
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <p id="date"> 12/Nov/2022 - 15/Nov/2022</p>
-                                    </div>  
-                                </div>
-                            </div>
-                            <!-- <hr/> -->
-                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-2 col-md-3 col-sm-12">
-                                        <b>Reason</b>
-                                    </div>
-                                    <div class="col-lg-10 col-md-9 col-sm-12">
-                                        <p id="reason">Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
-                                            Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
-                                            and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
-                                        </p>
-                                    </div>  
-                                </div> 
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
-                                <div class="row">
-                                    <div class="col-lg-2 col-md-3 col-sm-12">
-                                        <b>Attachment</b>
-                                    </div>
-                                    <div class="col-lg-10 col-md-9 col-sm-12">
-                                        <a href="/Users/soramitsukh/Downloads/Sale_Data_Sample.pdf" target="_blank">Medical_record.pdf</a>
-                                    </div>  
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="col">
+                        <div class="modal-body">
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-12">
-                                    <b>Comment:</b>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>First name</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="req_fname"> Sery</p>
+                                        </div>  
+                                    </div>   
                                 </div>
-                                <div class="col-lg-9 col-md-9 col-sm-12">
-                                    <p id="comment" readonly> No comment...</p>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Phone</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="req_phone"> 081808091</p>
+                                        </div>  
+                                    </div> 
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Last Name</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="req_lname" > Thida</p>
+                                        </div>  
+                                    </div>                                 
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Email</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="req_email"> </p>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Request</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="req_totalleave"></p>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Date</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="req_date"> 12/Nov/2022 - 15/Nov/2022</p>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <!-- <hr/> -->
+                                <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 col-sm-12">
+                                            <b>Reason</b>
+                                        </div>
+                                        <div class="col-lg-10 col-md-9 col-sm-12">
+                                            <p id="req_reason">Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
+                                                Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
+                                                and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
+                                            </p>
+                                        </div>  
+                                    </div> 
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 col-sm-12">
+                                            <b>Attachment</b>
+                                        </div>
+                                        <div class="col-lg-10 col-md-9 col-sm-12">
+                                            <a href="" id="req_attachment" target="_blank"></a>
+                                        </div>  
+                                    </div> 
                                 </div>
                             </div>
                         </div>
-                        <div class="col text-end">
-                            <input type="button" data-dismiss="modal" class="btn btn-secondary" value="Close">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-title="delete" id="delete" data-toggle="modal" data-target="#comfirm-modal">
+                                <span class="material-icons">delete</span>
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="edit" data-title="Edit">
+                                <span class="material-icons">edit_note</span>
+                            </button>
+                            <input type="button" class="btn btn-danger" value="Save Chnage">
                         </div>
                     </div>
-                  </div>
+                    </div>
                 </div>
-            </div>
+                <!-- View Details of Request Modal (STATUS) -->
+                <div class="modal fade bd-example-modal-lg" id="modal-reviewed" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Mark Otto's Form</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>First name</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="firstname"> xxxxfff</p>
+                                        </div>  
+                                    </div>   
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Phone</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="phone"> 012242201</p>
+                                        </div>  
+                                    </div> 
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Last Name</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="lastname"> koko</p>
+                                        </div>  
+                                    </div>                                 
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Email</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="email"> Thida.aaaa@gmail.com</p>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Request</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="leaveDate"> 3 Days</p>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <b>Date</b> 
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <p id="date"> 12/Nov/2022 - 15/Nov/2022</p>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <!-- <hr/> -->
+                                <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 col-sm-12">
+                                            <b>Reason</b>
+                                        </div>
+                                        <div class="col-lg-10 col-md-9 col-sm-12">
+                                            <p id="reason">Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
+                                                Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
+                                                and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
+                                            </p>
+                                        </div>  
+                                    </div> 
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 col-sm-12">
+                                            <b>Attachment</b>
+                                        </div>
+                                        <div class="col-lg-10 col-md-9 col-sm-12">
+                                            <a href="" target="_blank">Medical_record.pdf</a>
+                                        </div>  
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <b>Comment:</b>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-12">
+                                        <p id="comment" readonly> No comment...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col text-end">
+                                <input type="button" data-dismiss="modal" class="btn btn-secondary" value="Close">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
 
-            <!-- Content -->
-            <div class="content">
-                <div class="container">
-                    <div class="page-header">
-                        <span class="page-title">InBox</span>
-                        <div class="dropdown-divider"></div>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover" id="x">
-                            <thead class="table-header w-100">
-                                <tr>
-                                  <th data-sortable="true" data-sorter="alphanum" scope="col">#</th>
-                                  <th scope="col w-20">First Name</th>
-                                  <th scope="col w-20">Last Name</th>                                
-                                  <th scope="col w-20">Title</th>
-                                  <th scope="col w-20">Request Date</th>
-                                  <th scope="col w-20">Request</th>
-                                  <th scope="col" >Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-group-divider">
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Sary</td>
-                                    <td>thida</td>
-                                    <td>Water Festival</td>
-                                    <td>11 / 11 / 2022</td>
-                                    <td>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-pending">_reviews</span>
-                                    </td>      
-                                    <td>PENDING</td>                          
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>KNY</td>
-                                    <td>13 / 04 / 2022</td>
-                                    <td>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">_reviews</span>
-                                    </td>
-                                    <td style="color: Red;">REJECT</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>Pchum Benh</td>
-                                    <td>24 / 09 / 2022</td>
-                                    <td>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">_reviews</span>
-                                    </td>
-                                    <td style="color: green;">APPROVE</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>Pchum Benh</td>
-                                    <td>24 / 09 / 2022</td>
-                                    <td>
-                                        <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">_reviews</span>
-                                    </td>
-                                    <td style="color: green;">APPROVE</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <!-- Content -->
+                <div class="content">
+                    <div class="container">
+                        <div class="page-header">
+                            <span class="page-title">InBox</span>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="x">
+                                <thead class="table-header w-100">
+                                    <tr>
+                                    <th data-sortable="true" data-sorter="alphanum" scope="col">#</th>
+                                    <th scope="col w-20">First Name</th>
+                                    <th scope="col w-20">Last Name</th>                                
+                                    <th scope="col w-20">Title</th>
+                                    <th scope="col w-20">Request Date</th>
+                                    <th scope="col w-20">Request</th>
+                                    <th scope="col" >Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Sary</td>
+                                        <td>thida</td>
+                                        <td>Water Festival</td>
+                                        <td>11 / 11 / 2022</td>
+                                        <td>
+                                            <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-pending">_reviews</span>
+                                        </td>      
+                                        <td>PENDING</td>                          
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>KNY</td>
+                                        <td>13 / 04 / 2022</td>
+                                        <td>
+                                            <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">_reviews</span>
+                                        </td>
+                                        <td style="color: Red;">REJECT</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Pchum Benh</td>
+                                        <td>24 / 09 / 2022</td>
+                                        <td>
+                                            <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">_reviews</span>
+                                        </td>
+                                        <td style="color: green;">APPROVE</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>Pchum Benh</td>
+                                        <td>24 / 09 / 2022</td>
+                                        <td>
+                                            <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">_reviews</span>
+                                        </td>
+                                        <td style="color: green;">APPROVE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Delete comfirm Yes/No modal -->
-            <div class="modal fade" id="comfirm-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-body text-center">
-                        <h5>Are you sure?</h5>
-                        <input type="button" class="Yes-no" data-dismiss="modal" value="No" />
-                        <input type="button" class="Yes-no" data-dismiss="modal" onclick="del()" value="Yes" />
+                <!-- Delete comfirm Yes/No modal -->
+                <div class="modal fade" id="comfirm-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <h5>Are you sure?</h5>
+                            <input type="button" class="Yes-no" data-dismiss="modal" value="No" />
+                            <input type="button" class="Yes-no" data-dismiss="modal" onclick="del()" value="Yes" />
+                        </div>
                     </div>
-                  </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="extensions/natural-sorting/bootstrap-table-natural-sorting.js"></script>
-    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/script.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="extensions/natural-sorting/bootstrap-table-natural-sorting.js"></script>
+        <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/script.js"></script>
+    </body>
 </html>
+
+<script>
+    document.getElementById("req_fname").innerHTML= localStorage.getItem("firstname");
+    document.getElementById("req_lname").innerHTML= localStorage.getItem("lastname");
+    document.getElementById("req_phone").innerHTML= localStorage.getItem("phone");
+    document.getElementById("req_email").innerHTML= localStorage.getItem("email");
+    document.getElementById("req_totalleave").innerHTML= localStorage.getItem("TotalLeave") + "days";
+    document.getElementById("req_date").innerHTML= localStorage.getItem("From") + " to " + localStorage.getItem("To");
+    document.getElementById("req_reason").innerHTML= localStorage.getItem("reason");
+    document.getElementById("req_attachment").innerHTML= localStorage.getItem("attachment");
+</script>
