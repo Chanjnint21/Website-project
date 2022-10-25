@@ -47,33 +47,3 @@
         <script src="../assets/js/script.js"></script>
     </body>
 </html>
-<script>
-    function LogIN(){
-        const Login_form = document.getElementById("login_form");
-        const inputname= document.getElementById("username");
-        const inputpassword= document.getElementById("password");
-
-        Login_form.addEventListener('submit', function (e){
-            e.preventDefault();
-
-            localStorage.setItem("Username", inputname.value);
-            localStorage.setItem("Password", inputpassword.value);
-            const User = localStorage.getItem("Username");
-            const Pass = localStorage.getItem("Password");
-
-
-            const user1 = "adminpage"
-            const pass1 = 12345;
-
-            const user2 = "userpage"
-            const pass2 = 54321;
-            if (user1 == User && pass1 == Pass){
-                window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/Admin-page/MainPage.html';
-            } else if (user2 == User && pass2 == Pass) {
-                window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/User-page/UserMainPage.html';
-            } else {
-                alert("Invalid Input");
-            }
-        } )   
-        }
-</script>
