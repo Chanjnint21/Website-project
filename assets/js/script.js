@@ -127,6 +127,37 @@ function visbility(){
 }
 }
 
+//--------------------------------------------------- user/admin log in account ---------------------------------------------------
+function LogIN(){
+    const Login_form = document.getElementById("login_form");
+    const inputname= document.getElementById("username");
+    const inputpassword= document.getElementById("password");
+
+    Login_form.addEventListener('submit', function (e){
+        e.preventDefault();
+
+        localStorage.setItem("Username", inputname.value);
+        localStorage.setItem("Password", inputpassword.value);
+        const User = localStorage.getItem("Username");
+        const Pass = localStorage.getItem("Password");
+
+
+        const user1 = "adminpage"
+        const pass1 = 12345;
+
+        const user2 = "userpage"
+        const pass2 = 54321;
+
+        if (user1 == User && pass1 == Pass){
+            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/Admin-page/MainPage.html';
+        } else if (user2 == User && pass2 == Pass) {
+            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/User-page/UserMainPage.html';
+        } else {
+            alert("Invalid Input");
+        }
+    } )   
+}
+
 //--------------------------------------------------- store form input into local storage ---------------------------------------------
 function movepage(){
     const Paperform = document.getElementById("paperform");
@@ -138,6 +169,7 @@ function movepage(){
     var inputBackDate= document.getElementById("back_date");
     var inputTotalleave= document.getElementById("noOfDays");
     var inputReason= document.getElementById("reason");
+    var inputattachment= document.getElementById("attachment");
 
     Paperform.addEventListener('submit', function(e){
         e.preventDefault();
@@ -148,8 +180,9 @@ function movepage(){
         localStorage.setItem("email", inputEmail.value);
         localStorage.setItem("From", inputLeaveDate.value);
         localStorage.setItem("To", inputBackDate.value);
-        localStorage.setItem("Total Leave", inputTotalleave.value);
+        localStorage.setItem("TotalLeave", inputTotalleave.value);
         localStorage.setItem("reason", inputReason.value);
+        localStorage.setItem("attachment", inputattachment.value);
         
         window.location.href = "Inbox.html";
     })
