@@ -14,7 +14,7 @@
                         <img src="https://static.tildacdn.com/tild6631-3830-4336-b664-373834303236/soramitsu-logo-6year.svg">
                     </div>
                     <div class="login-card-body">
-                        <form class="loging-elm">
+                        <form class="loging-elm" id="login_form">
                             <div class="form-group">
                                 <input type="text" id="username" class="username" placeholder=" " required/>
                                 <label for="username" >Username</label>
@@ -23,7 +23,7 @@
                             <div class="form-group" >
                                 <input type="password" id="password" class="password" placeholder=" "required>
                                 <label for="password" >Passwords</label>
-                                <i><span class="material-icons show" id="eye">
+                                <i onclick="visbility()"><span class="material-icons show" id="eye">
                                     visibility_off
                                     </span></i>
                             </div>
@@ -39,47 +39,41 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="submit" onclick="LogIN()" class="btn btn-danger" value="Log In">
+                                <input type="submit" class="btn btn-danger" onclick="LogIN()" value="Log In"/>
                             </div>
                         </form>
                     </div>
             </div>
+        <script src="../assets/js/script.js"></script>
     </body>
 </html>
 <script>
     function LogIN(){
-        var inputname= document.getElementById("username");
-        var inputpassword= document.getElementById("password");
+        const Login_form = document.getElementById("login_form");
+        const inputname= document.getElementById("username");
+        const inputpassword= document.getElementById("password");
 
-        localStorage.setItem("Username", inputname.value);
-        localStorage.setItem("Password", inputpassword.value);
+        Login_form.addEventListener('submit', function (e){
+            e.preventDefault();
 
-        var User = localStorage.getItem("Username", inputname.value);
-        var Pass = localStorage.getItem("Password", inputpassword.value);
+            localStorage.setItem("Username", inputname.value);
+            localStorage.setItem("Password", inputpassword.value);
+            const User = localStorage.getItem("Username");
+            const Pass = localStorage.getItem("Password");
 
-        var us, pas;
-        us = "limchanjnint@gmail.com"
-        pas = 12345;
-        if (us == User && pas == Pass){
-            // alert("Sucessful Log In !!");
-            window.location.pathname = 'login-page/ForgotPass.html';
-            // location.replace("https://www.google.com/search?q=local+storage&rlz=1C5CHFA_enKH1022KH1023&oq=Local+storage&aqs=chrome.0.35i39i457j35i39j0i67l2j0i20i263i512j69i60j69i61j69i60.4870j0j7&sourceid=chrome&ie=UTF-8");
-        } else {
-            alert("Invalid Input");
+
+            const user1 = "adminpage"
+            const pass1 = 12345;
+
+            const user2 = "userpage"
+            const pass2 = 54321;
+            if (user1 == User && pass1 == Pass){
+                window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/Admin-page/MainPage.html';
+            } else if (user2 == User && pass2 == Pass) {
+                window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/User-page/UserMainPage.html';
+            } else {
+                alert("Invalid Input");
+            }
+        } )   
         }
-    }
-</script>
-<script>
-    //----------------------------------------------------- hide/show side bar ---------------------------------------------
- document.getElementById("eye").addEventListener('click', sdsds) 
-    function sdsds(){
-        var password = document.getElementById("password");
-        if (password.type ==="password"){
-            password.type ="text";
-            document.getElementById("eye").innerHTML = "visibility";
-        } else {
-            password.type = "password";
-            document.getElementById("eye").innerHTML = "visibility_off";
-        }
-}
 </script>
