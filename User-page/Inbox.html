@@ -337,10 +337,10 @@
                                 <tbody class="table-group-divider">
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Sary</td>
-                                        <td>thida</td>
-                                        <td>Water Festival</td>
-                                        <td>11 / 11 / 2022</td>
+                                        <td><span id="T_fname"></span></td>
+                                        <td><span id="T_lname"></span></td>
+                                        <td><span id="T_title"></span></td>
+                                        <td><span id="T_date"></span></td>
                                         <td>
                                             <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-pending">_reviews</span>
                                         </td>      
@@ -407,6 +407,7 @@
 </html>
 
 <script>
+    //added the form input into pending modal
     document.getElementById("req_fname").innerHTML= localStorage.getItem("firstname");
     document.getElementById("req_lname").innerHTML= localStorage.getItem("lastname");
     document.getElementById("req_phone").innerHTML= localStorage.getItem("phone");
@@ -415,4 +416,10 @@
     document.getElementById("req_date").innerHTML= localStorage.getItem("From") + " to " + localStorage.getItem("To");
     document.getElementById("req_reason").innerHTML= localStorage.getItem("reason");
     document.getElementById("req_attachment").innerHTML= localStorage.getItem("attachment");
+
+    //added to the table
+    document.getElementById("T_fname").innerHTML= localStorage.getItem("firstname");
+    document.getElementById("T_lname").innerHTML= localStorage.getItem("lastname");
+    document.getElementById("T_title").innerHTML= localStorage.getItem("title");
+    document.getElementById("T_date").innerHTML= localStorage.getItem("submitdate");
 </script>

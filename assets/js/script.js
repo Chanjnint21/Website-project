@@ -168,12 +168,13 @@ function movepage(){
     var inputLeaveDate= document.getElementById("leave_date");
     var inputBackDate= document.getElementById("back_date");
     var inputTotalleave= document.getElementById("noOfDays");
+    var inputtitle= document.getElementById("title");
     var inputReason= document.getElementById("reason");
     var inputattachment= document.getElementById("attachment");
 
     Paperform.addEventListener('submit', function(e){
         e.preventDefault();
-        
+
         localStorage.setItem("firstname", inputFname.value);
         localStorage.setItem("lastname", inputLname.value);
         localStorage.setItem("phone", inputPhone.value);
@@ -181,8 +182,22 @@ function movepage(){
         localStorage.setItem("From", inputLeaveDate.value);
         localStorage.setItem("To", inputBackDate.value);
         localStorage.setItem("TotalLeave", inputTotalleave.value);
+        localStorage.setItem("title", inputtitle.value);
         localStorage.setItem("reason", inputReason.value);
         localStorage.setItem("attachment", inputattachment.value);
+
+        const event = new Date();
+
+        const years = {  year: 'numeric'};
+        const months = { month: 'short' };
+        const days = { day: 'numeric' };
+        
+        const year = event.toLocaleDateString('en-Us', years);
+        const month = event.toLocaleDateString('en-Us', months);
+        const day = event.toLocaleDateString('en-Us', days);
+        
+        const submitDate= day + "/" + month + "/" + year;
+        localStorage.setItem("submitdate", submitDate);
         
         window.location.href = "Inbox.html";
     })
