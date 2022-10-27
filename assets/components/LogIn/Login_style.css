@@ -1,7 +1,6 @@
 html, body{    
     background-color: #ff4343;
 }
-
 .login-card{
     background-color: white;
     position: absolute;
@@ -11,6 +10,10 @@ html, body{
     padding: 0;  
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+}
+span.material-icons {
+  width: 30px;
+  vertical-align: middle;
 }
 
 .login-card img {
@@ -28,6 +31,13 @@ html, body{
 .login-card-body h2{
   padding: 10px;
   color: #ff4343;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 0.3rem 0.75rem;
+  font-size: 1.5rem;
 }
 
 .form-group {
@@ -87,7 +97,53 @@ i{
   top: 50%;
   /* opacity: 0.5; */
 }
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 5px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 50%;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
 
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+}
 
 /* .username,
 .password {
