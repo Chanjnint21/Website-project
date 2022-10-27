@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
-    <body>
+    <body onload="loadvalue()">
         <div class="wrapper">
             <nav id="sidebar" class="overflow-hidden">
                 <!-- <div class="sidebar-header">
@@ -105,7 +105,7 @@
                                             <b>First name</b> 
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_fname"> Sery</p>
+                                            <p id="req_fname"> </p>
                                         </div>  
                                     </div>   
                                 </div>
@@ -115,7 +115,7 @@
                                             <b>Phone</b> 
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_phone"> 081808091</p>
+                                            <p id="req_phone"> </p>
                                         </div>  
                                     </div> 
                                 </div>
@@ -125,7 +125,7 @@
                                             <b>Last Name</b> 
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_lname" > Thida</p>
+                                            <p id="req_lname" > </p>
                                         </div>  
                                     </div>                                 
                                 </div>
@@ -322,7 +322,7 @@
                             <div class="dropdown-divider"></div>
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-hover" id="x">
+                            <table class="table table-hover" id="display">
                                 <thead class="table-header w-100">
                                     <tr>
                                     <th data-sortable="true" data-sorter="alphanum" scope="col">#</th>
@@ -335,7 +335,7 @@
                                     </tr>
                                 </thead>
                                 <tbody class="table-group-divider">
-                                    <tr>
+                                    <!-- <tr>
                                         <th scope="row">1</th>
                                         <td><span id="T_fname"></span></td>
                                         <td><span id="T_lname"></span></td>
@@ -344,8 +344,8 @@
                                         <td>
                                             <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-pending">_reviews</span>
                                         </td>      
-                                        <td>PENDING</td>                          
-                                    </tr>
+                                        <td id="T_status">PENDING</td>                          
+                                    </tr> -->
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>Jacob</td>
@@ -405,21 +405,3 @@
         <script src="../assets/js/script.js"></script>
     </body>
 </html>
-
-<script>
-    //added the form input into pending modal
-    document.getElementById("req_fname").innerHTML= localStorage.getItem("firstname");
-    document.getElementById("req_lname").innerHTML= localStorage.getItem("lastname");
-    document.getElementById("req_phone").innerHTML= localStorage.getItem("phone");
-    document.getElementById("req_email").innerHTML= localStorage.getItem("email");
-    document.getElementById("req_totalleave").innerHTML= localStorage.getItem("TotalLeave") + "days";
-    document.getElementById("req_date").innerHTML= localStorage.getItem("From") + " to " + localStorage.getItem("To");
-    document.getElementById("req_reason").innerHTML= localStorage.getItem("reason");
-    document.getElementById("req_attachment").innerHTML= localStorage.getItem("attachment");
-
-    //added to the table
-    document.getElementById("T_fname").innerHTML= localStorage.getItem("firstname");
-    document.getElementById("T_lname").innerHTML= localStorage.getItem("lastname");
-    document.getElementById("T_title").innerHTML= localStorage.getItem("title");
-    document.getElementById("T_date").innerHTML= localStorage.getItem("submitdate");
-</script>

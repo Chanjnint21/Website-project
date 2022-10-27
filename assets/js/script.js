@@ -86,15 +86,6 @@ function status3(){
         document.getElementById("demo3").innerHTML= "Reject";
     }
 }
-
-
-
-var tbl = document.getElementById('x');
-if(tbl.rows.length==0){
-    document.getElementById("text").innerHTML = 'No Request';
-}
-
-
 //----------------------------------------------------- date count ---------------------------------------------
 
 function countdays () {
@@ -109,53 +100,6 @@ function countdays () {
 //--------------------------------------------------- comfirm modal ---------------------------------------------
 function del(){
     document.getElementsByTagName("tr")[3].remove();
-}
-
-//--------------------------------------------------- hide/show password ---------------------------------------------
-function visbility(){
-    var Eye = document.getElementById("eye");
-    Eye.addEventListener('click', show_hide()) 
-    function show_hide(){
-        var password = document.getElementById("password");
-        if (password.type ==="password"){
-            password.type ="text";
-            document.getElementById("eye").innerHTML = "visibility";
-        } else {
-            password.type = "password";
-            document.getElementById("eye").innerHTML = "visibility_off";
-        }
-}
-}
-
-//--------------------------------------------------- user/admin log in account ---------------------------------------------------
-function LogIN(){
-    const Login_form = document.getElementById("login_form");
-    const inputname= document.getElementById("username");
-    const inputpassword= document.getElementById("password");
-
-    Login_form.addEventListener('submit', function (e){
-        e.preventDefault();
-
-        localStorage.setItem("Username", inputname.value);
-        localStorage.setItem("Password", inputpassword.value);
-        const User = localStorage.getItem("Username");
-        const Pass = localStorage.getItem("Password");
-
-
-        const user1 = "adminpage"
-        const pass1 = 12345;
-
-        const user2 = "userpage"
-        const pass2 = 54321;
-
-        if (user1 == User && pass1 == Pass){
-            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/Admin-page/MainPage.html';
-        } else if (user2 == User && pass2 == Pass) {
-            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/User-page/UserMainPage.html';
-        } else {
-            alert("Invalid Input");
-        }
-    } )   
 }
 
 //--------------------------------------------------- store form input into local storage ---------------------------------------------
@@ -197,8 +141,52 @@ function movepage(){
         const day = event.toLocaleDateString('en-Us', days);
         
         const submitDate= day + "/" + month + "/" + year;
-        localStorage.setItem("submitdate", submitDate);
-        
+        localStorage.setItem("submitdate", submitDate); 
+
+        const status = "PENDING";
+        localStorage.setItem("status", status);
+
         window.location.href = "Inbox.html";
     })
 }
+
+//------------------------------------------------------- load value into row of table ---------------------------------------------------
+function loadvalue(){
+    document.getElementById("req_fname").innerHTML= localStorage.getItem("firstname");
+    document.getElementById("req_lname").innerHTML= localStorage.getItem("lastname");
+    document.getElementById("req_phone").innerHTML= localStorage.getItem("phone");
+    document.getElementById("req_email").innerHTML= localStorage.getItem("email");
+    document.getElementById("req_totalleave").innerHTML= localStorage.getItem("TotalLeave") + "days";
+    document.getElementById("req_date").innerHTML= localStorage.getItem("From") + " to " + localStorage.getItem("To");
+    document.getElementById("req_reason").innerHTML= localStorage.getItem("reason");
+    document.getElementById("req_attachment").innerHTML= localStorage.getItem("attachment");
+    
+    //added to the table
+
+    // document.getElementById("T_fname").innerHTML= localStorage.getItem("firstname");
+    // document.getElementById("T_lname").innerHTML= localStorage.getItem("lastname");
+    // document.getElementById("T_title").innerHTML= localStorage.getItem("title");
+    // document.getElementById("T_date").innerHTML= localStorage.getItem("submitdate");
+    // document.getElementById("T_status").innerHTML= localStorage.getItem("status");
+
+    var row= 1;
+        var display = document.getElementById("display");
+        var newRow = display.insertRow(row);
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+        var cell6 = newRow.insertCell(5);
+        var cell7 = newRow.insertCell(6);
+
+        cell2.innerHTML = localStorage.getItem("firstname");
+        cell2.innerHTML = localStorage.getItem("firstname");
+        cell3.innerHTML = localStorage.getItem("lastname");
+        cell4.innerHTML = localStorage.getItem("title");
+        cell5.innerHTML = localStorage.getItem("submitdate");
+        cell6.innerHTML = "<span type='button' class='material-icons' data-toggle='modal' data-target='#modal-pending'>_reviews</span>";
+        cell7.innerHTML = localStorage.getItem("status");
+}
+
