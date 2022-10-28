@@ -99,7 +99,11 @@ function countdays () {
 
 //--------------------------------------------------- comfirm modal ---------------------------------------------
 function del(){
-    document.getElementsByTagName("tr")[3].remove();
+    document.getElementsByTagName("tr")[1].remove();
+    document.getElementById("row1").innerHTML="1";
+    document.getElementById("row2").innerHTML="2";
+    document.getElementById("row3").innerHTML="3";
+
 }
 
 //--------------------------------------------------- store form input into local storage ---------------------------------------------
@@ -191,6 +195,12 @@ function movepage(){
 // }
 
 function refresh(){
+    // var btn = document.getElementById('btnn');
+    // var elem = document.getElementById('elem');
+
+    // btn.addEventListener('click', function() {
+    
+    // });
     document.getElementById("req_fname").innerHTML= localStorage.getItem("firstname");
     document.getElementById("req_lname").innerHTML= localStorage.getItem("lastname");
     document.getElementById("req_phone").innerHTML= localStorage.getItem("phone");
@@ -201,8 +211,16 @@ function refresh(){
     document.getElementById("req_attachment").innerHTML= localStorage.getItem("attachment");
     
     if (localStorage.getItem("firstname") === null){
-        alert("no New Request !")
+        elem.classList.remove('show');
+        // this force-restarts the CSS animation
+        void elem.offsetWidth;
+        elem.classList.add('show');
+        // setTimeout(alert("no New Request !"), 5000);
     } else {
+        elem.classList.remove('show');
+        // this force-restarts the CSS animation
+        void elem.offsetWidth;
+        elem.classList.add('show');
         var row= 1;
         var display = document.getElementById("display");
         var newRow = display.insertRow(row);

@@ -8,6 +8,31 @@
         <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../assets/css/master.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            /*Center the loader*/
+            #elem {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                z-index: 1;
+                width: 50px;
+                height: 50px;
+                border: 10px solid #f4f6fa;
+                border-radius: 50%;
+                border: 10px transparent(50%);
+                border-top: 10px solid red;
+                border-bottom: 10px solid red;
+                opacity: 0;
+            }
+        #elem.show {
+            animation: anime 1s linear;
+            }
+        @keyframes anime {
+                0% { transform: rotate(0deg); opacity: 1; }
+                50% {transform: rotate(180deg); opacity: 1;}
+                100% { transform: rotate(360deg); opacity: 0; }
+        }
+        </style>
     </head>
 
     <body onload="loadvalue()">
@@ -315,12 +340,14 @@
                 </div>
 
                 <!-- Content -->
+                
                 <div class="content">
                     <div class="container">
                         <div class="page-header">
-                            <span class="page-title">InBox</span><input type="button" class="material-icons" onclick="refresh()" value="refresh"/>   
+                            <span class="page-title">InBox</span><input type="button" id="btnn" class="material-icons" onclick="refresh()" value="refresh"/>   
                             <div class="dropdown-divider"></div>
                         </div>
+                        <div  id="elem" ></div>
                         <div class="table-responsive">
                             <table class="table table-hover" id="display">
                                 <thead class="table-header w-100">
@@ -405,3 +432,14 @@
         <script src="../assets/js/script.js"></script>
     </body>
 </html>
+<script>
+    // var btn = document.getElementById('btnn');
+    // var elem = document.getElementById('elem');
+
+    // btn.addEventListener('click', function() {
+    // elem.classList.remove('show');
+    // // this force-restarts the CSS animation
+    // void elem.offsetWidth;
+    // elem.classList.add('show');
+    // });
+</script>
