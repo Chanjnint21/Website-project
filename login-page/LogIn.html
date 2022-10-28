@@ -8,8 +8,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
-    <body onload="loginpage()">
-        <div><img id="loader" src="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico"></div>
+    <body > 
+        <!-- onload="loginpage()" -->
             <div class="login-card text-center" id="login-card"> 
                 <div class="login-card-header">
                     <img src="https://static.tildacdn.com/tild6631-3830-4336-b664-373834303236/soramitsu-logo-6year.svg">
@@ -40,11 +40,12 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn btn-danger" value="Log In"/>
+                            <input type="submit" class="btn btn-danger" onclick="LogIn()" value="Log In"/>
                         </div>
                     </form>
                 </div>
             </div>
+            <!-- <div><img id="loader" src="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico"></div> -->
             
             <!-- <div style="display:none;" id="myDiv" class="animate-bottom">
             </div> -->

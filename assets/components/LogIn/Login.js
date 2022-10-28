@@ -17,8 +17,8 @@ function visbility(){
 //--------------------------------------------------- user/admin log in account ---------------------------------------------------
 
 
-function loginpage(){
-    document.getElementById("loader").style.visibility = "hidden";
+function LogIn(){
+    // document.getElementById("loader").style.visibility = "hidden";
     const Login_form = document.getElementById("login_form");
     const inputname= document.getElementById("username");
     const inputpassword= document.getElementById("password");
@@ -39,12 +39,12 @@ function loginpage(){
         const pass2 = 54321;
 
         if (user1 == User && pass1 == Pass){
-            document.getElementById("login-card").style.visibility = "hidden";  
-            myVar = setTimeout(showPage, 1500);
-            function showPage() {
-                document.getElementById("loader").style.display = "visible";
-              }
-            // window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/Admin-page/MainPage.html';
+            // document.getElementById("login-card").style.visibility = "hidden";  
+            // myVar = setTimeout(showPage, 1500);
+            // function showPage() {
+            //     document.getElementById("loader").style.display = "visible";
+            //   }
+            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/Admin-page/MainPage.html';
         } else if (user2 == User && pass2 == Pass) {
             window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/User-page/UserMainPage.html';
         } else {
@@ -53,12 +53,12 @@ function loginpage(){
     } )   
 }
 
-function LogIn() {
-    myVar = setTimeout(showPage, 1500);
-    window.location.href='User-page/UserMainPage.html';
-  }
+// function LogIn() {
+//     myVar = setTimeout(showPage, 1500);
+//     window.location.href='User-page/UserMainPage.html';
+//   }
   
-  function showPage() {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("myDiv").style.display = "block";
-  }
+//   function showPage() {
+//     document.getElementById("loader").style.display = "none";
+//     document.getElementById("myDiv").style.display = "block";
+//   }
