@@ -151,7 +151,46 @@ function movepage(){
 }
 
 //------------------------------------------------------- load value into row of table ---------------------------------------------------
-function loadvalue(){
+// function loadvalue(){
+    // document.getElementById("req_fname").innerHTML= localStorage.getItem("firstname");
+    // document.getElementById("req_lname").innerHTML= localStorage.getItem("lastname");
+    // document.getElementById("req_phone").innerHTML= localStorage.getItem("phone");
+    // document.getElementById("req_email").innerHTML= localStorage.getItem("email");
+    // document.getElementById("req_totalleave").innerHTML= localStorage.getItem("TotalLeave") + "days";
+    // document.getElementById("req_date").innerHTML= localStorage.getItem("From") + " to " + localStorage.getItem("To");
+    // document.getElementById("req_reason").innerHTML= localStorage.getItem("reason");
+    // document.getElementById("req_attachment").innerHTML= localStorage.getItem("attachment");
+    
+    // //added to the table
+
+    // // document.getElementById("T_fname").innerHTML= localStorage.getItem("firstname");
+    // // document.getElementById("T_lname").innerHTML= localStorage.getItem("lastname");
+    // // document.getElementById("T_title").innerHTML= localStorage.getItem("title");
+    // // document.getElementById("T_date").innerHTML= localStorage.getItem("submitdate");
+    // // document.getElementById("T_status").innerHTML= localStorage.getItem("status");
+    // var row= 1;
+    //     var display = document.getElementById("display");
+    //     var newRow = display.insertRow(row);
+
+    //     var cell1 = newRow.insertCell(0);
+    //     var cell2 = newRow.insertCell(1);
+    //     var cell3 = newRow.insertCell(2);
+    //     var cell4 = newRow.insertCell(3);
+    //     var cell5 = newRow.insertCell(4);
+    //     var cell6 = newRow.insertCell(5);
+    //     var cell7 = newRow.insertCell(6);
+
+    //     cell1.innerHTML = "1";
+    //     cell2.innerHTML = localStorage.getItem("firstname");
+    //     cell2.innerHTML = localStorage.getItem("firstname");
+    //     cell3.innerHTML = localStorage.getItem("lastname");
+    //     cell4.innerHTML = localStorage.getItem("title");
+    //     cell5.innerHTML = localStorage.getItem("submitdate");
+    //     cell6.innerHTML = "<span type='button' class='material-icons' data-toggle='modal' data-target='#modal-pending'>_reviews</span>";
+    //     cell7.innerHTML = localStorage.getItem("status");
+// }
+
+function refresh(){
     document.getElementById("req_fname").innerHTML= localStorage.getItem("firstname");
     document.getElementById("req_lname").innerHTML= localStorage.getItem("lastname");
     document.getElementById("req_phone").innerHTML= localStorage.getItem("phone");
@@ -161,15 +200,10 @@ function loadvalue(){
     document.getElementById("req_reason").innerHTML= localStorage.getItem("reason");
     document.getElementById("req_attachment").innerHTML= localStorage.getItem("attachment");
     
-    //added to the table
-
-    // document.getElementById("T_fname").innerHTML= localStorage.getItem("firstname");
-    // document.getElementById("T_lname").innerHTML= localStorage.getItem("lastname");
-    // document.getElementById("T_title").innerHTML= localStorage.getItem("title");
-    // document.getElementById("T_date").innerHTML= localStorage.getItem("submitdate");
-    // document.getElementById("T_status").innerHTML= localStorage.getItem("status");
-
-    var row= 1;
+    if (localStorage.getItem("firstname") === null){
+        alert("no New Request !")
+    } else {
+        var row= 1;
         var display = document.getElementById("display");
         var newRow = display.insertRow(row);
 
@@ -181,6 +215,7 @@ function loadvalue(){
         var cell6 = newRow.insertCell(5);
         var cell7 = newRow.insertCell(6);
 
+        cell1.innerHTML = "1";
         cell2.innerHTML = localStorage.getItem("firstname");
         cell2.innerHTML = localStorage.getItem("firstname");
         cell3.innerHTML = localStorage.getItem("lastname");
@@ -188,5 +223,9 @@ function loadvalue(){
         cell5.innerHTML = localStorage.getItem("submitdate");
         cell6.innerHTML = "<span type='button' class='material-icons' data-toggle='modal' data-target='#modal-pending'>_reviews</span>";
         cell7.innerHTML = localStorage.getItem("status");
+    
+        document.getElementById("row1").innerHTML="2";
+        document.getElementById("row2").innerHTML="3";
+        document.getElementById("row3").innerHTML="4";
+    }
 }
-

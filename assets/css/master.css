@@ -100,6 +100,13 @@ body {
 
 .page-header {
     margin: 1rem 0;
+    display: inline-flex;
+}
+
+.page-header input{
+    background: none;
+    border: none;
+    right: 100px;
 }
 
 .page-title {
