@@ -39,26 +39,33 @@ function LogIn(){
         const pass2 = 54321;
 
         if (user1 == User && pass1 == Pass){
-            // document.getElementById("login-card").style.visibility = "hidden";  
-            // myVar = setTimeout(showPage, 1500);
-            // function showPage() {
-            //     document.getElementById("loader").style.display = "visible";
-            //   }
-            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/Admin-page/MainPage.html';
+            switchtoAdmin();
         } else if (user2 == User && pass2 == Pass) {
-            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/User-page/UserMainPage.html';
+            switchtoUser();
         } else {
             alert("Invalid Input");
         }
     } )   
 }
 
-// function LogIn() {
-//     myVar = setTimeout(showPage, 1500);
-//     window.location.href='User-page/UserMainPage.html';
-//   }
-  
-//   function showPage() {
-//     document.getElementById("loader").style.display = "none";
-//     document.getElementById("myDiv").style.display = "block";
-//   }
+function switchtoUser() {
+    var logincard = document.getElementById("login-card");
+    var loader = document.getElementById("loadd");
+    logincard.style.display = "none";
+    loader.style.display = "block";
+    timeout = setTimeout(switchtoUser, 1000);
+    if(timeout == 3){
+            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/User-page/UserMainPage.html';
+    }
+  }
+
+function switchtoAdmin() {
+    var logincard = document.getElementById("login-card");
+    var loader = document.getElementById("load");
+    logincard.style.display = "none";
+    loader.style.display = "block";
+    timeout = setTimeout(switchtoAdmin, 1000);
+    if(timeout == 4){
+            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/Admin-page/MainPage.html';
+    }
+  }

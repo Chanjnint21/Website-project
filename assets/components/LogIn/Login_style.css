@@ -97,7 +97,8 @@ i{
   top: 50%;
   /* opacity: 0.5; */
 }
-/* #loader {
+
+#loader {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -108,8 +109,8 @@ i{
   border: 5px solid #ffffff;
   background-color: #ffffff;
   border-radius: 50%;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
 }
 
 @-webkit-keyframes spin {
@@ -123,7 +124,7 @@ i{
 }
 
 /* Add animation to "page content" */
-/* .animate-bottom {
+ /* .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
@@ -139,9 +140,9 @@ i{
 @keyframes animatebottom { 
   from{ bottom:-100px; opacity:0 } 
   to{ bottom:0; opacity:1 }
-}
+} */
 
-#myDiv {
+/* #myDiv {
   display: none;
 } */
 
