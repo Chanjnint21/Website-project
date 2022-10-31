@@ -247,3 +247,16 @@ function refresh(){
         document.getElementById("row3").innerHTML="4";
     }
 }
+//------------------------------------------------------- Logout ---------------------------------------------------
+
+function LogOut(){
+    // window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/login-page/LogIn.html';
+    var wrappe = document.getElementById("wrapper");
+    var loader = document.getElementById("loading");
+    wrappe.style.display = "none";
+    loader.style.display = "block";
+    timeou = setTimeout(LogOut, 1000);
+    if(timeou == 3){
+            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/login-page/LogIn.html';
+    }
+}
