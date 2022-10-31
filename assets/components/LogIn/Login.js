@@ -50,7 +50,7 @@ function LogIn(){
 
 function switchtoUser() {
     var logincard = document.getElementById("login-card");
-    var loader = document.getElementById("loadd");
+    var loader = document.getElementById("load");
     logincard.style.display = "none";
     loader.style.display = "block";
     timeout = setTimeout(switchtoUser, 1000);
