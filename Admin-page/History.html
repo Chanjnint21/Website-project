@@ -11,7 +11,7 @@
     </head>
 
     <body>
-        <div class="wrapper">
+        <div class="wrapper" id="wrapper">
             <nav id="sidebar" class="overflow-hidden">
                 <!-- <div class="sidebar-header">
                     <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
@@ -54,7 +54,7 @@
                                             <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal"><span type="button" class="material-icons">person</span> Profile</a></li>
                                             <!-- <li><a href="" class="dropdown-item"><span class="material-icons">settings</span> Settings</a></li> -->
                                             <div class="dropdown-divider"></div>
-                                            <li><a href="../login-page/LogIn.html" class="dropdown-item"><span type="button" class="material-icons">logout</span> Logout</a></li>
+                                            <li><a class="dropdown-item" onclick="LogOut()"><span type="button" class="material-icons">logout</span> Logout</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -173,6 +173,7 @@
 
             </div>
         </div>
+        <div style="display:none;" id="loading"><img id="loader" src="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico"></div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
