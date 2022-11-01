@@ -235,7 +235,6 @@ function refresh(){
 
         cell1.innerHTML = "1";
         cell2.innerHTML = localStorage.getItem("firstname");
-        cell2.innerHTML = localStorage.getItem("firstname");
         cell3.innerHTML = localStorage.getItem("lastname");
         cell4.innerHTML = localStorage.getItem("title");
         cell5.innerHTML = localStorage.getItem("submitdate");
