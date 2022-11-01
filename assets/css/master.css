@@ -479,3 +479,34 @@ textarea{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+.paginate_button{
+    border: none;
+}
+
+#display tr{
+    background: none;
+}
+
+#elem {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border: 10px solid #f4f6fa;
+    border-radius: 50%;
+    border: 10px transparent(50%);
+    border-top: 10px solid red;
+    border-bottom: 10px solid red;
+    opacity: 0;
+}
+#elem.show {
+animation: anime 1s linear;
+}
+@keyframes anime {
+    0% { transform: rotate(0deg); opacity: 1; }
+    50% {transform: rotate(180deg); opacity: 1;}
+    100% { transform: rotate(360deg); opacity: 0; }
+}
