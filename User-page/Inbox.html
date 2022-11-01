@@ -321,8 +321,8 @@
                             <span class="page-title">InBox</span><input type="button" id="btnn" class="material-icons" onclick="refresh()" value="refresh"/>   
                         </div>
                         <div  id="elem" ></div>
-                        <div class="table-responsive-sm">
-                            <table class="table table-hover" id="display">
+                        <div class="table-responsive-sm table-responsive-lg table-responsive-md">
+                            <!-- <table class="table table-hover" id="display">
                                 <thead class="table-header w-100">
                                     <tr>
                                     <th data-sortable="true" data-sorter="alphanum" scope="col">#</th>
@@ -369,6 +369,21 @@
                                         <td style="color: green;">APPROVE</td>
                                     </tr>
                                 </tbody>
+                            </table> -->
+                            <table id="display" class="table table-hover display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>                                
+                                        <th scope="col">Title</th>
+                                        <th scope="col ">Request Date</th>
+                                        <th scope="col">Request</th>
+                                        <th scope="col" >Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -389,14 +404,13 @@
         </div>
         <div style="display:none;" id="loading"><img id="loader" src="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico"></div>
 
-        <script>
-            $(document).ready( function () {
-                $('#display').DataTable();
-            } );
-        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="extensions/natural-sorting/bootstrap-table-natural-sorting.js"></script>
         <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/components/Table/InboxTable.js"></script>
         <script src="../assets/js/script.js"></script>
     </body>
 </html>
+<script>
+    
+</script>
