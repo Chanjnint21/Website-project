@@ -44,6 +44,9 @@ $(document).ready(function () {
         var num5 = 4;
         var num6 = 5;
         var num7 = 6;
+        var num8 = 7;
+        var num9 = 8;
+        var num10 = 9;
     } else {
         var num1 = 1;
         var num2 = 2;
@@ -52,6 +55,9 @@ $(document).ready(function () {
         var num5 = 5;
         var num6 = 6;
         var num7 = 7;
+        var num8 = 8;
+        var num9 = 9;
+        var num10 = 10;
         t.row.add([num1, firstname, lastname, title, subdate, pending_review, status]).draw(false);
     }
 
@@ -61,6 +67,9 @@ $(document).ready(function () {
     t.row.add([num4, 'Thida', "karl", "Phcum Ben", "12/07/2022", Already_review, approve]).draw(false);
     t.row.add([num5, 'Daro', "krosa", "title", "12/05/2022", Already_review, reject]).draw(false);
     t.row.add([num6, 'vireak', "chan", "Phcum Ben", "12/09/2022", Already_review, reject]).draw(false);
-    t.row.add([num7, 'Kosal', "vicheka", "title", "12/09/2022", Already_review, reject]).draw(false);
+    t.row.add([num7, 'Kosal', "vicheka", "title", "13/07/2022", Already_review, reject]).draw(false);
+    t.row.add([num8, 'Kjoool', "Rosa", "title", "24/05/2022", Already_review, reject]).draw(false);
+    t.row.add([num9, 'forlto', "chanao", "Phcum Ben", "31/09/2022", Already_review, reject]).draw(false);
+    t.row.add([num10, 'candaal', "ghiloo", "title", "12/10/2022", Already_review, reject]).draw(false);
     
 });

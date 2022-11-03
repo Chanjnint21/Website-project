@@ -116,20 +116,20 @@ function movepage(){
         var inputattachment= document.getElementById("attachment").value;
 
         //store as array
-        var ARRAY = [inputFname, inputLname, inputPhone, inputEmail, inputLeaveDate, inputBackDate, inputTotalleave, inputtitle, inputReason, inputattachment];
-        localStorage.setItem(inputtitle, JSON.stringify(ARRAY));
+        // var ARRAY = [inputFname, inputLname, inputPhone, inputEmail, inputLeaveDate, inputBackDate, inputTotalleave, inputtitle, inputReason, inputattachment];
+        // localStorage.setItem(inputtitle, JSON.stringify(ARRAY));
 
-        //store one by one as variable
-        // localStorage.setItem("firstname", inputFname);
-        // localStorage.setItem("lastname", inputLname);
-        // localStorage.setItem("phone", inputPhone);
-        // localStorage.setItem("email", inputEmail);
-        // localStorage.setItem("From", inputLeaveDate);
-        // localStorage.setItem("To", inputBackDate);
-        // localStorage.setItem("TotalLeave", inputTotalleave);
-        // localStorage.setItem("title", inputtitle);
-        // localStorage.setItem("reason", inputReason);
-        // localStorage.setItem("attachment", inputattachment);
+        // store one by one as variable
+        localStorage.setItem("firstname", inputFname);
+        localStorage.setItem("lastname", inputLname);
+        localStorage.setItem("phone", inputPhone);
+        localStorage.setItem("email", inputEmail);
+        localStorage.setItem("From", inputLeaveDate);
+        localStorage.setItem("To", inputBackDate);
+        localStorage.setItem("TotalLeave", inputTotalleave);
+        localStorage.setItem("title", inputtitle);
+        localStorage.setItem("reason", inputReason);
+        localStorage.setItem("attachment", inputattachment);
 
         const event = new Date();
 
@@ -247,7 +247,6 @@ function movepage(){
 //------------------------------------------------------- Logout ---------------------------------------------------
 
 function LogOut(){
-    // window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/login-page/LogIn.html';
     var wrappe = document.getElementById("wrapper");
     var loader = document.getElementById("loading");
     wrappe.style.display = "none";
@@ -259,7 +258,6 @@ function LogOut(){
 }
 
 function loadvalue() {
-
         // document.getElementById("myDiv").style.display = "block";
         var myVar = setTimeout(showPage, 1000);
     }
