@@ -65,7 +65,7 @@ function switchtoAdmin() {
     logincard.style.display = "none";
     loader.style.display = "block";
     timeout = setTimeout(switchtoAdmin, 1000);
-    if(timeout == 4){
+    if(timeout == 3){
             window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/Admin-page/MainPage.html';
     }
   }
