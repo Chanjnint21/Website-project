@@ -489,24 +489,61 @@ textarea{
 }
 
 #elem {
-    position: absolute;
+    position: relative;
     left: 50%;
-    top: 50%;
+    margin-top: 20%;
     z-index: 1;
     width: 50px;
     height: 50px;
     border: 10px solid #f4f6fa;
     border-radius: 50%;
     border: 10px transparent(50%);
-    border-top: 10px solid red;
-    border-bottom: 10px solid red;
-    opacity: 0;
+    border-top: 10px solid rgb(255, 61, 61);
+    border-bottom: 10px solid rgb(255, 61, 61);
+    -webkit-animation: anime 0.7s linear infinite;
+    animation: anime 0.7s linear infinite;
 }
-#elem.show {
-animation: anime 1s linear;
+
+/* #elem.show {
+animation: anime 0.7s linear;
 }
 @keyframes anime {
     0% { transform: rotate(0deg); opacity: 1; }
     50% {transform: rotate(180deg); opacity: 1;}
     100% { transform: rotate(360deg); opacity: 0; }
-}
+} */
+  
+  @-webkit-keyframes anime {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes anime {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-content {
+    position: relative;
+    /* -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 0.7s;
+    animation-name: animatebottom;
+    animation-duration: 0.7s; */
+    -webkit-animation: animatebottom 0.7s;
+    animation: animatebottom 0.7s;
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-50px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-50px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+    display: none;
+  }
