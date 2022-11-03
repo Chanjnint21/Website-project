@@ -6,28 +6,20 @@
 })();
 //----------------------------------------------------- button in (details) request page ---------------------------------------------
 
-    document.getElementById("Reject").addEventListener("click", Rbtn)
+document.getElementById("Reject").addEventListener("click", Rbtn)
     function Rbtn(){
         var btn = document.getElementById("demo1");
         btn.value="Reject"
         btn.style.color="red";
         document.getElementById("demo1").innerHTML= "Reject";
     }
-    document.getElementById("Approve").addEventListener("click", Abtn)
+document.getElementById("Approve").addEventListener("click", Abtn)
     function Abtn(){
         var btn = document.getElementById("demo1");
         btn.value="Approve"
         btn.style.color="green";
         document.getElementById("demo1").innerHTML= "Approve";
     }
-
-
-// function btn1(){
-//     var btn = document.getElementById("demo1");
-//     btn.value="Approve"
-//     btn.style.color="green";
-//     document.getElementById("demo1").innerHTML= "Approve";
-// }
 
 function btn2(){
     var btn = document.getElementById("demo2");
@@ -109,35 +101,40 @@ function del(){
 //--------------------------------------------------- store form input into local storage ---------------------------------------------
 function movepage(){
     const Paperform = document.getElementById("paperform");
-    var inputFname= document.getElementById("firstname");
-    var inputLname= document.getElementById("lastname");
-    var inputPhone= document.getElementById("phone");
-    var inputEmail= document.getElementById("email");
-    var inputLeaveDate= document.getElementById("leave_date");
-    var inputBackDate= document.getElementById("back_date");
-    var inputTotalleave= document.getElementById("noOfDays");
-    var inputtitle= document.getElementById("title");
-    var inputReason= document.getElementById("reason");
-    var inputattachment= document.getElementById("attachment");
 
     Paperform.addEventListener('submit', function(e){
         e.preventDefault();
+        var inputFname= document.getElementById("firstname").value;
+        var inputLname= document.getElementById("lastname").value;
+        var inputPhone= document.getElementById("phone").value;
+        var inputEmail= document.getElementById("email").value;
+        var inputLeaveDate= document.getElementById("leave_date").value;
+        var inputBackDate= document.getElementById("back_date").value;
+        var inputTotalleave= document.getElementById("noOfDays").value;
+        var inputtitle= document.getElementById("title").value;
+        var inputReason= document.getElementById("reason").value;
+        var inputattachment= document.getElementById("attachment").value;
 
-        localStorage.setItem("firstname", inputFname.value);
-        localStorage.setItem("lastname", inputLname.value);
-        localStorage.setItem("phone", inputPhone.value);
-        localStorage.setItem("email", inputEmail.value);
-        localStorage.setItem("From", inputLeaveDate.value);
-        localStorage.setItem("To", inputBackDate.value);
-        localStorage.setItem("TotalLeave", inputTotalleave.value);
-        localStorage.setItem("title", inputtitle.value);
-        localStorage.setItem("reason", inputReason.value);
-        localStorage.setItem("attachment", inputattachment.value);
+        //store as array
+        var ARRAY = [inputFname, inputLname, inputPhone, inputEmail, inputLeaveDate, inputBackDate, inputTotalleave, inputtitle, inputReason, inputattachment];
+        localStorage.setItem(inputtitle, JSON.stringify(ARRAY));
+
+        //store one by one as variable
+        // localStorage.setItem("firstname", inputFname);
+        // localStorage.setItem("lastname", inputLname);
+        // localStorage.setItem("phone", inputPhone);
+        // localStorage.setItem("email", inputEmail);
+        // localStorage.setItem("From", inputLeaveDate);
+        // localStorage.setItem("To", inputBackDate);
+        // localStorage.setItem("TotalLeave", inputTotalleave);
+        // localStorage.setItem("title", inputtitle);
+        // localStorage.setItem("reason", inputReason);
+        // localStorage.setItem("attachment", inputattachment);
 
         const event = new Date();
 
         const years = {  year: 'numeric'};
-        const months = { month: 'short' };
+        const months = { month: 'numeric' };
         const days = { day: 'numeric' };
         
         const year = event.toLocaleDateString('en-Us', years);
@@ -199,7 +196,7 @@ function movepage(){
 //     // var elem = document.getElementById('elem');
 
 //     // btn.addEventListener('click', function() {
-    
+
 //     // });
 //     document.getElementById("req_fname").innerHTML= localStorage.getItem("firstname");
 //     document.getElementById("req_lname").innerHTML= localStorage.getItem("lastname");
@@ -246,6 +243,7 @@ function movepage(){
 //         document.getElementById("row3").innerHTML="4";
 //     }
 // }
+
 //------------------------------------------------------- Logout ---------------------------------------------------
 
 function LogOut(){
@@ -259,3 +257,13 @@ function LogOut(){
             window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/login-page/LogIn.html';
     }
 }
+
+function loadvalue() {
+
+        // document.getElementById("myDiv").style.display = "block";
+        var myVar = setTimeout(showPage, 1000);
+    }
+    function showPage() {
+        document.getElementById("elem").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+    }
