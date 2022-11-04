@@ -265,3 +265,10 @@ function loadvalue() {
         document.getElementById("elem").style.display = "none";
         document.getElementById("myDiv").style.display = "block";
     }
+
+//---count the row of request
+function dashboard(){
+    var table = document.getElementById("display");
+    var tbodyRowCount = table.tBodies[0].rows.length;
+    document.getElementById('').innerHTML = tbodyRowCount;
+}
