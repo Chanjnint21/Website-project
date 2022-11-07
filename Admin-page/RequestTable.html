@@ -8,14 +8,9 @@
     <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/master.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
-        <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
 </head>
 
-<body onload="loadvalue()">
+<body>
     <div class="wrapper" id="wrapper">
         <nav id="sidebar" class="overflow-hidden">
             <!-- <div class="sidebar-header">
@@ -215,39 +210,94 @@
             <div class="content">
                 <div class="container">
                     <div class="page-header">
-                        <span class="page-title">InBox</span>  
+                        <span class="page-title">Request Box</span>
                     </div>
-                    <div  id="elem" ></div>
-                    <div class="animate-content" id="myDiv">
-                        <table id="display" class="table table-hover display" style="width:100%">
-                            <thead>
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="x">
+                            <thead class="table-header w-100">
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">Last Name</th>                                
-                                    <th scope="col">Title</th>
-                                    <th scope="col ">Request Date</th>
-                                    <th scope="col">Request</th>
-                                    <th scope="col" >Status</th>
+                                    <th scope="col w-20">First Name</th>
+                                    <th scope="col w-20">Last Name</th>                                
+                                    <th scope="col w-20">Title</th>
+                                    <th scope="col w-20">Request Date</th>
+                                    <th scope="col w-20">Details</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="table-group-divider">
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>Pchum Benh</td>
+                                    <td>24 / 09 / 2022</td>
+                                    <td>
+                                        <!-- <input onclick="btn1()" type="button" value="Approve" class="btn btn-danger"></input>
+                                        <input onclick="btn1()" type="button" value="Reject" class="btn btn-secondary" ></input> -->
+                                        <!-- <span type="button" data-toggle="modal" data-target="#modal-reviewed">view details..</span> -->
+                                        <img src="https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png" type="button" data-toggle="modal" data-target="#modal-reviewed"/>
+                                    </td>
+                                    <td><button data-toggle="modal" data-target="#comfirm-modal" data-title="change status"><p id="demo1" value=""></p></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>KNY</td>
+                                    <td>13 / 04 / 2022</td>
+                                    <td>
+                                        <!-- <input onclick="btn2()" type="button" value="Approve" class="btn btn-danger"></input>
+                                        <input onclick="btn2()" type="button" value="Reject" class="btn btn-secondary"></input> -->
+                                        <img src="https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png" type="button" data-toggle="modal" data-target="#modal-reviewed"/>
+                                        <!-- <span type="button" class="material-icons" data-toggle="modal" data-target="#modal-reviewed">visibility</span> -->
+                                    </td>
+                                    <td><button data-toggle="modal" data-target="#comfirm-modal" data-title="change status"><p id="demo2" value=""></p></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Sary</td>
+                                    <td>thida</td>
+                                    <td>Water Festival</td>
+                                    <td>11 / 11 / 2022</td>
+                                    <td>
+                                        <!-- <input onclick="btn3()" type="button" value="Approve" class="btn btn-danger"></input>
+                                        <input onclick="btn3()" type="button" value="Reject" class="btn btn-secondary"></input> -->
+                                        <img src="https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png" type="button" data-toggle="modal" data-target="#modal-reviewed"/>
+                                    </td>  
+                                    <td><button data-toggle="modal" data-target="#comfirm-modal" data-title="change status" ><p id="demo3" value=""></p></button></td>                             
+                                </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <!-- comfirm modal -->
+                    <div  class="modal" id="comfirm-modal">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title">Status</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-title="close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <h5>Do you want to change the status?</h5>
+                                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="No">
+                                    <input type="button" class="btn btn-danger" onclick="status1()" value="Yes" data-dismiss="modal">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div style="display:none;" id="loading"><img id="loader" src="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico"></div>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="extensions/natural-sorting/bootstrap-table-natural-sorting.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/script.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/components/Table/InboxTable.js"></script>
     <script src="../assets/js/script.js"></script>
+    
 </body>
 </html>
