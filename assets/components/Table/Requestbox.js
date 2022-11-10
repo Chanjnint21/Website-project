@@ -8,35 +8,17 @@ $(document).ready(function () {
     document.getElementById("req_reason").innerHTML = localStorage.getItem("reason");
     document.getElementById("req_attachment").innerHTML = localStorage.getItem("attachment");
 
-    // elem.classList.remove('show');
-    //             // this force-restarts the CSS animation
-    //             void elem.offsetWidth;
-    //         elem.classList.add('show');
     var t = $('#display').DataTable();
     var firstname = localStorage.getItem("firstname");
     var lastname = localStorage.getItem("lastname");
     var title = localStorage.getItem("title");
     var subdate = localStorage.getItem("submitdate");
     var review = "<img src='https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png' type='button' data-toggle='modal' data-target='#modal-reviewed'/>";
-    var status = localStorage.getItem("status");
-    // $('#btnn').on('click', function () {
-    //     if (localStorage.getItem("firstname") === null){
-    //         elem.classList.remove('show');
-    //             // this force-restarts the CSS animation
-    //             void elem.offsetWidth;
-    //         elem.classList.add('show');
-    //             // setTimeout(alert("no New Request !"), 5000);
-    //     } else {
-    //         elem.classList.remove('show');
-    //             // this force-restarts the CSS animation
-    //             void elem.offsetWidth;
-    //         elem.classList.add('show');
-    //         t.row.add([num1, firstname, lastname, title, subdate, reviewPEN, status]).draw(false);
-    //     }
-    // });
-    var approve = 'APPROVE'; 
-    var reject = 'REJECT';
-    if (status == null){
+    var localstatus = localStorage.getItem("status");
+    var status = "<button data-toggle='modal' data-target='#comfirm-modal' data-title='change status' ><span id='demo1' value=''>PENDING</span></button>";
+    var approve = "<span style='color: green;'>APPROVE</span>"; 
+    var reject = "<span style='color: red;'>REJECT</span>";
+    if (localstatus == null){
         var num2 = 1;
         var num3 = 2;
         var num4 = 3;
@@ -71,4 +53,33 @@ $(document).ready(function () {
     t.row.add([num9, 'forlto', "chanao", "Phcum Ben", "31/09/2022", review, reject]).draw(false);
     t.row.add([num10, 'candaal', "ghiloo", "title", "12/10/2022", review, reject]).draw(false);
     
+
+    document.getElementById("Reject").addEventListener("click", Rbtn)
+    function Rbtn(){
+        var btn = document.getElementById("demo1");
+        btn.value="REJECT"
+        btn.style.color="red";
+        document.getElementById("demo1").innerHTML= "REJECT";
+    }
+    document.getElementById("Approve").addEventListener("click", Abtn)
+    function Abtn(){
+        var btn = document.getElementById("demo1");
+        btn.value="APPROVE"
+        btn.style.color="green";
+        document.getElementById("demo1").innerHTML= "APPROVE";
+    }
 });
+
+function status1(){
+    var elem = document.getElementById("demo1");
+    if (elem.value=="Reject"){
+        elem.value = "Approve";
+        elem.style.color='green';
+        document.getElementById("demo1").innerHTML= "Approve";
+    } 
+    else {
+        elem.value = "Reject";
+        elem.style.color='red';
+        document.getElementById("demo1").innerHTML= "Reject";
+    }
+}
