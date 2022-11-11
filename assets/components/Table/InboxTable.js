@@ -69,7 +69,7 @@ $(document).ready(function () {
     t.row.add([num6, 'vireak', "chan", "Phcum Ben", "12/09/2022", Already_review, reject]).draw(false);
     t.row.add([num7, 'Kosal', "vicheka", "title", "13/07/2022", Already_review, reject]).draw(false);
     t.row.add([num8, 'Kjoool', "Rosa", "title", "24/05/2022", Already_review, reject]).draw(false);
-    t.row.add([num9, 'forlto', "chanao", "Phcum Ben", "31/09/2022", Already_review, reject]).draw(false);
-    t.row.add([num10, 'candaal', "ghiloo", "title", "12/10/2022", Already_review, reject]).draw(false);
+    // t.row.add([num9, 'forlto', "chanao", "Phcum Ben", "31/09/2022", Already_review, reject]).draw(false);
+    // t.row.add([num10, 'candaal', "ghiloo", "title", "12/10/2022", Already_review, reject]).draw(false);
     
 });
