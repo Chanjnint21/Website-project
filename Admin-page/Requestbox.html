@@ -322,10 +322,11 @@
                         </div>
                         <div  id="elem" ></div>
                         <div class="animate-content" id="myDiv">
+                            <input type="button" style="display:none" id="removeBtn" class="btn btn-secondary" data-toggle='modal' data-target='#deletRow-modal' value="remove" style="display:none"/>
                             <table id="display" class="table table-hover display" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
+                                        <th scope="col"><input type="checkbox" id="all"> All</th></th>
                                         <th scope="col">First Name</th>
                                         <th scope="col">Last Name</th>                                
                                         <th scope="col">Title</th>
@@ -354,6 +355,19 @@
                                 <h5>Do you want to change the status?</h5>
                                 <input type="button" class="btn btn-secondary" data-dismiss="modal" value="No">
                                 <input type="button" class="btn btn-danger" onclick="status1()" value="Yes" data-dismiss="modal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="modal" id="deletRow-modal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body text-center">
+                                <br>
+                                <h5>Are you sure?</h5>
+                                <br>
+                                <input type="button" class="btn btn-secondary" data-dismiss="modal" value="No">
+                                <input type="button" class="btn btn-danger"  onclick="DeleteRow();" value="Yes" data-dismiss="modal">
                             </div>
                         </div>
                     </div>
