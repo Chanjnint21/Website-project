@@ -17,8 +17,8 @@ $(document).ready(function () {
     var lastname = localStorage.getItem("lastname");
     var title = localStorage.getItem("title");
     var subdate = localStorage.getItem("submitdate");
-    var pending_review = "<span type='button' class='material-icons' data-toggle='modal' data-target='#modal-pending'>_reviews</span>";
-    var Already_review = "<span type='button' class='material-icons' data-toggle='modal' data-target='#modal-reviewed'>_reviews</span>";
+    var pending_review = "<img src='https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png' type='button' data-toggle='modal' data-target='#modal-pending'/>";
+    var Already_review = "<img src='https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png' type='button' data-toggle='modal' data-target='#modal-reviewed'/>";
     var status = localStorage.getItem("status");
     // $('#btnn').on('click', function () {
     //     if (localStorage.getItem("firstname") === null){
@@ -35,8 +35,8 @@ $(document).ready(function () {
     //         t.row.add([num1, firstname, lastname, title, subdate, reviewPEN, status]).draw(false);
     //     }
     // });
-    var approve = 'APPROVE'; 
-    var reject = 'REJECT';
+    var approve = "<span style='color: green;'>APPROVE</span>"; 
+    var reject = "<span style='color: red;'>REJECT</span>";
     if (status == null){
         var num2 = 1;
         var num3 = 2;
