@@ -55,7 +55,7 @@ function switchtoUser() {
     loader.style.display = "block";
     timeout = setTimeout(switchtoUser, 1000);
     if(timeout == 3){
-            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/User-page/UserMainPage.html';
+            window.location.href = '../User-page/UserMainPage.html';
     }
   }
 
@@ -66,6 +66,6 @@ function switchtoAdmin() {
     loader.style.display = "block";
     timeout = setTimeout(switchtoAdmin, 1000);
     if(timeout == 3){
-            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/Admin-page/MainPage.html';
+            window.location.href = '../Admin-page/MainPage.html';
     }
   }
