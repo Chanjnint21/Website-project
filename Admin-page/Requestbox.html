@@ -313,31 +313,30 @@
                     </div>
                     </div>
                 </div>
-
                 <!-- Content -->
                 <div class="content">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="page-header">
                             <span class="page-title">InBox</span>  
                         </div>
                         <div  id="elem" ></div>
                         <div class="animate-content" id="myDiv">
-                            <input type="button" style="display:none" id="removeBtn" class="btn btn-secondary" data-toggle='modal' data-target='#deletRow-modal' value="remove" style="display:none"/>
-                            <table id="display" class="table table-hover display" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"><input type="checkbox" id="all"> All</th></th>
-                                        <th scope="col">First Name</th>
-                                        <th scope="col">Last Name</th>                                
-                                        <th scope="col">Title</th>
-                                        <th scope="col ">Request Date</th>
-                                        <th scope="col">Request</th>
-                                        <th scope="col" >Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
+                            <input type="button" style="display:none" id="removeBtn" class="btn btn-secondary" data-toggle='modal' data-target='#deletRow-modal' value="remove"/>
+                            <div class="table-card">
+                                <table id="display" class="table table-hover display">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><input type= "checkbox" onclick= 'checkUncheck(this)'> All</th></th>
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>                                
+                                            <th scope="col">Title</th>
+                                            <th scope="col ">Request Date</th>
+                                            <th scope="col">Request</th>
+                                            <th scope="col" >Status</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
