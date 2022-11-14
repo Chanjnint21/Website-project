@@ -111,6 +111,7 @@ i{
   border-radius: 50%;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
 @-webkit-keyframes spin {
