@@ -123,6 +123,10 @@ body {
 .container-fluid{
     padding: 0vw 2vw;
 }
+.detail{
+    display: flex;
+    justify-content: center;
+}
 
 /*------------------------------------------------------------------
 [7. Dashboard Cards / .card] 
@@ -143,9 +147,14 @@ body {
 }
 
 .card .content .number {
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: right;
     font-weight: bolder;
+}
+
+.card .content .header{
+    display: flex;
+    justify-content: center;
 }
 
 .card .content .footer {
@@ -153,11 +162,17 @@ body {
     position: relative;
     padding: 0;
     line-height: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .card .content .stats {
     display: inline-block;
     color: #a9a9a9;
+}
+
+.card .content .card-icon{
+    color: red;
 }
 
 /*------------------------------------------------------------------
