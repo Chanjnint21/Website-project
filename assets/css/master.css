@@ -91,7 +91,6 @@ body {
 #body>.content {
     position: relative;
     padding: .5rem;
-    padding-top: 60px;
 }
 
 #body .content .page-title h3 {

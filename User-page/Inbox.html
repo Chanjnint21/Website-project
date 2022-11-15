@@ -18,16 +18,21 @@
     <body onload="loadvalue()">
         <div class="wrapper" id="wrapper">
             <nav id="sidebar" class="overflow-hidden">
+                <div id="logo" class="text-center pt-3 pb-1 company-logo">
+                    <img id="beforeCollape" width="200" height="25" src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
+                    <img id="afterCollape" class="after-collape" width="20" height="25" src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
+                </div>
                 <ul class="list-unstyled components text-secondary">
+                    <hr> 
                     <div class="col">
                         <li>
-                            <a href="UserMainPage.html"><span id="dashboard "class="material-icons">dashboard</span> Dashboard</a>
+                            <a href="UserMainPage.html"><span id="dashboard "class="material-icons">dashboard</span> <span id="dashboardText">Dashboard</span> </a>
                         </li>
                         <li >
-                            <a href="Form.html"><span id="person-icon" class="material-icons">description</span>Permission Form</a>
+                            <a href="Form.html"><span id="person-icon" class="material-icons">description</span> <span id="permissionText">Permission Form</span></a>
                         </li>
                         <li  class="item">
-                            <a href="Inbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> InBox<span class="badge">2</span></a>
+                            <a href="Inbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> <span id="inboxText"> InBox<span class="badge">2</span></span></a>
                         </li>
                         <li>
                             <a class="switch" href="../Admin-page/MainPage.html"><span id="person-icon" class="material-icons">trending_flat</span>Switch to Admin</a>
@@ -37,9 +42,8 @@
             </nav>
             <div id="body">
                 <!-- navbar navigation component -->
-                <nav class="fixed-top navbar navbar-expand-lg navbar-white bg-white">
+                <nav class="navbar navbar-expand-lg navbar-white bg-white">
                     <span type="button" class="material-icons" id="sidebarCollapse" >menu</span>
-                    <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ms-auto">
                             <li class="nav-item dropdown">

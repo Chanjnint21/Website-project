@@ -2,6 +2,11 @@
     document.getElementById("sidebarCollapse").addEventListener('click', (x) => {
         document.getElementById("sidebar").classList.toggle("active");
         document.getElementById("body").classList.toggle("active");
+        document.getElementById("afterCollape").classList.toggle("after-collape");
+        document.getElementById("beforeCollape").classList.toggle("before-collape");
+        document.getElementById("dashboardText").classList.toggle("after-collape");
+        document.getElementById("permissionText").classList.toggle("after-collape");
+        document.getElementById("inboxText").classList.toggle("after-collape");
     });
 })();
 //----------------------------------------------------- button in (details) request page ---------------------------------------------
