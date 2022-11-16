@@ -11,7 +11,8 @@
     color: #fff;
     transition: all 0.3s;
     border-right: 1px solid #e6ecf5;
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+    /* box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%); */
+    z-index: 1030;
 }
 
 #sidebar.active {
@@ -96,11 +97,12 @@ a[aria-expanded="true"] {
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%)
 }
 
-.switch{
+.LogOut{
     position: absolute;
     bottom: 0px;
     width: 250px;
 }
+
 
 .badge {
     color: #fff;
@@ -109,3 +111,30 @@ a[aria-expanded="true"] {
     margin-left: 0.5rem;
     border-radius: 50%;
 }
+
+.sidebartext{
+    position: absolute;
+    animation: fadeInAnimation ease 0.5s;
+  }
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+#sidebar li .profile-details{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#sidebar li .profile-details.after-collape{
+    display: none;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+

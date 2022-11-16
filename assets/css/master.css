@@ -383,6 +383,7 @@ a:focus {
 span.material-icons {
     width: 30px;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .nav-item.nav-link.dropdown-toggle.text-secondary img{
