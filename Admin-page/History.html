@@ -13,40 +13,35 @@
     <body>
         <div class="wrapper" id="wrapper">
             <nav id="sidebar" class="overflow-hidden">
-                <!-- <div class="sidebar-header">
-                    <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
-                </div> -->
-                <ul class="list-unstyled components text-secondary">
-                    <div class="col">
-                        <li>
-                            <a href="MainPage.html"><span id="dashboard "class="material-icons">dashboard</span> Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="Requestbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> Request Box<span class="badge">3</span></a>
-                        </li>
-                        <li  class="item">
-                            <a href="History.html"><span id="person-icon" class="material-icons">history</span>History</a>
-                        </li>
-                        <li>
-                            <a class="switch" href="../User-page/UserMainPage.html"><span id="person-icon" class="material-icons">trending_flat</span>Switch to user</a>
-                        </li>  
-                    </div>
+                <div id="logo" class="text-center pt-3 pb-1 company-logo">
+                    <img id="beforeCollape" width="200" height="25" src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
+                    <img id="afterCollape" class="after-collape" width="25" height="25" src="https://static.tildacdn.com/tild3763-6339-4363-b336-383130646539/menu_logo_2.svg" alt="App logo" class="app-logo">
+                </div>
+                <ul class="list-unstyled components text-secondary mt-4">
+                    <li>
+                        <a href="./MainPage.html"><span id="dashboard "class="material-icons">dashboard</span> <span id="dashboardText" class="sidebartext">Dashboard</span> </a>
+                    </li>
+                    <li >
+                        <a href="./Requestbox.html"><span id="person-icon" class="material-icons">description</span> <span id="permissionText" class="sidebartext" >Request Box<span class="badge">2</span></span></a>
+                    </li>
+                    <li class="item">
+                        <a href="./History.html"> <span id="inbox-icon" class="material-icons">inbox</span> <span id="inboxText" class="sidebartext"> History</span></a>
+                    </li>
+                    <li class="LogOut" >
+                        <a href="#"> <span id="logout-icon" class="material-icons">logout</span> <span id="logoutText" class="logout"> Log out</span></a>
+                    </li>
                 </ul>
             </nav>
             <div id="body">
                 <!-- navbar navigation component -->
-                <nav class="fixed-top navbar navbar-expand-lg navbar-white bg-white">
-                    <!-- <button type="button" id="sidebarCollapse" class="btn btn-light">
-                        <span class="material-icons" >menu</span>
-                    </button> -->
-                    <span type="button" class="material-icons" id="sidebarCollapse" >menu</span>
-                    <img src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
+                <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                    <span class="material-icons" id="sidebarCollapse">menu_open</span>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ms-auto">
                             <li class="nav-item dropdown">
                                 <div class="nav-dropdown">
                                     <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span>Admin Page</span>
+                                        <span>Lim Chanjnint</span>
                                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-end nav-link-menu">

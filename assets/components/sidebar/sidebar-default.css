@@ -81,7 +81,7 @@ a[aria-expanded="true"] {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { .
     #sidebarCollapse span {
         display: none;
     }
@@ -97,12 +97,27 @@ a[aria-expanded="true"] {
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%)
 }
 
-.LogOut{
-    position: absolute;
-    bottom: 0px;
+.fixed-bottom{
     width: 250px;
+    background-color: #f55252;
+    position: absolute;
 }
 
+.fixed-bottom.after-collape{
+    width: 75px;
+}
+
+.info.after-collape{
+    animation: fadeIn ease 4s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
 
 .badge {
     color: #fff;
@@ -125,16 +140,4 @@ a[aria-expanded="true"] {
         opacity: 1;
      }
 }
-
-#sidebar li .profile-details{
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
-#sidebar li .profile-details.after-collape{
-    display: none;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
 
