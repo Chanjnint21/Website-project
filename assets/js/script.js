@@ -10,8 +10,8 @@
         document.getElementById("dashboardText").classList.toggle("after-collape");
         document.getElementById("permissionText").classList.toggle("after-collape");
         document.getElementById("inboxText").classList.toggle("after-collape");
-        document.getElementById("logoutText").classList.toggle("after-collape");
-
+        document.getElementById("logout").classList.toggle("after-collape");
+        document.getElementById("infohide").classList.toggle("after-collape");
         if(sidebar.classList.contains('active')) {
             document.getElementById("sidebarCollapse").innerHTML="menu";
         } else {
