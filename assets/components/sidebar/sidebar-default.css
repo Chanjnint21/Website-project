@@ -41,7 +41,7 @@
 
 #sidebar ul li a {
     padding: .8rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     display: block;
 }
 
@@ -81,7 +81,7 @@ a[aria-expanded="true"] {
     display: none;
 }
 
-@media (max-width: 768px) { .
+@media (max-width: 768px) {
     #sidebarCollapse span {
         display: none;
     }
@@ -99,24 +99,11 @@ a[aria-expanded="true"] {
 
 .fixed-bottom{
     width: 250px;
-    background-color: #f55252;
-    position: absolute;
+    background: #f55252;
 }
 
 .fixed-bottom.after-collape{
     width: 75px;
-}
-
-.info.after-collape{
-    animation: fadeIn ease 4s;
-}
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
 }
 
 .badge {
@@ -128,9 +115,10 @@ a[aria-expanded="true"] {
 }
 
 .sidebartext{
-    position: absolute;
-    animation: fadeInAnimation ease 0.5s;
-  }
+    animation: fadeInAnimation ease 0.7s;
+    padding-top: 0.15rem;
+    font-weight: 200;
+}
 
 @keyframes fadeInAnimation {
     0% {
@@ -141,3 +129,6 @@ a[aria-expanded="true"] {
      }
 }
 
+#logoutText{
+    font-size: 1.2rem;
+}

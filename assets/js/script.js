@@ -10,12 +10,14 @@
         document.getElementById("dashboardText").classList.toggle("after-collape");
         document.getElementById("permissionText").classList.toggle("after-collape");
         document.getElementById("inboxText").classList.toggle("after-collape");
+        document.getElementById("logoutText").classList.toggle("after-collape");
         document.getElementById("logout").classList.toggle("after-collape");
-        document.getElementById("infohide").classList.toggle("after-collape");
+        document.getElementById("sidebar-details").classList.toggle("after-collape")
+
         if(sidebar.classList.contains('active')) {
-            document.getElementById("sidebarCollapse").innerHTML="menu";
+            menu_icon.innerHTML="menu";
         } else {
-            document.getElementById("sidebarCollapse").innerHTML="menu_open";
+            menu_icon.innerHTML="menu";
         }
     });
 })();
@@ -122,6 +124,34 @@ function movepage(){
         window.location.href = "Inbox.html";
     })
 }
+//------------------------------------------------------- Logout ---------------------------------------------------
+
+function LogOut(){
+    var wrappe = document.getElementById("wrapper");
+    var loader = document.getElementById("loading");
+    wrappe.style.display = "none";
+    loader.style.display = "block";
+    timeou = setTimeout(LogOut, 1000);
+    if(timeou == 3){
+            window.location.href = '../login-page/LogIn.html';
+    }
+}
+
+function loadvalue() {
+        // document.getElementById("myDiv").style.display = "block";
+        var myVar = setTimeout(showPage, 1000);
+    }
+    function showPage() {
+        document.getElementById("elem").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+    }
+
+//---count the row of request
+function dashboard(){
+    var table = document.getElementById("display");
+    var tbodyRowCount = table.tBodies[0].rows.length;
+    document.getElementById('').innerHTML = tbodyRowCount;
+}
 
 //------------------------------------------------------- load value into row of table ---------------------------------------------------
 // function loadvalue(){
@@ -216,31 +246,3 @@ function movepage(){
 //     }
 // }
 
-//------------------------------------------------------- Logout ---------------------------------------------------
-
-function LogOut(){
-    var wrappe = document.getElementById("wrapper");
-    var loader = document.getElementById("loading");
-    wrappe.style.display = "none";
-    loader.style.display = "block";
-    timeou = setTimeout(LogOut, 1000);
-    if(timeou == 3){
-            window.location.href = '/Users/soramitsukh/Documents/Intern/Website-project/login-page/LogIn.html';
-    }
-}
-
-function loadvalue() {
-        // document.getElementById("myDiv").style.display = "block";
-        var myVar = setTimeout(showPage, 1000);
-    }
-    function showPage() {
-        document.getElementById("elem").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-    }
-
-//---count the row of request
-function dashboard(){
-    var table = document.getElementById("display");
-    var tbodyRowCount = table.tBodies[0].rows.length;
-    document.getElementById('').innerHTML = tbodyRowCount;
-}
