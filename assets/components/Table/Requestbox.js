@@ -1,4 +1,3 @@
-$(document).ready(function () {
     document.getElementById("req_fname").innerHTML = localStorage.getItem("firstname");
     document.getElementById("req_lname").innerHTML = localStorage.getItem("lastname");
     document.getElementById("req_phone").innerHTML = localStorage.getItem("phone");
@@ -60,19 +59,18 @@ $(document).ready(function () {
         btn.style.color="green";
         document.getElementById("demo1").innerHTML= "APPROVE";
     }
-});
 
 function status1(){
     var elem = document.getElementById("demo1");
     if (elem.value=="Reject"){
         elem.value = "Approve";
         elem.style.color='green';
-        document.getElementById("demo1").innerHTML= "Approve";
+        document.getElementById("demo1").innerHTML= "APPROVE";
     } 
     else {
         elem.value = "Reject";
         elem.style.color='red';
-        document.getElementById("demo1").innerHTML= "Reject";
+        document.getElementById("demo1").innerHTML= "REJECT";
     }
 }
 

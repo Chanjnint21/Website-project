@@ -1,4 +1,3 @@
-$(document).ready(function () {
     document.getElementById("req_fname").innerHTML = localStorage.getItem("firstname");
     document.getElementById("req_lname").innerHTML = localStorage.getItem("lastname");
     document.getElementById("req_phone").innerHTML = localStorage.getItem("phone");
@@ -7,11 +6,6 @@ $(document).ready(function () {
     document.getElementById("req_date").innerHTML = localStorage.getItem("From") + " to " + localStorage.getItem("To");
     document.getElementById("req_reason").innerHTML = localStorage.getItem("reason");
     document.getElementById("req_attachment").innerHTML = localStorage.getItem("attachment");
-
-    // elem.classList.remove('show');
-    //             // this force-restarts the CSS animation
-    //             void elem.offsetWidth;
-    //         elem.classList.add('show');
     var t = $('#display').DataTable();
     var firstname = localStorage.getItem("firstname");
     var lastname = localStorage.getItem("lastname");
@@ -51,7 +45,7 @@ $(document).ready(function () {
             t.row.add([i, 'Sokha', "chan", "Phcum Ben", "12/07/2022", approve, Already_review]).draw(false);
         }
         for (let j=11; j<21 ; j++){
-            t.row.add([j, 'MArk', "jackson", "title", "12/06/2022", reject, Already_review]).draw(false);
+            t.row.add([j, 'Sokha', "chan", "Phcum Ben", "12/07/2022", reject, Already_review]).draw(false);
         }
     } else {
         var num1 = 1;
@@ -69,7 +63,7 @@ $(document).ready(function () {
             t.row.add([i, 'Sokha', "chan", "Phcum Ben", "12/07/2022", approve, Already_review]).draw(false);
         }
         for (let j=11; j<21 ; j++){
-            t.row.add([j, 'MArk', "jackson", "title", "12/06/2022", reject, Already_review]).draw(false);
+            t.row.add([j, 'Sokha', "chan", "Phcum Ben", "12/07/2022", reject, Already_review]).draw(false);
         }
     }
     // t.row.add([i, 'Sokha', "chan", "Phcum Ben", "12/07/2022", approve, Already_review]).draw(false);
@@ -82,4 +76,3 @@ $(document).ready(function () {
     // t.row.add([num9, 'forlto', "chanao", "Phcum Ben", "31/09/2022", reject, Already_review]).draw(false);
     // t.row.add([num10, 'candaal', "ghiloo", "title", "12/10/2022", reject, Already_review]).draw(false);
     
-});
