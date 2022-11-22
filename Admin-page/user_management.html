@@ -9,10 +9,10 @@
         <link href="../assets/css/master.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
-        <link href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css" rel="stylesheet" >
+        <link href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css" rel="stylesheet" > -->
     </head>
 
     <body>
@@ -35,7 +35,7 @@
                     <li  class="item">
                         <a href="./user_management.html"> <span id="inbox-icon" class="material-icons">people</span> <span id="UMtext" class="sidebartext position-absolute">User Mangement</span></a>
                     </li>
-                    <li >  
+                    <li >
                         <a class="fixed-bottom text-light" id="logout" href="#"> <span id="logout-icon" class="material-icons">logout</span> <span id="logoutText" class="sidebartext position-absolute text-uppercase px-2">Lim Chanjnint</span></a> 
                     </li>
                 </ul>
@@ -86,12 +86,16 @@
                 </div>
                 <div class="content">
                     <div class="container-fluid">
-                        <div class="page-header">
-                            <span class="page-title">User Management</span>
-                            <!-- <div class="dropdown-divider"></div> -->
+                        <div class="page-header d-flex">
+                            <div class="col">
+                                <span class="page-title">User Management</span>
+                            </div>
+                            <div class="col d-flex justify-content-end">
+                                <button class="btn btn-secondary">Add User +</button>
+                            </div>
                         </div>
                         <div class="animate-content">
-                            <div class="table-box px-4 pt-4">
+                            <!-- <div class="table-box px-4 pt-4">
                                 <div class="table-card pb-5">
                                     <table id="UM" class="table table-hover">
                                         <thead class="table-head position-sticky" style="top: 0; background-color: white; z-index:1;">
@@ -111,7 +115,7 @@
                                                 <td>Edinburgh</td>
                                                 <td>61</td>
                                                 <td>2011-04-25</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Garrett Winters</td>
@@ -119,7 +123,7 @@
                                                 <td>Tokyo</td>
                                                 <td>63</td>
                                                 <td>2011-07-25</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Ashton Cox</td>
@@ -127,7 +131,7 @@
                                                 <td>San Francisco</td>
                                                 <td>66</td>
                                                 <td>2009-01-12</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Cedric Kelly</td>
@@ -135,7 +139,7 @@
                                                 <td>Edinburgh</td>
                                                 <td>22</td>
                                                 <td>2012-03-29</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Airi Satou</td>
@@ -143,7 +147,7 @@
                                                 <td>Tokyo</td>
                                                 <td>33</td>
                                                 <td>2008-11-28</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Brielle Williamson</td>
@@ -151,7 +155,7 @@
                                                 <td>New York</td>
                                                 <td>61</td>
                                                 <td>2012-12-02</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Herrod Chandler</td>
@@ -159,7 +163,7 @@
                                                 <td>San Francisco</td>
                                                 <td>59</td>
                                                 <td>2012-08-06</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Rhona Davidson</td>
@@ -167,7 +171,7 @@
                                                 <td>Tokyo</td>
                                                 <td>55</td>
                                                 <td>2010-10-14</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Colleen Hurst</td>
@@ -175,7 +179,7 @@
                                                 <td>San Francisco</td>
                                                 <td>39</td>
                                                 <td>2009-09-15</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Sonya Frost</td>
@@ -183,7 +187,7 @@
                                                 <td>Edinburgh</td>
                                                 <td>23</td>
                                                 <td>2008-12-13</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Jena Gaines</td>
@@ -191,7 +195,7 @@
                                                 <td>London</td>
                                                 <td>30</td>
                                                 <td>2008-12-19</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Quinn Flynn</td>
@@ -199,7 +203,7 @@
                                                 <td>Edinburgh</td>
                                                 <td>22</td>
                                                 <td>2013-03-03</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Serge Baldwin</td>
@@ -207,7 +211,7 @@
                                                 <td>Singapore</td>
                                                 <td>64</td>
                                                 <td>2012-04-09</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Zenaida Frank</td>
@@ -215,7 +219,7 @@
                                                 <td>New York</td>
                                                 <td>63</td>
                                                 <td>2010-01-04</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Zorita Serrano</td>
@@ -223,7 +227,7 @@
                                                 <td>San Francisco</td>
                                                 <td>56</td>
                                                 <td>2012-06-01</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Jennifer Acosta</td>
@@ -231,7 +235,7 @@
                                                 <td>Edinburgh</td>
                                                 <td>43</td>
                                                 <td>2013-02-01</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Cara Stevens</td>
@@ -239,7 +243,7 @@
                                                 <td>New York</td>
                                                 <td>46</td>
                                                 <td>2011-12-06</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                             <tr>
                                                 <td>Hermione Butler</td>
@@ -247,27 +251,210 @@
                                                 <td>London</td>
                                                 <td>47</td>
                                                 <td>2011-03-21</td>
-                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
+                            </div> -->
+                            <div class="table-box px-4 pt-4">
+                                <div class="table-card">
+                                    <div class="row d-flex ">
+                                        <div class="col">
+                                            <span>
+                                                Show 
+                                                <select id="inputState">
+                                                    <option selected>10</option>
+                                                    <option>20</option>
+                                                    <option>30</option>
+                                                    <option>50</option>
+                                                    <option>100</option>
+                                                </select>
+                                                entrier
+                                            </span>
+                                        </div>
+                                        <div class="col search_UM d-flex justify-content-end">
+                                                <input type="text" class="search" placeholder="Search user..."/>
+                                                <span class='material-icons p-1'>search</span>
+                                                
+                                        </div>
+                                    </div>
+                                            <table class="table table-hover">
+                                                <thead class="table-head position-sticky" style="top: 0; background-color: white; z-index:1;">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Name</th>						
+                                                        <th>Role</th>
+                                                        <th>Phone</th>
+                                                        <th>Email</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Michael Holz</td>
+                                                        <td>Admin</td>                        
+                                                        <td>09234566</td>
+                                                        <td>Michael Holz@gmail.com</td>
+                                                        <td>
+                                                            <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                            <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Paula Wilson</td>
+                                                        <td>Quality Assurance</td>                       
+                                                        <td>088756383</td>
+                                                        <td>Paula Wilson@gmail.com</td>
+                                                        <td>
+                                                            <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                            <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Antonio Moreno</td>
+                                                        <td>Quality Assurance</td>
+                                                        <td>012463834</td>
+                                                        <td>Antonio Moreno@gmail.com</td>                        
+                                                        <td>
+                                                            <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                            <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                        </td>                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Mary Saveley</td>
+                                                        <td>Quality Assurancer</td>
+                                                        <td>06789375</td>
+                                                        <td>Mary Saveley@gmail.com</td>
+                                                        <td>
+                                                            <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                            <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Martin Sommer</td>
+                                                        <td>DevOP</td>                        
+                                                        <td>08473839</td>
+                                                        <td>Martin Sommer@gmail.com</td>
+                                                        <td>
+                                                            <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                            <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Michael Holz</td>
+                                                        <td>DevOp</td>                        
+                                                        <td>09234566</td>
+                                                        <td>Michael Holz@gmail.com</td>
+                                                        <td>
+                                                            <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                            <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Paula Wilson</td>
+                                                        <td>Front-end Developer</td>                       
+                                                        <td>088756383</td>
+                                                        <td>Paula Wilson@gmail.com</td>
+                                                        <td>
+                                                            <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                            <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Antonio Moreno</td>
+                                                        <td>Front-end Developer</td>
+                                                        <td>012463834</td>
+                                                        <td>Antonio Moreno@gmail.com</td>                        
+                                                        <td>
+                                                            <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                            <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                        </td>                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Mary Saveley</td>
+                                                        <td>Back-end Developer</td>
+                                                        <td>06789375</td>
+                                                        <td>Mary Saveley@gmail.com</td>
+                                                        <td>
+                                                            <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                            <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Martin Sommer</td>
+                                                        <td>Back-end Developer</td>                        
+                                                        <td>08473839</td>
+                                                        <td>Martin Sommer@gmail.com</td>
+                                                        <td>
+                                                            <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                            <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="hint-text">Showing <b>10</b> out of <b>55</b> entries</div>
+                                                </div>
+                                                <div class="col">
+                                                    <nav aria-label="Page navigation example">
+                                                        <ul class="pagination justify-content-end">
+                                                          <li class="page-item disabled">
+                                                            <a class="page-link" href="#" tabindex="-1"><span id="inbox-icon" class="material-icons">keyboard_double_arrow_left</span></a>
+                                                          </li>
+                                                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                          <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                          <li class="page-item">
+                                                            <a class="page-link next" href="#"><span id="inbox-icon" class="material-icons">keyboard_double_arrow_right</span></a>
+                                                          </li>
+                                                        </ul>
+                                                      </nav>
+                                                </div>
+                                            </div>
+                                </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div style="display:none;" id="loading"><img id="loader" src="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico"></div>
-
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/js/script.js"></script>
     </body>
 </html>
 <script>
-    $(document).ready(function () {
-        $('#UM').DataTable();
-    });
+    // $(document).ready(function () {
+    //     $('#UM').DataTable();
+    // });
+    $('[data-toggle="tooltip"]').tooltip()
 </script>
+<style>
+    .page-item.disabled .page-link,
+    .page-item .page-link.next {
+        padding: 5px;
+    }
+    .page-item.active .page-link {
+        background-color: #f55252;
+        border-color: #f55252 ;
+    }
+    .page-link {
+        color: #f55252;
+    }
+</style>
