@@ -56,9 +56,13 @@
 }
 
 .table-card{
-    height: 85vh;
+    height: 78vh;
     overflow-y: auto;
     overflow-x: hidden;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 5rem;
+}
+.table-box{
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 }
