@@ -4,21 +4,22 @@
     
     menu_icon.addEventListener('click', (x) => {
         sidebar.classList.toggle("active");
+
+        if(sidebar.classList.contains('active')) {
+            document.getElementById("sidebarCollapse").innerHTML="menu";
+        } else {
+            document.getElementById("sidebarCollapse").innerHTML="menu_open";
+        }
         document.getElementById("body").classList.toggle("active");
         document.getElementById("afterCollape").classList.toggle("after-collape");
         document.getElementById("beforeCollape").classList.toggle("before-collape");
         document.getElementById("dashboardText").classList.toggle("after-collape");
         document.getElementById("permissionText").classList.toggle("after-collape");
         document.getElementById("inboxText").classList.toggle("after-collape");
+        document.getElementById("UMtext").classList.toggle("after-collape");
         document.getElementById("logoutText").classList.toggle("after-collape");
         document.getElementById("logout").classList.toggle("after-collape");
         document.getElementById("sidebar-details").classList.toggle("after-collape")
-
-        if(sidebar.classList.contains('active')) {
-            menu_icon.innerHTML="menu";
-        } else {
-            menu_icon.innerHTML="menu";
-        }
     });
 })();
 //----------------------------------------------------- button in (details) request page ---------------------------------------------
