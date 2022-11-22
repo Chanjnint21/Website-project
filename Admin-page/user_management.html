@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Leave Request</title> <link rel="shortcut icon" href="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico" type="image/x-icon">
+        <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/master.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
+        <link href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css" rel="stylesheet" >
+    </head>
+
+    <body>
+        <div class="wrapper" id="wrapper">
+            <nav id="sidebar" class="overflow-hidden">
+                <div id="logo" class="text-center pt-3 pb-1 company-logo">
+                    <img id="beforeCollape" width="200" height="25" src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
+                    <img id="afterCollape" class="after-collape" width="25" height="25" src="https://static.tildacdn.com/tild3763-6339-4363-b336-383130646539/menu_logo_2.svg" alt="App logo" class="app-logo">
+                </div>
+                <ul class="list-unstyled components text-secondary mt-4">
+                    <li >
+                        <a href="./MainPage.html"><span id="dashboard "class="material-icons">dashboard</span> <span id="dashboardText" class="sidebartext position-absolute">Dashboard</span> </a>
+                    </li>
+                    <li>
+                        <a href="./Requestbox.html"><span id="person-icon" class="material-icons">inbox</span> <span id="permissionText" class="sidebartext position-absolute" >Request Box<span class="badge">2</span></span></a>
+                    </li>
+                    <li >
+                        <a href="./History.html"> <span id="inbox-icon" class="material-icons">history</span> <span id="inboxText" class="sidebartext position-absolute"> History</span></a>
+                    </li>
+                    <li  class="item">
+                        <a href="./user_management.html"> <span id="inbox-icon" class="material-icons">people</span> <span id="UMtext" class="sidebartext position-absolute">User Mangement</span></a>
+                    </li>
+                    <li >  
+                        <a class="fixed-bottom text-light" id="logout" href="#"> <span id="logout-icon" class="material-icons">logout</span> <span id="logoutText" class="sidebartext position-absolute text-uppercase px-2">Lim Chanjnint</span></a> 
+                    </li>
+                </ul>
+            </nav>
+            <div id="body">
+                <!-- navbar navigation component -->
+                <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                    <span class="material-icons" id="sidebarCollapse">menu_open</span>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <div class="nav-dropdown">
+                                    <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="text-uppercase">Admin Page</span>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                                        <ul class="nav-list">
+                                            <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal"><span type="button" class="material-icons">person</span> Profile</a></li>
+                                            <!-- <li><a href="" class="dropdown-item"><span class="material-icons">settings</span> Settings</a></li> -->
+                                            <div class="dropdown-divider"></div>
+                                            <li><a class="dropdown-item" onclick="LogOut()"><span type="button" class="material-icons">logout</span> Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- end of navbar navigation -->
+                <div  class="modal" id="myModal">
+                    <!-- Modal -->
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title">Profile</h5>
+                                </div>
+                                <div class="modal-body profile">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
+                                    <span><h3>Admin Page</h3></span>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close">
+                                    <input type="button" class="btn btn-danger" value="Save Change">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="page-header">
+                            <span class="page-title">User Management</span>
+                            <!-- <div class="dropdown-divider"></div> -->
+                        </div>
+                        <div class="animate-content">
+                            <div class="table-box px-4 pt-4">
+                                <div class="table-card pb-5">
+                                    <table id="UM" class="table table-hover">
+                                        <thead class="table-head position-sticky" style="top: 0; background-color: white; z-index:1;">
+                                            <tr>
+                                                <th>First Name</th>
+                                                <th>Last Naem</th>
+                                                <th>Position</th>
+                                                <th>Phone</th>
+                                                <th>Email</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011-04-25</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Garrett Winters</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>63</td>
+                                                <td>2011-07-25</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ashton Cox</td>
+                                                <td>Junior Technical Author</td>
+                                                <td>San Francisco</td>
+                                                <td>66</td>
+                                                <td>2009-01-12</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cedric Kelly</td>
+                                                <td>Senior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>22</td>
+                                                <td>2012-03-29</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Airi Satou</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>33</td>
+                                                <td>2008-11-28</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brielle Williamson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>New York</td>
+                                                <td>61</td>
+                                                <td>2012-12-02</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Herrod Chandler</td>
+                                                <td>Sales Assistant</td>
+                                                <td>San Francisco</td>
+                                                <td>59</td>
+                                                <td>2012-08-06</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Rhona Davidson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>Tokyo</td>
+                                                <td>55</td>
+                                                <td>2010-10-14</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Colleen Hurst</td>
+                                                <td>Javascript Developer</td>
+                                                <td>San Francisco</td>
+                                                <td>39</td>
+                                                <td>2009-09-15</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sonya Frost</td>
+                                                <td>Software Engineer</td>
+                                                <td>Edinburgh</td>
+                                                <td>23</td>
+                                                <td>2008-12-13</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jena Gaines</td>
+                                                <td>Office Manager</td>
+                                                <td>London</td>
+                                                <td>30</td>
+                                                <td>2008-12-19</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Quinn Flynn</td>
+                                                <td>Support Lead</td>
+                                                <td>Edinburgh</td>
+                                                <td>22</td>
+                                                <td>2013-03-03</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Serge Baldwin</td>
+                                                <td>Data Coordinator</td>
+                                                <td>Singapore</td>
+                                                <td>64</td>
+                                                <td>2012-04-09</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Zenaida Frank</td>
+                                                <td>Software Engineer</td>
+                                                <td>New York</td>
+                                                <td>63</td>
+                                                <td>2010-01-04</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Zorita Serrano</td>
+                                                <td>Software Engineer</td>
+                                                <td>San Francisco</td>
+                                                <td>56</td>
+                                                <td>2012-06-01</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jennifer Acosta</td>
+                                                <td>Junior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>43</td>
+                                                <td>2013-02-01</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cara Stevens</td>
+                                                <td>Sales Assistant</td>
+                                                <td>New York</td>
+                                                <td>46</td>
+                                                <td>2011-12-06</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hermione Butler</td>
+                                                <td>Regional Director</td>
+                                                <td>London</td>
+                                                <td>47</td>
+                                                <td>2011-03-21</td>
+                                                <td><span class="material-icons">edit</span> <span class="material-icons text-danger">cancel</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display:none;" id="loading"><img id="loader" src="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/script.js"></script>
+    </body>
+</html>
+<script>
+    $(document).ready(function () {
+        $('#UM').DataTable();
+    });
+</script>
