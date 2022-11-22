@@ -16,9 +16,9 @@
         document.getElementById("dashboardText").classList.toggle("after-collape");
         document.getElementById("permissionText").classList.toggle("after-collape");
         document.getElementById("inboxText").classList.toggle("after-collape");
-        document.getElementById("UMtext").classList.toggle("after-collape");
         document.getElementById("logoutText").classList.toggle("after-collape");
         document.getElementById("logout").classList.toggle("after-collape");
+        document.getElementById("UMtext").classList.toggle("after-collape");
         document.getElementById("sidebar-details").classList.toggle("after-collape")
     });
 })();
