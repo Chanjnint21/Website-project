@@ -43,6 +43,7 @@
     padding: .8rem 1.5rem;
     font-size: 1.1rem;
     display: block;
+    cursor: pointer;
 }
 
 #sidebar ul li a .fas {
@@ -118,6 +119,7 @@ a[aria-expanded="true"] {
     animation: fadeInAnimation ease 0.7s;
     padding-top: 0.15rem;
     font-weight: 200;
+    margin-left: .8rem;
 }
 
 @keyframes fadeInAnimation {

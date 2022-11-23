@@ -378,16 +378,9 @@ a:focus {
 */
 
 span.material-icons {
-    width: 30px;
+    font-size: 26px;
     vertical-align: middle;
     cursor: pointer;
-}
-
-.nav-item.nav-link.dropdown-toggle.text-secondary img{
-    width: 30px;
-    padding: 3px;
-    margin: 0;
-    opacity: 0.5;
 }
 
 /*------------------------------------------------------------------
@@ -435,7 +428,6 @@ textarea{
   }
 
 .form-type {
-    /* padding: 0; */
       border: 1px solid #bfbfbf;
       width: 100%;
       font-size: 1rem;
@@ -531,9 +523,6 @@ textarea{
   /* Add animation to "page content" */
   .animate-content {
     position: relative;
-    /*
-    animation-name: animatebottom;
-    animation-duration: 0.7s; */
     -webkit-animation: animatebottom 0.7s;
     animation: animatebottom 0.7s;
   }

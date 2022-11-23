@@ -33,7 +33,7 @@
                         <a href="./Inbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> <span id="inboxText" class="sidebartext position-absolute"> InBox<span class="badge">2</span></span></a>
                     </li>
                     <li >  
-                        <a class="fixed-bottom text-light" id="logout" href="#"> <span id="logout-icon" class="material-icons">logout</span> <span id="logoutText" class="sidebartext position-absolute text-uppercase px-2">Lim Chanjnint</span></a> 
+                        <a class="fixed-bottom text-light" id="logout" onclick="LogOut()"> <span id="logout-icon" class="material-icons">logout</span> <span id="logoutText" class="sidebartext position-absolute text-uppercase px-2">Lim Chanjnint</span></a> 
                     </li>
                 </ul>
             </nav>
@@ -45,14 +45,14 @@
                         <ul class="nav navbar-nav ms-auto">
                             <li class="nav-item dropdown">
                                 <div class="nav-dropdown">
-                                    <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary d-inlineblock" data-bs-toggle="dropdown" aria-expanded="false">
                                         <span class="text-uppercase">Lim Chanjnint</span>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                         <ul class="nav-list">
                                             <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal"><span type="button" class="material-icons">person</span> Profile</a></li>
-                                            <!-- <li><a href="" class="dropdown-item"><span class="material-icons">settings</span> Settings</a></li> -->
+                                            <li><a href="../Admin-page/MainPage.html" class="dropdown-item"><span type="button" class="material-icons">commit</span> Switch role</a></li>
                                             <div class="dropdown-divider"></div>
                                             <li><a class="dropdown-item" onclick="LogOut()"><span type="button" class="material-icons">logout</span> Logout</a></li>
                                         </ul>
@@ -64,28 +64,62 @@
                 </nav>
                 <!-- end of navbar navigation -->
                 
-                <!-- Profile Modal -->
+                <!-- profile modal -->
                 <div  class="modal" id="myModal">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title">Profile</h5>
-                                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="headergg p-3 d-flex justify-content-between">
+                                <h5 class="modal-title font-weight-bold text-uppercase p-1">Profile Setting</h5>
+                                <button type="button" class="btn btn-light" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
-                                </button> -->
+                                  </button>
+                            </div>
+                            <div class="row p-3">
+                                <div class="col">
+                                    <div class="d-flex justify-content-center">
+                                        <img style="width:200px ;" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" title="Profile"/>
+                                    </div>
+                                    <div class="p-3 d-flex justify-content-center">
+                                        <button class="btn btn-danger">change</button>
+                                    </div>
                                 </div>
-                                <div class="modal-body profile">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbQkEvb33q_lt85QVkbkoZYRL71vkuNUFhadj5vxJTzSt-p16U4-l25zPmFwbF3GnWbM&usqp=CAU">
-                                    <span><h3>Lim Chanjnint</h3></span>
-                                </div>
-                                <div class="modal-footer">
-                                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-danger">Save changes</button> -->
-                                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close">
-                                    <input type="button" class="btn btn-danger" value="Save Chnage">
+                                <div class="col">
+                                    <div class="row p-1">
+                                        <div class="user-info col-sm-12 col-md-12 col-lg-12 ">
+                                            Full Name :
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-12 font-weight-bold">
+                                            Lim Chanjnint
+                                        </div>
+                                    </div>
+                                    <div class="row p-1">
+                                        <div class="user-info col-sm-12 col-md-12 col-lg-12">
+                                            Phone :
+                                        </div>
+                                        <div class="col">
+                                            081808091
+                                        </div>
+                                    </div>
+                                    <div class="row p-1">
+                                        <div class="user-info col-sm-12 col-md-12 col-lg-12 ">
+                                            Email :
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-12 ">
+                                            limchanjnint@gmail.com
+                                        </div>
+                                    </div>
+                                    <div class="row p-1">
+                                        <div class="user-info col-sm-12 col-md-12 col-lg-12 ">
+                                            Role :
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-12 ">
+                                            User
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
                 <!-- View Details of Request Modal (PENDING STATUS) -->
                 <div class="modal fade bd-example-modal-lg" id="modal-pending" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
