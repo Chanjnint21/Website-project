@@ -24,20 +24,20 @@
 })();
 //----------------------------------------------------- button in (details) request page ---------------------------------------------
 
-document.getElementById("Reject").addEventListener("click", Rbtn)
-    function Rbtn(){
-        var btn = document.getElementById("demo1");
-        btn.value="Reject"
-        btn.style.color="red";
-        document.getElementById("demo1").innerHTML= "Reject";
-    }
-document.getElementById("Approve").addEventListener("click", Abtn)
-    function Abtn(){
-        var btn = document.getElementById("demo1");
-        btn.value="Approve"
-        btn.style.color="green";
-        document.getElementById("demo1").innerHTML= "Approve";
-    }
+// document.getElementById("Reject").addEventListener("click", Rbtn)
+//     function Rbtn(){
+//         var btn = document.getElementById("demo1");
+//         btn.value="Reject"
+//         btn.style.color="red";
+//         document.getElementById("demo1").innerHTML= "Reject";
+//     }
+// document.getElementById("Approve").addEventListener("click", Abtn)
+//     function Abtn(){
+//         var btn = document.getElementById("demo1");
+//         btn.value="Approve"
+//         btn.style.color="green";
+//         document.getElementById("demo1").innerHTML= "Approve";
+//     }
 //----------------------------------------------------- button in request page ---------------------------------------------
 function status1(){
     var elem = document.getElementById("demo1");
@@ -62,16 +62,16 @@ function countdays () {
     var countdays = counttime / (1000 * 3600 * 24);
     document.getElementById("noOfDays").setAttribute("value", isNaN(countdays) ? '' : countdays);
     document.getElementById("noOfDays").innerHTML = countdays + "days";
-  }
+}
 
 //--------------------------------------------------- comfirm modal ---------------------------------------------
-function del(){
-    document.getElementsByTagName("tr")[1].remove();
-    document.getElementById("row1").innerHTML="1";
-    document.getElementById("row2").innerHTML="2";
-    document.getElementById("row3").innerHTML="3";
+// function del(){
+//     document.getElementsByTagName("tr")[1].remove();
+//     document.getElementById("row1").innerHTML="1";
+//     document.getElementById("row2").innerHTML="2";
+//     document.getElementById("row3").innerHTML="3";
 
-}
+// }
 
 //--------------------------------------------------- store form input into local storage ---------------------------------------------
 function movepage(){

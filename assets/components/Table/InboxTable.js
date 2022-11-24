@@ -1,4 +1,5 @@
     document.getElementById("req_fname").innerHTML = localStorage.getItem("firstname");
+    document.getElementById("ModalTitle").innerHTML = localStorage.getItem("firstname") + "'s form";
     document.getElementById("req_lname").innerHTML = localStorage.getItem("lastname");
     document.getElementById("req_phone").innerHTML = localStorage.getItem("phone");
     document.getElementById("req_email").innerHTML = localStorage.getItem("email");
