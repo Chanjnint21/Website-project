@@ -51,11 +51,11 @@
     margin-left: 10px;
 }
 
-.table-card{
+/* .table-card{
     height: 78vh;
     overflow-y: auto;
     overflow-x: hidden;
-}
+} */
 .table-box{
     border-radius: 10px;
     background-color: white;
