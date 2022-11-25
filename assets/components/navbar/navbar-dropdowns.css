@@ -1,13 +1,22 @@
-/*------------------------------------------------------------------
+/* ------------------------------------------------------------------
 * Bootstrap Simple Admin Template
 * Version: 3.0
 * Author: Alexis Luna
 * Website: https://github.com/alexis-luna/bootstrap-simple-admin-template
 -------------------------------------------------------------------*/
+.navbar{
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1030;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    padding: .3rem;
+}
 .nav-dropdown .nav-link {
     color: #B2EBF2;
     line-height: 1.42857;
     /* padding: 1rem 0 1rem 1rem !important; */
+
 }
 
 .nav-dropdown .nav-link:hover {
@@ -23,7 +32,6 @@
 }
 
 .nav-dropdown .nav-link-menu {
-    z-index: 1030;
     position: absolute;
     border: none;
     min-width: 220px;

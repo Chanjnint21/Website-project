@@ -6,11 +6,11 @@
         sidebar.classList.toggle("active");
 
         if(sidebar.classList.contains('active')) {
-            document.getElementById("sidebarCollapse").innerHTML="menu";
-        } else {
             document.getElementById("sidebarCollapse").innerHTML="menu_open";
+        } else {
+            document.getElementById("sidebarCollapse").innerHTML="menu";
         }
-        document.getElementById("body").classList.toggle("active");
+        document.getElementById("section").classList.toggle("active");
         document.getElementById("afterCollape").classList.toggle("after-collape");
         document.getElementById("beforeCollape").classList.toggle("before-collape");
         document.getElementById("dashboardText").classList.toggle("after-collape");

@@ -43,38 +43,45 @@ body {
     font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: 1rem;
     color: #444;
-    overflow: hidden;
 }
 
-.wrapper {
+/* .wrapper {
     display: flex;
     width: 100%;
     align-items: stretch;
     overflow-x: hidden
-}
-
+} */
 #body {
     width: 100%;
     padding: 0;
     min-height: 100vh;
     transition: all 0.3s;
 }
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+  } */
+  .content{
+    margin-top: 1rem;
+  }
 
 /*------------------------------------------------------------------
 [2. Header / #header]
 */
-#body>.navbar {
+/* #body>.navbar {
     padding: 0 1.5rem;
     min-height: 54px;
     box-shadow: none;
     border-bottom: 1px solid rgba(101, 109, 119, .16);
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
-}
+} */
 
 /*------------------------------------------------------------------
 [3. Navigation / #navbar] - see /components/navbar/navbar-dropdown.css
 */
-.default-light-menu {
+/* .default-light-menu {
     border: none !important;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
     color: #fff;
@@ -83,7 +90,7 @@ body {
 .default-light-menu:hover {
     background: #2196F3 !important;
     color: #fff;
-}
+} */
 
 /*------------------------------------------------------------------
 [4. Content / #content]
@@ -401,8 +408,7 @@ textarea{
 
 .form-card{
     background-color: white;
-    height: 85vh;
-    margin: 0;
+    /* height: 85vh; */
     padding: 1rem;
     font-weight: bold;
     border-radius: 10px;
@@ -475,6 +481,7 @@ textarea{
     border-radius: 50%;
     -webkit-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
+    box-shadow: 0 0rem 1rem rgb(255, 255, 255);
   }
   
   @-webkit-keyframes spin {

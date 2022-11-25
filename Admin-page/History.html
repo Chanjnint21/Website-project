@@ -19,8 +19,8 @@
         <div class="wrapper" id="wrapper">
             <nav id="sidebar" class="overflow-hidden">
                 <div id="logo" class="text-center pt-3 pb-1 company-logo">
-                    <img id="beforeCollape" width="200" height="25" src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
-                    <img id="afterCollape" class="after-collape" width="25" height="25" src="https://static.tildacdn.com/tild3763-6339-4363-b336-383130646539/menu_logo_2.svg" alt="App logo" class="app-logo">
+                    <img id="afterCollape" class="after-collape" width="210" height="25" src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
+                    <img id="beforeCollape" width="30" height="25" src="https://static.tildacdn.com/tild3763-6339-4363-b336-383130646539/menu_logo_2.svg" alt="App logo" class="app-logo">
                 </div>
                 <hr class="mx-3" style="color: #f55252 ; opacity: 1; height: 5px; border-radius: 5px;"/>
                 <ul class="list-unstyled components text-secondary mt-4">
@@ -37,37 +37,11 @@
                         <a href="./user_management.html"> <span id="inbox-icon" class="material-icons">people</span> <span id="UMtext" class="sidebartext position-absolute">User Mangement</span></a>
                     </li>
                     <li >  
-                        <a class="fixed-bottom text-light" id="logout" onclick="LogOut()" > <span id="logout-icon" class="material-icons">logout</span> <span id="logoutText" class="sidebartext position-absolute text-uppercase px-2">Lim Chanjnint</span></a> 
+                        <a class="fixed-bottom text-light" id="logout" onclick="LogOut()" > <span id="logout-icon" class="material-icons">logout</span> <span id="logoutText" class="sidebartext position-absolute text-uppercase px-2">admin page</span></a> 
                     </li>
                 </ul>
             </nav>
             <div id="body">
-                <!-- navbar navigation component -->
-                <nav class="navbar navbar-expand-lg navbar-white bg-white">
-                    <span class="material-icons" id="sidebarCollapse">menu_open</span>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ms-auto">
-                            <li class="nav-item dropdown">
-                                <div class="nav-dropdown">
-                                    <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary d-inlineblock" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span class="text-uppercase">admin page</span>
-                                        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end nav-link-menu">
-                                        <ul class="nav-list">
-                                            <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal"><span type="button" class="material-icons">person</span> Profile</a></li>
-                                            <li><a href="../User-page/UserMainPage.html" class="dropdown-item"><span type="button" class="material-icons">commit</span> Switch role</a></li>
-                                            <div class="dropdown-divider"></div>
-                                            <li><a class="dropdown-item" onclick="LogOut()"><span type="button" class="material-icons">logout</span> Logout</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <!-- end of navbar navigation -->
-                
                 <!-- Profile Modal -->
                 <div  class="modal" id="myModal">
                     <div class="modal-dialog modal-dialog-centered">
@@ -243,33 +217,62 @@
                     </div>
                 </div>
                 <!-- Content -->
-                <div class="content">
-                    <div class="container-fluid">
-                        <div class="page-header">
+                <section class="home-section" id="section">
+                    <!-- navbar navigation component -->
+                    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                        <span class="material-icons mx-3" id="sidebarCollapse">menu</span>
+                        <div class="page-head">
                             <span class="page-title">History</span>  
                         </div>
-                        <div  id="elem" ></div>
-                        <div class="animate-content" id="myDiv">
-                            <div class="table-box px-4 pt-4">
-                                <div class="table-card pb-5">
-                                    <table id="display" class="table table-hover display">
-                                        <thead  class="table-head position-sticky" style="top: 0; background-color:white ; opacity: 1; z-index:1;">
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">First Name</th>
-                                                <th scope="col">Last Name</th>                               
-                                                <th scope="col">Title</th>
-                                                <th scope="col ">Request Date</th>
-                                                <th scope="col" >Status</th>
-                                                <th scope="col">Action</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ms-auto">
+                                <li class="nav-item dropdown d-inlineblock">
+                                    <div class="nav-dropdown">
+                                        <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary d-inlineblock" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="text-uppercase">admin page</span>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                                            <ul class="nav-list">
+                                                <li><a class="dropdown-item" data-toggle="modal" data-target="#myModal"><span type="button" class="material-icons">person</span> Profile</a></li>
+                                                <li><a href="../User-page/UserMainPage.html" class="dropdown-item"><span type="button" class="material-icons">commit</span> Switch role</a></li>
+                                                <div class="dropdown-divider"></div>
+                                                <li><a class="dropdown-item" onclick="LogOut()"><span type="button" class="material-icons">logout</span> Logout</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- end of navbar navigation -->
+                    <div class="content">
+                        <div class="container-fluid">
+                            <div  id="elem" ></div>
+                            <div class="animate-content" id="myDiv">
+                                <div class="table-box px-4 pt-4">
+                                    <div class="table-card pb-5">
+                                        <table id="display" class="table table-hover display">
+                                            <thead  class="table-head position-sticky" style="top: 0; background-color:white ; opacity: 1; z-index:1;">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">First Name</th>
+                                                    <th scope="col">Last Name</th>                               
+                                                    <th scope="col">Title</th>
+                                                    <th scope="col ">Request Date</th>
+                                                    <th scope="col" >Status</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                </section>
+                
                 <!-- Delete comfirm Yes/No modal -->
                 <div  class="modal" id="comfirm-modal">
                     <div class="modal-dialog modal-dialog-centered">

@@ -5,8 +5,12 @@
 * Website: https://github.com/alexis-luna/bootstrap-simple-admin-template
 -------------------------------------------------------------------*/
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    min-width: 75px;
+    max-width: 75px;
     background: #fff;
     color: #fff;
     transition: all 0.3s;
@@ -16,8 +20,8 @@
 }
 
 #sidebar.active {
-    min-width: 75px;
-    max-width: 75px;
+    min-width: 250px;
+    max-width: 250px;
 }
 
 .after-collape, .before-collape {
@@ -99,12 +103,12 @@ a[aria-expanded="true"] {
 }
 
 .fixed-bottom{
-    width: 250px;
+    width: 75px;
     background: #f55252;
 }
 
 .fixed-bottom.after-collape{
-    width: 75px;
+    width: 250px;
 }
 
 .badge {
@@ -114,13 +118,30 @@ a[aria-expanded="true"] {
     margin-left: 0.5rem;
     border-radius: 50%;
 }
-
 .sidebartext{
+    display: none;
+}
+.sidebartext.after-collape{
+    display: inline-block;
     animation: fadeInAnimation ease 0.7s;
     padding-top: 0.15rem;
     font-weight: 200;
     margin-left: .8rem;
 }
+.home-section{
+    position: relative;
+    background: #f4f6fa ;
+    min-height: 100vh;
+    top: 0;
+    left: 75px;
+    width: calc(100% - 75px);
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+.home-section.active{
+    left: 250px;
+    width: calc(100% - 250px);
+  }
 
 @keyframes fadeInAnimation {
     0% {
