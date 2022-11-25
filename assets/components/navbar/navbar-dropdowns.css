@@ -23,6 +23,7 @@
 }
 
 .nav-dropdown .nav-link-menu {
+    z-index: 1030;
     position: absolute;
     border: none;
     min-width: 220px;
