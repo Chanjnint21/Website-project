@@ -9,14 +9,15 @@
         <link href="../assets/css/master.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
-        <link href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css" rel="stylesheet" > -->
+        <link href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css" rel="stylesheet" >
     </head>
 
     <body>
         <div class="wrapper" id="wrapper">
+            <!--toggle side bar-->
             <nav id="sidebar" class="overflow-hidden">
                 <div id="logo" class="text-center pt-3 pb-1 company-logo">
                     <img id="afterCollape" class="after-collape" width="210" height="25" src="../assets/img/soramitsu_6years.png" alt="App logo" class="app-logo">
@@ -41,6 +42,91 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- modal for create the new user-->
+            <div  class="modal" id="create-user">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Add New User</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        First Name<span class="required">*</span>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <input type="text" id="new-Fname" class="added-user" required>
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Last Name<span class="required">*</span>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <input type="text" id="new-Lname" class="added-user" required>
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Phone<span class="required">*</span>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <input type="text" id="new-phone" class="added-user" required>
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Email<span class="required">*</span>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <input type="text" id="new-email" class="added-user" >
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Password<span class="required">*</span>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <input type="text" id="new-pass" class="added-user" >
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Confirm Password<span class="required">*</span>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <input type="text" id="new-cfpass" class="added-user" >
+                                        <p class=" text-danger" id="cf-password-validations"></p>
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Role<span class="required">*</span>
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <div class="form-check form-check-inline">
+                                            <input  type="radio" name="RadioOptions" id="inlineRadio1" value="admin" >
+                                            <label class="form-check-label" for="inlineRadio1">Admin User</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="RadioOptions" id="inlineRadio2" value="user">
+                                            <label class="form-check-label" for="inlineRadio2">General User</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-2 text-center">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-danger" onclick="createuser();">Create user</button>
+                                        <button type="button" class="btn btn-secondary" class="close" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
             <div id="body">
                 <div  class="modal" id="myModal">
                         <div class="modal-dialog modal-dialog-centered">
@@ -104,6 +190,7 @@
                         <span class="material-icons mx-3" id="sidebarCollapse">menu</span>
                         <div class="page-head">
                             <span class="page-title">User Management</span>
+                            <span class="material-icons mb-2" data-toggle="modal" data-target="#create-user" >person_add</span>
                         </div>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="nav navbar-nav ms-auto">
@@ -129,11 +216,11 @@
                     <!-- end of navbar navigation -->
                     <div class="content">
                         <div class="container-fluid">
-                            <div class="page-header">
+                            <!-- <div class="page-header">
                                 <div class="row d-flex ">
                                     <div class="col mt-2">
                                     <span>
-                                        Show 
+                                        Show
                                         <select id="inputState">
                                             <option selected>10</option>
                                             <option>20</option>
@@ -145,27 +232,27 @@
                                     </span>
                                 </div>
                                 <div class="col search_UM d-flex justify-content-end">
-                                        <!-- <button class="btn btn-secondary mr-3">Add User +</button> -->
-                                        <input type="text" class="search mt-1" placeholder="Search user..."/>
+                                        <input type="text" class="search mt-1" id="search" onkeyup="myFunction()" placeholder="Search user..." autocomplete="off"/>
                                         <span class='material-icons p-1 mt-1'>search</span>
                                 </div>
-                            </div>  
-                        </div>
+                            </div>   -->
+                        <!-- </div> -->
                             <div class="animate-content">
-                                <!-- <div class="table-box px-4 pt-4">
+                                <div class="table-box px-4 pt-4">
                                     <div class="table-card pb-5">
                                         <table id="UM" class="table table-hover">
                                             <thead class="table-head position-sticky" style="top: 0; background-color: white; z-index:1;">
                                                 <tr>
+                                                    <th>#</th>
                                                     <th>First Name</th>
-                                                    <th>Last Naem</th>
-                                                    <th>Position</th>
+                                                    <th>Last Name</th>
+                                                    <th>Role</th>
                                                     <th>Phone</th>
                                                     <th>Email</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <!-- <tbody>
                                                 <tr>
                                                     <td>Tiger Nixon</td>
                                                     <td>System Architect</td>
@@ -310,31 +397,12 @@
                                                     <td>2011-03-21</td>
                                                     <td><span class="material-icons">edit</span> <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span></td>
                                                 </tr>
-                                            </tbody>
+                                            </tbody> -->
                                         </table>
                                     </div>
-                                </div> -->
-                                <div class="table-box px-4 pt-4">
+                                </div>
+                                <!-- <div class="table-box px-4 pt-4">
                                     <div class="table-card">
-                                        <!-- <div class="row d-flex ">
-                                            <div class="col">
-                                                <span>
-                                                    Show 
-                                                    <select id="inputState">
-                                                        <option selected>10</option>
-                                                        <option>20</option>
-                                                        <option>30</option>
-                                                        <option>50</option>
-                                                        <option>100</option>
-                                                    </select>
-                                                    entrier
-                                                </span>
-                                            </div>
-                                            <div class="col search_UM d-flex justify-content-end">
-                                                    <input type="text" class="search" placeholder="Search user..."/>
-                                                    <span class='material-icons p-1'>search</span>
-                                            </div>
-                                        </div> -->
                                                 <table class="table table-hover">
                                                     <thead class="table-head position-sticky" style="top: 0; background-color: white; z-index:1;">
                                                         <tr>
@@ -346,7 +414,7 @@
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody>
+                                                    <tbody id="bodytable">
                                                         <tr>
                                                             <td>1</td>
                                                             <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Michael Holz</td>
@@ -457,6 +525,28 @@
                                                                 <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
                                                             </td>
                                                         </tr>
+                                                        <tr>
+                                                            <td>11</td>
+                                                            <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Mary Saveley</td>
+                                                            <td>Back-end Developer</td>
+                                                            <td>06789375</td>
+                                                            <td>Mary Saveley@gmail.com</td>
+                                                            <td>
+                                                                <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                                <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12</td>
+                                                            <td><img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="avatar" alt="Avatar"> Martin Sommer</td>
+                                                            <td>Back-end Developer</td>                        
+                                                            <td>08473839</td>
+                                                            <td>Martin Sommer@gmail.com</td>
+                                                            <td>
+                                                                <span class="material-icons" title="Edit" data-toggle="tooltip">edit</span>
+                                                                <span class="material-icons text-danger" title="Delete" data-toggle="tooltip">cancel</span>
+                                                            </td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                                 <div class="row">
@@ -481,8 +571,7 @@
                                                         </nav>
                                                     </div>
                                                 </div>
-                                    </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -490,14 +579,15 @@
             </div>
         </div>
         <div style="display:none;" id="loading"><img id="loader" src="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico"></div>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/components/Table/usermanagement.js"></script>
         <script src="../assets/js/script.js"></script>
     </body>
 </html>
 <script>$('[data-toggle="tooltip"]').tooltip()</script>
-<style>
+<!-- <style>
     .page-item.disabled .page-link,
     .page-item .page-link.next {
         padding: 5px;
@@ -509,4 +599,16 @@
     .page-link {
         color: #f55252;
     }
-</style>
+</style> -->
+<script>
+    // var $rows = $('#bodytable tr');
+    // $('#search').keyup(function() {
+    //     var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+        
+    //     $rows.show().filter(function() {
+    //         var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+    //         return !~text.indexOf(val);
+    //     }).hide();
+    // });
+    // $('#UM').DataTable();
+</script>
