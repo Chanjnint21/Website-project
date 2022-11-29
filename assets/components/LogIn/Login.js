@@ -18,18 +18,17 @@ function visbility(){
 
 
 function LogIn(){
-    // document.getElementById("loader").style.visibility = "hidden";
     const Login_form = document.getElementById("login_form");
-    const inputname= document.getElementById("username");
-    const inputpassword= document.getElementById("password");
+    const inputname= document.getElementById("username").value;
+    const inputpassword= document.getElementById("password").value;
 
     Login_form.addEventListener('submit', function (e){
         e.preventDefault();
 
-        localStorage.setItem("Username", inputname.value);
-        localStorage.setItem("Password", inputpassword.value);
-        const User = localStorage.getItem("Username");
-        const Pass = localStorage.getItem("Password");
+        var logincard = document.getElementById("login-card");
+        var loader = document.getElementById("load");
+        const newUser = localStorage.getItem("new-email");
+        const newPass = localStorage.getItem("new-pass");
 
 
         const user1 = "adminpage"
@@ -38,14 +37,25 @@ function LogIn(){
         const user2 = "userpage"
         const pass2 = 54321;
 
-        if (user1 == User && pass1 == Pass){
+        if (user1 == inputname && pass1 == inputpassword){
             switchtoAdmin();
-        } else if (user2 == User && pass2 == Pass) {
+        } else if (user2 == inputname && pass2 == inputpassword) {
             switchtoUser();
+        } else if(newUser == inputname && newPass == inputpassword){
+            logincard.style.display = "none";
+            loader.style.display = "block";
+            timeout = setTimeout(switchpage, 5000);
         } else {
-            alert("Invalid Input");
+            document.getElementById("Invalid_inp").innerHTML= "*Invalid email or password*"
         }
     } )   
+}
+
+function switchpage(){
+    var role = localStorage.getItem("new-role");
+    if (role == "admin"){
+        window.location.href = '../Admin-page/MainPage.html';
+    }
 }
 
 function switchtoUser() {
@@ -69,3 +79,4 @@ function switchtoAdmin() {
             window.location.href = '../Admin-page/MainPage.html';
     }
   }
+
