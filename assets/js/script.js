@@ -22,22 +22,6 @@
         document.getElementById("sidebar-details").classList.toggle("after-collape")
     });
 })();
-//----------------------------------------------------- button in (details) request page ---------------------------------------------
-
-// document.getElementById("Reject").addEventListener("click", Rbtn)
-//     function Rbtn(){
-//         var btn = document.getElementById("demo1");
-//         btn.value="Reject"
-//         btn.style.color="red";
-//         document.getElementById("demo1").innerHTML= "Reject";
-//     }
-// document.getElementById("Approve").addEventListener("click", Abtn)
-//     function Abtn(){
-//         var btn = document.getElementById("demo1");
-//         btn.value="Approve"
-//         btn.style.color="green";
-//         document.getElementById("demo1").innerHTML= "Approve";
-//     }
 //----------------------------------------------------- button in request page ---------------------------------------------
 function status1(){
     var elem = document.getElementById("demo1");
@@ -132,10 +116,14 @@ function LogOut(){
     var loader = document.getElementById("loading");
     wrappe.style.display = "none";
     loader.style.display = "block";
-    timeou = setTimeout(LogOut, 1000);
-    if(timeou == 3){
-            window.location.href = '../login-page/LogIn.html';
-    }
+    timeou = setTimeout(LogOutnow, 2000);
+    // if(timeou == 3){
+    //         window.location.href = '../login-page/LogIn.html';
+    // }
+}
+
+function LogOutnow(){
+    window.location.href = '../login-page/LogIn.html';
 }
 
 function loadvalue() {
