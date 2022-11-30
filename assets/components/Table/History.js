@@ -26,3 +26,7 @@ t.row.add([num+15, 'Kosal', "vicheka", "title", "13/07/2022",reject, review]).dr
 t.row.add([num+16, 'Kjoool', "Rosa", "title", "24/05/2022", reject, review]).draw(false);
 t.row.add([num+17, 'forlto', "chanao", "Phcum Ben", "31/09/2022", reject, review]).draw(false);
 t.row.add([num+18, 'candaal', "ghiloo", "title", "12/10/2022", reject, review]).draw(false);
+
+function DeleteRow(){
+    document.getElementsByTagName("tr")[1].remove();
+}
