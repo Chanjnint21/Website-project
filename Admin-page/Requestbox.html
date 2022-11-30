@@ -25,16 +25,16 @@
                 <hr class="mx-3" style="color: #f55252 ; opacity: 1; height: 5px; border-radius: 5px;"/>
                 <ul class="list-unstyled components text-secondary mt-4">
                     <li >
-                        <a href="./MainPage.html"><span id="dashboard "class="material-icons">dashboard</span> <span id="dashboardText" class="sidebartext position-absolute">Dashboard</span> </a>
+                        <a href="./MainPage.html" title='Dashboard' data-toggle='tooltip' data-placement="right"  ><span id="dashboard "class="material-icons">dashboard</span> <span id="dashboardText" class="sidebartext position-absolute">Dashboard</span> </a>
                     </li>
                     <li class="item">
-                        <a href="./Requestbox.html"><span id="person-icon" class="material-icons">inbox</span> <span id="permissionText" class="sidebartext position-absolute" >Request Box<span class="badge">2</span></span></a>
-                    </li>
-                    <li>
-                        <a href="./History.html"> <span id="inbox-icon" class="material-icons">history</span> <span id="inboxText" class="sidebartext position-absolute"> History</span></a>
+                        <a href="./Requestbox.html" title='Request Box' data-toggle='tooltip' data-placement="right"><span id="person-icon" class="material-icons">inbox</span> <span id="permissionText" class="sidebartext position-absolute" >Request Box<span class="badge">2</span></span></a>
                     </li>
                     <li >
-                        <a href="./user_management.html"> <span id="inbox-icon" class="material-icons">people</span> <span id="UMtext" class="sidebartext position-absolute">User Mangement</span></a>
+                        <a href="./History.html" title='History' data-toggle='tooltip' data-placement="right"> <span id="inbox-icon" class="material-icons">history</span> <span id="inboxText" class="sidebartext position-absolute"> History</span></a>
+                    </li>
+                    <li >
+                        <a href="./user_management.html" title='User Management' data-toggle='tooltip' data-placement="right"> <span id="inbox-icon" class="material-icons">people</span> <span id="UMtext" class="sidebartext position-absolute">User Mangement</span></a>
                     </li>
                     <li >  
                         <a class="fixed-bottom text-light" id="logout" onclick="LogOut()" > <span id="logout-icon" class="material-icons">logout</span> <span id="logoutText" class="sidebartext position-absolute text-uppercase px-2">admin page</span></a> 
@@ -178,9 +178,7 @@
                                             <b>Reason</b>
                                         </div>
                                         <div class="col-lg-10 col-md-9 col-sm-12">
-                                            <p id="req_reason">Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
-                                                Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
-                                                and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
+                                            <p id="req_reason">
                                             </p>
                                         </div>  
                                     </div> 
@@ -198,13 +196,20 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-title="delete" id="delete" data-toggle="modal" data-target="#comfirm-modal">
-                                <span class="material-icons">delete</span>
-                            </button>
-                            <button type="button" class="btn btn-secondary" id="edit" data-title="Edit">
-                                <span class="material-icons">edit_note</span>
-                            </button>
-                            <input type="button" class="btn btn-danger" value="Save Chnage">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-12">
+                                        <b>Comment:</b>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-12">
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col text-end">
+                                    <input type="button" class="btn btn-danger" onclick="movetohistory()" value="Reject"  data-dismiss="modal" id="Reject">
+                                    <input type="button" class="btn btn-success" onclick="movetohistory()" value="Approve"  data-dismiss="modal" id="Approve">
+                            </div>
                         </div>
                     </div>
                     </div>
@@ -303,14 +308,6 @@
         <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/components/Table/Requestbox.js"></script>
         <script src="../assets/js/script.js"></script>
+        <script>$('[data-toggle="tooltip"]').tooltip()</script>
     </body>
 </html>
-<style>
-    .page-item.active .page-link {
-        background-color: #f55252;
-        border-color: #f55252 ;
-    }
-    .page-link {
-        color: #f55252;
-    }
-</style>

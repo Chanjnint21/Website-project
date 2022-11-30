@@ -19,14 +19,14 @@
             </div>
             <hr class="mx-3" style="color: #f55252 ; opacity: 1; height: 5px; border-radius: 5px;"/>
             <ul class="list-unstyled components text-secondary mt-4">
-                <li >
-                    <a href="./UserMainPage.html"><span id="dashboard "class="material-icons">dashboard</span> <span id="dashboardText" class="sidebartext position-absolute">Dashboard</span> </a>
+                <li>
+                    <a href="./UserMainPage.html" title='Dashboard' data-toggle='tooltip' data-placement="right"><span id="dashboard "class="material-icons">dashboard</span> <span id="dashboardText" class="sidebartext position-absolute">Dashboard</span> </a>
                 </li>
                 <li class="item">
-                    <a href="./Form.html"><span id="person-icon" class="material-icons">description</span> <span id="permissionText" class="sidebartext position-absolute" >Request Form</span></a>
+                    <a href="./Form.html" title='Request Form' data-toggle='tooltip' data-placement="right"><span id="person-icon" class="material-icons">description</span> <span id="permissionText" class="sidebartext position-absolute" >Request Form</span></a>
                 </li>
                 <li >
-                    <a href="./Inbox.html"> <span id="inbox-icon" class="material-icons">inbox</span> <span id="inboxText" class="sidebartext position-absolute"> InBox<span class="badge">2</span></span></a>
+                    <a href="./Inbox.html" title='Inbox' data-toggle='tooltip' data-placement="right"> <span id="inbox-icon" class="material-icons">inbox</span> <span id="inboxText" class="sidebartext position-absolute"> InBox<span class="badge">2</span></span></a>
                 </li>
                 <li >  
                     <a class="fixed-bottom text-light" id="logout" onclick="LogOut()"> <span id="logout-icon" class="material-icons">logout</span> <span id="logoutText" class="sidebartext position-absolute text-uppercase px-2">Lim Chanjnint</span></a> 
@@ -217,5 +217,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script>$('[data-toggle="tooltip"]').tooltip()</script>
 </body>
 </html>
