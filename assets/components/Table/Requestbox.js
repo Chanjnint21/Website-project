@@ -12,94 +12,60 @@
     var lastname = localStorage.getItem("lastname");
     var title = localStorage.getItem("title");
     var subdate = localStorage.getItem("submitdate");
-    var review = "<button data-title='review'><img src='https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png' type='button' data-toggle='modal' data-target='#modal-reviewed'/></button ><button data-title='delete'>"; //<span class='material-icons'  data-toggle='modal' data-target='#deletRow-modal'>delete</span></button >
+    var review = "<button data-title='review'><img src='https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png' type='button' data-toggle='modal' data-target='#modal-pending'/></button ><button data-title='delete'>"; //<span class='material-icons'  data-toggle='modal' data-target='#deletRow-modal'>delete</span></button >
     var localstatus = localStorage.getItem("status");
-    var status = "<button data-toggle='modal' data-target='#comfirm-modal' data-title='change status' ><span id='demo1' value=''>PENDING</span></button>";
-    // var approve = "<span style='color: green;'>APPROVE</span>"; 
-    // var reject = "<span style='color: red;'>REJECT</span>";
-    let num = 0;
+    var req_status = "<button data-toggle='modal' data-target='#comfirm-modal' data-title='change status' ><span id='demo1' value=''>PENDING</span></button>";
+    let num;
     if (localstatus !== null){
         num = 1;
-        t.row.add([num, firstname, lastname, title, subdate, status, review]).draw(false);
+        t.row.add([num, firstname, lastname, title, subdate, req_status, review]).draw(false);
+    } else {
+        num = 0;
     }
     // Automatically add a first row of data
 
-    t.row.add([num + 1, 'Sokha', "chan", "Phcum Ben", "12/07/2022", status, review]).draw(false);
-    t.row.add([num + 2, 'MArk', "jackson", "title", "12/06/2022", status, review]).draw(false);
-    t.row.add([num + 3, 'Thida', "karl", "Phcum Ben", "12/07/2022", status, review]).draw(false);
-    t.row.add([num + 4, 'Daro', "krosa", "title", "12/05/2022", status, review]).draw(false);
-    t.row.add([num + 5, 'vireak', "chan", "Phcum Ben", "12/09/2022", status, review]).draw(false);
-    t.row.add([num + 6, 'Kosal', "vicheka", "title", "13/07/2022",status, review]).draw(false);
-    t.row.add([num + 7, 'Kjoool', "Rosa", "title", "24/05/2022", status, review]).draw(false);
-    t.row.add([num + 8, 'forlto', "chanao", "Phcum Ben", "31/09/2022", status, review]).draw(false);
-    t.row.add([num + 9, 'candaal', "ghiloo", "title", "12/10/2022", status, review]).draw(false);
-
-    // t.row.add([num+10, 'Sokha', "chan", "Phcum Ben", "12/07/2022", approve, review]).draw(false);
-    // t.row.add([num+11, 'MArk', "jackson", "title", "12/06/2022", approve, review]).draw(false);
-    // t.row.add([num+12, 'Thida', "karl", "Phcum Ben", "12/07/2022", approve, review]).draw(false);
-    // t.row.add([num+13, 'Daro', "krosa", "title", "12/05/2022", reject, review]).draw(false);
-    // t.row.add([num+14, 'vireak', "chan", "Phcum Ben", "12/09/2022", reject, review]).draw(false);
-    // t.row.add([num+15, 'Kosal', "vicheka", "title", "13/07/2022",reject, review]).draw(false);
-    // t.row.add([num+16, 'Kjoool', "Rosa", "title", "24/05/2022", reject, review]).draw(false);
-    // t.row.add([num+17, 'forlto', "chanao", "Phcum Ben", "31/09/2022", reject, review]).draw(false);
-    // t.row.add([num+18, 'candaal', "ghiloo", "title", "12/10/2022", reject, review]).draw(false);
+    t.row.add([num + 1, 'Sokha', "chan", "Phcum Ben", "12/07/2022", req_status, review]).draw(false);
+    t.row.add([num + 2, 'MArk', "jackson", "title", "12/06/2022", req_status, review]).draw(false);
+    t.row.add([num + 3, 'Thida', "karl", "Phcum Ben", "12/07/2022", req_status, review]).draw(false);
+    t.row.add([num + 4, 'Daro', "krosa", "title", "12/05/2022", req_status, review]).draw(false);
+    t.row.add([num + 5, 'vireak', "chan", "Phcum Ben", "12/09/2022", req_status, review]).draw(false);
+    t.row.add([num + 6, 'Kosal', "vicheka", "title", "13/07/2022",req_status, review]).draw(false);
+    t.row.add([num + 7, 'Kjoool', "Rosa", "title", "24/05/2022", req_status, review]).draw(false);
+    t.row.add([num + 8, 'forlto', "chanao", "Phcum Ben", "31/09/2022", req_status, review]).draw(false);
+    t.row.add([num + 9, 'candaal', "ghiloo", "title", "12/10/2022", req_status, review]).draw(false);
     
 
-    document.getElementById("Reject").addEventListener("click", Rbtn)
-    function Rbtn(){
-        var btn = document.getElementById("demo1");
-        btn.value="REJECT"
-        btn.style.color="red";
-        document.getElementById("demo1").innerHTML= "REJECT";
-    }
-    document.getElementById("Approve").addEventListener("click", Abtn)
-    function Abtn(){
-        var btn = document.getElementById("demo1");
-        btn.value="APPROVE"
-        btn.style.color="green";
-        document.getElementById("demo1").innerHTML= "APPROVE";
-    }
+    // document.getElementById("Reject").addEventListener("click", Rbtn)
+    // function Rbtn(){
+    //     var btn = document.getElementById("demo1");
+    //     btn.value="REJECT"
+    //     btn.style.color="red";
+    //     document.getElementById("demo1").innerHTML= "REJECT";
+    // }
+    // document.getElementById("Approve").addEventListener("click", Abtn)
+    // function Abtn(){
+    //     var btn = document.getElementById("demo1");
+    //     btn.value="APPROVE"
+    //     btn.style.color="green";
+    //     document.getElementById("demo1").innerHTML= "APPROVE";
+    // }
 
-function status1(){
-    var elem = document.getElementById("demo1");
-    if (elem.value=="Reject"){
-        elem.value = "Approve";
-        elem.style.color='green';
-        document.getElementById("demo1").innerHTML= "APPROVE";
-    } 
-    else {
-        elem.value = "Reject";
-        elem.style.color='red';
-        document.getElementById("demo1").innerHTML= "REJECT";
-    }
-}
-
-function DeleteRow() {
-    document.getElementsByTagName("tr")[1].remove();
-
-}
-
-// document.getElementById('all').addEventListener('click', allrow)
-// function allrow(){
-//     var selectall = $('table').find('input');
-//     selectall.prop('checked', 'checked');
-// }
-
-// function checkUncheck(checkBox) {
-//     var get = document.getElementsByName('checkedbox');
-//     for(var i=0; i<get.length; i++) {
-//         get[i].checked = checkBox.checked;
+// function status1(){
+//     var elem = document.getElementById("demo1");
+//     if (elem.value=="Reject"){
+//         elem.value = "Approve";
+//         elem.style.color='green';
+//         document.getElementById("demo1").innerHTML= "APPROVE";
+//     } 
+//     else {
+//         elem.value = "Reject";
+//         elem.style.color='red';
+//         document.getElementById("demo1").innerHTML= "REJECT";
 //     }
 // }
 
-// function showremovebtn(){
-//     // let checkBox = document.getElementsByClassName("select");
-//     // let checkBoxx = document.getElementsByName('checkedbox');
-//     let checkBox = document.getElementById('Check');
-//     var BtnRemove = document.getElementById("removeBtn");
-//         if (checkBox.checked == true){
-//             BtnRemove.style.display = "block";
-//         } else {
-//             BtnRemove.style.display = "none";
-//         }
-// }
+function movetohistory() {
+
+    // document.getElementsByTagName("tr")[1].remove();
+
+}
