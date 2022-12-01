@@ -80,7 +80,7 @@
                                         Email<span class="required">*</span>
                                     </div>
                                     <div class="col-sm-12 col-md-8 col-lg-8">
-                                        <input type="text" id="new-email" class="added-user" >
+                                        <input type="text" id="new-email" class="added-user" required>
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -88,7 +88,7 @@
                                         Password<span class="required">*</span>
                                     </div>
                                     <div class="col-sm-12 col-md-8 col-lg-8">
-                                        <input type="text" id="new-pass" class="added-user" >
+                                        <input type="text" id="new-pass" class="added-user" required>
                                     </div>
                                 </div>
                                 <div class="row pb-2">
@@ -106,26 +106,26 @@
                                     </div>
                                     <div class="col-sm-12 col-md-8 col-lg-8">
                                         <div class="form-check form-check-inline">
-                                            <input  type="radio" name="RadioOptions" id="inlineRadio1" value="Admin" >
-                                            <label class="form-check-label" for="inlineRadio1">Admin User</label>
+                                            <input type="radio" name="RadioOptions" id="inlineRadio2" value="General User" checked>
+                                            <label class="form-check-label" for="inlineRadio2">General User</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input type="radio" name="RadioOptions" id="inlineRadio2" value="General User">
-                                            <label class="form-check-label" for="inlineRadio2">General User</label>
+                                            <input  type="radio" name="RadioOptions" id="inlineRadio1" value="Admin" required>
+                                            <label class="form-check-label" for="inlineRadio1">Admin User</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row py-2 text-center">
                                     <div class="col">
                                         <button type="button" class="btn btn-danger" onclick="createuser();">Create user</button>
-                                        <button type="button" class="btn btn-secondary" class="close" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#CancelAdded-modal">Cancel</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-        </div>
+            </div>
             <div id="body">
                 <!--profile modal-->
                 <div  class="modal" id="myModal">
@@ -185,19 +185,7 @@
                         </div>
                 </div>
                 <!--Remove User modal-->
-                <div  class="modal" id="RemoveUser-modal">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body text-center">
-                                <br>
-                                <h5>Remove this user?</h5>
-                                <br>
-                                <input type="button" class="btn btn-light" data-dismiss="modal" value="No">
-                                <input type="button" class="btn btn-light"  onclick="RemoveUser();" value="Yes" data-dismiss="modal">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <section class="home-section" id="section">
                     <!-- navbar navigation component -->
                     <nav class="navbar navbar-expand-lg navbar-white bg-white">
@@ -424,6 +412,109 @@
                         </div>
                     </div>
                 </section>
+            </div>
+            <div class="modal" id="RemoveUser-modal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <br>
+                            <h5>Remove this user?</h5>
+                            <br>
+                            <input type="button" class="btn btn-light" data-dismiss="modal" value="No">
+                            <input type="button" class="btn btn-light"  onclick="RemoveUser();" value="Yes" data-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="CancelAdded-modal">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <br>
+                            <h5>Cancel create?</h5>
+                            <br>
+                            <input type="button" class="btn btn-light" data-dismiss="modal" data-target="#CancelAdded-modal" value="No">
+                            <input type="button" class="btn btn-light" value="Yes" onclick="cancelAddeduser();">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="modal" id="edit-UsM">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Sokha Chan's Info</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        First Name
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <input type="text" id="new-Fname" class="added-user" value="Sokha" >
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Last Name
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <input type="text" id="new-Lname" class="added-user" value="Chan" >
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Phone
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <input type="text" id="new-phone" class="added-user" value="081808091" >
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Email
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <input type="text" id="new-email" class="added-user" value="Sokhachan@gmail.com" >
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Password
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8 d-flex">
+                                        <input type="password" id="seeUsM-pass" class="added-user" value="12345678">
+                                        <span class="material-icons m-1 text-secondary" onclick="SeePass();" id="eye">
+                                            visibility_off
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row pb-2">
+                                    <div class="col-sm-12 col-md-4 col-lg-4">
+                                        Role
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 col-lg-8">
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="RadioOptions" id="inlineRadio2" value="General User" checked>
+                                            <label class="form-check-label" for="inlineRadio2">General User</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input  type="radio" name="RadioOptions" id="inlineRadio1" value="Admin" required>
+                                            <label class="form-check-label" for="inlineRadio1">Admin User</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-2 text-center">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal" disabled>Save Change</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div style="display:none;" id="loading"><img id="loader" src="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico"></div>

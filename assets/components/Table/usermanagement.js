@@ -6,7 +6,7 @@ const new_Lname =localStorage.getItem("new-Lname");
 const new_Role = localStorage.getItem("new-role");
 const new_phone = localStorage.getItem("new-phone");
 const new_email = localStorage.getItem("new-email");
-const action = "<button><span class='material-icons' title='Edit' data-toggle='tooltip'>edit</span></button> <button  data-toggle='modal' data-target='#RemoveUser-modal'><span class='material-icons text-danger' title='Delete' data-toggle='tooltip' >cancel</span></button>";
+const action = "<button data-toggle='modal' data-target='#edit-UsM'><span class='material-icons' title='Edit' data-toggle='tooltip'>edit</span></button> <button  data-toggle='modal' data-target='#RemoveUser-modal'><span class='material-icons text-danger' title='Delete' data-toggle='tooltip' >cancel</span></button>";
 var newuser = localStorage.getItem("new-email");
 let num;
 if (newuser !== null){
@@ -40,14 +40,31 @@ t.row.add([num+18, 'candaal', "ghiloo", "General User", "Phone number", "Email",
 
 //create the user function
 function createuser() {
+    var newFname = document.getElementById("new-Fname").value;
+    var newLname =  document.getElementById("new-Lname").value;
+    var newPhone = document.getElementById("new-phone").value;
+    var newEmail = document.getElementById("new-email").value;
+    var pass = document.getElementById("new-pass").value;
+    var Cpass = document.getElementById("new-cfpass").value;
+    if (newFname == "" || newLname == "" || newPhone == "" || newEmail == "" || pass == "" || Cpass == ""){
+        document.getElementById("cf-password-validations").innerHTML= "Plz complete all the requirements";
+    } else {
+        CreatedNow();
+    }
+}
+function CreatedNow(){
+    var newFname = document.getElementById("new-Fname").value;
+    var newLname =  document.getElementById("new-Lname").value;
+    var newPhone = document.getElementById("new-phone").value;
+    var newEmail = document.getElementById("new-email").value;
     var pass = document.getElementById("new-pass").value;
     var Cpass = document.getElementById("new-cfpass").value;
     var ele = document.getElementsByName('RadioOptions');
     if (pass == Cpass){
-        localStorage.setItem("new-Fname", document.getElementById("new-Fname").value);
-        localStorage.setItem("new-Lname", document.getElementById("new-Lname").value);
-        localStorage.setItem("new-phone", document.getElementById("new-phone").value);
-        localStorage.setItem("new-email", document.getElementById("new-email").value);
+        localStorage.setItem("new-Fname", newFname);
+        localStorage.setItem("new-Lname", newLname);
+        localStorage.setItem("new-phone", newPhone);
+        localStorage.setItem("new-email", newEmail);
         localStorage.setItem("new-pass", Cpass);
         //check which radio is check
         for(i = 0; i < ele.length; i++) {
@@ -65,5 +82,24 @@ function RemoveUser(){
     for (key of keysToRemove) {
         localStorage.removeItem(key);
         location.reload();
+    }
+}
+
+function cancelAddeduser(){
+    location.reload();
+}
+
+function SeePass(){
+    var Eye = document.getElementById("eye");
+    Eye.addEventListener('click', show_hide()) 
+    function show_hide(){
+        var password = document.getElementById("seeUsM-pass");
+        if (password.type ==="password"){
+            password.type ="text";
+            document.getElementById("eye").innerHTML = "visibility";
+        } else {
+            password.type = "password";
+            document.getElementById("eye").innerHTML = "visibility_off";
+        }
     }
 }

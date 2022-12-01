@@ -1,3 +1,4 @@
+document.getElementById("ModalTitle").innerHTML = localStorage.getItem("firstname")+"'s form";
     document.getElementById("req_fname").innerHTML = localStorage.getItem("firstname");
     document.getElementById("req_lname").innerHTML = localStorage.getItem("lastname");
     document.getElementById("req_phone").innerHTML = localStorage.getItem("phone");
@@ -22,8 +23,8 @@
     } else {
         num = 0;
     }
-    // Automatically add a first row of data
 
+    // Automatically add a first row of data
     t.row.add([num + 1, 'Sokha', "chan", "Phcum Ben", "12/07/2022", req_status, review]).draw(false);
     t.row.add([num + 2, 'MArk', "jackson", "title", "12/06/2022", req_status, review]).draw(false);
     t.row.add([num + 3, 'Thida', "karl", "Phcum Ben", "12/07/2022", req_status, review]).draw(false);
@@ -34,38 +35,34 @@
     t.row.add([num + 8, 'forlto', "chanao", "Phcum Ben", "31/09/2022", req_status, review]).draw(false);
     t.row.add([num + 9, 'candaal', "ghiloo", "title", "12/10/2022", req_status, review]).draw(false);
     
+function Approve(){
+    localStorage.removeItem("status");
+    localStorage.setItem("H-status", "APPROVE");
+    movetohistory()
+}
 
-    // document.getElementById("Reject").addEventListener("click", Rbtn)
-    // function Rbtn(){
-    //     var btn = document.getElementById("demo1");
-    //     btn.value="REJECT"
-    //     btn.style.color="red";
-    //     document.getElementById("demo1").innerHTML= "REJECT";
-    // }
-    // document.getElementById("Approve").addEventListener("click", Abtn)
-    // function Abtn(){
-    //     var btn = document.getElementById("demo1");
-    //     btn.value="APPROVE"
-    //     btn.style.color="green";
-    //     document.getElementById("demo1").innerHTML= "APPROVE";
-    // }
-
-// function status1(){
-//     var elem = document.getElementById("demo1");
-//     if (elem.value=="Reject"){
-//         elem.value = "Approve";
-//         elem.style.color='green';
-//         document.getElementById("demo1").innerHTML= "APPROVE";
-//     } 
-//     else {
-//         elem.value = "Reject";
-//         elem.style.color='red';
-//         document.getElementById("demo1").innerHTML= "REJECT";
-//     }
-// }
+function Reject(){
+    localStorage.removeItem("status");
+    localStorage.setItem("H-status", "REJECT");
+    movetohistory()
+}
 
 function movetohistory() {
+    localStorage.setItem("H-firstname", firstname);
+    localStorage.setItem("H-lastname", lastname);
+    localStorage.setItem("H-title", title);
+    localStorage.setItem("H-submitdate", subdate);
+    localStorage.setItem("H-reason", localStorage.getItem("reason"));
+    localStorage.setItem("H-email", localStorage.getItem("email"));
+    localStorage.setItem("H-phone", localStorage.getItem("reason"));
+    localStorage.setItem("H-From", localStorage.getItem("From"));
+    localStorage.setItem("H-to", localStorage.getItem("To"));
+    localStorage.setItem("H-to", localStorage.getItem("TotalLeave"));
+    localStorage.setItem("H-attachment", localStorage.getItem("attachment"));
 
-    // document.getElementsByTagName("tr")[1].remove();
-
+    let keysToRemove = ["firstname", "lastname", "title", "phone", "email", "TotalLeave", "From", "To", "reason", "attachment", "submitdate", "status"];
+    for (key of keysToRemove) {
+        localStorage.removeItem(key);
+        location.reload();
+    }
 }
