@@ -108,82 +108,79 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2 ">
+                                    <div class="row d-flex">
                                         <div class="col-lg-4 col-md-4 col-sm-4">
                                             <b>First name</b> 
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_fname"> </p>
+                                            <input class="added-user" id="req_fname" />
                                         </div>  
-                                    </div>   
+                                    </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
+                                    <div class="row d-flex">
                                         <div class="col-lg-4 col-md-4 col-sm-4">
                                             <b>Phone</b> 
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_phone"> </p>
-                                        </div>  
+                                            <input class="added-user" id="req_phone" />
+                                        </div> 
                                     </div> 
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
+                                    <div class="row d-flex">
                                         <div class="col-lg-4 col-md-4 col-sm-4">
                                             <b>Last Name</b> 
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_lname" > </p>
+                                            <input class="added-user" id="req_lname"/>
                                         </div>  
                                     </div>                                 
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
+                                    <div class="row d-flex">
                                         <div class="col-lg-4 col-md-4 col-sm-4">
                                             <b>Email</b> 
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_email"> </p>
+                                            <input class="added-user" id="req_email"/>
                                         </div>  
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
+                                    <div class="row d-flex">
                                         <div class="col-lg-4 col-md-4 col-sm-4">
                                             <b>Request</b> 
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_totalleave"></p>
+                                            <input class="added-user" id="req_totalleave"/>
                                         </div>  
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
+                                    <div class="row d-flex">
                                         <div class="col-lg-4 col-md-4 col-sm-4">
                                             <b>Date</b> 
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_date"> 12/Nov/2022 - 15/Nov/2022</p>
+                                            <input class="added-user" id="req_date"/>
                                         </div>  
                                     </div>
                                 </div>
                                 <!-- <hr/> -->
                                 <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
-                                    <div class="row">
+                                    <div class="row d-flex">
                                         <div class="col-lg-2 col-md-3 col-sm-12">
                                             <b>Reason</b>
                                         </div>
                                         <div class="col-lg-10 col-md-9 col-sm-12">
-                                            <p id="req_reason">Editing tools today tell you what's wrong and what to write, but they don't tell you why it's wrong or how to write better in the first place. Auto-correct, auto-suggestion, and grammar correction tools are useful, but they hinder our ability to think, and fall short of turning us into powerful communicators.
-                                                Essay helps you move beyond the fear of the blank page so you can finally put your ideas down on paper. Then, it helps you move them around and change them, word by word, sentence by sentence, 
-                                                and paragraph by paragraph, rejecting what doesn't work and keeping what's great. In the end, what you're left with is your incredible ideas, powerfully written.
-                                            </p>
+                                            <textarea class="added-user" id="req_reason"></textarea>
                                         </div>  
                                     </div> 
                                 </div>
                                 <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
-                                    <div class="row">
+                                    <div class="row d-flex">
                                         <div class="col-lg-2 col-md-3 col-sm-12">
                                             <b>Attachment</b>
                                         </div>
@@ -197,9 +194,6 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal" data-title="delete" id="delete" data-toggle="modal" data-target="#comfirm-modal">
                                 <span class="material-icons">delete</span>
-                            </button>
-                            <button type="button" class="btn btn-secondary" id="edit" data-title="Edit">
-                                <span class="material-icons">edit_note</span>
                             </button>
                             <input type="button" class="btn btn-danger" value="Save Chnage">
                         </div>
@@ -387,7 +381,7 @@
                         <div class="modal-body text-center">
                             <h5>Are you sure?</h5>
                             <input type="button" class="Yes-no btn btn-light" data-dismiss="modal" value="No" />
-                            <input type="button" class="Yes-no btn btn-light" data-dismiss="modal" onclick="del()" value="Yes" />
+                            <input type="button" class="Yes-no btn btn-light" data-dismiss="modal" onclick='deleteRequest()' value="Yes" />
                         </div>
                     </div>
                     </div>
