@@ -67,29 +67,45 @@ function movepage(){
         var inputLname= document.getElementById("lastname").value;
         var inputPhone= document.getElementById("phone").value;
         var inputEmail= document.getElementById("email").value;
-        var inputLeaveDate= document.getElementById("leave_date").value;
-        var inputBackDate= document.getElementById("back_date").value;
+        var inputLeaveDate= document.getElementById("leave_date").value  + ' to ' + document.getElementById("back_date").value;
+        // var inputBackDate= document.getElementById("back_date").value;
         var inputTotalleave= document.getElementById("noOfDays").value;
         var inputtitle= document.getElementById("title").value;
         var inputReason= document.getElementById("reason").value;
         var inputattachment= document.getElementById("attachment").value;
+        const status = "PENDING";
+        // var test = {
+        //     inputFname,
+        //     inputLname,
+        //     inputPhone,
+        //     inputEmail,
+        //     inputLeaveDate,
+        //     inputTotalleave,
+        //     inputtitle,
+        //     inputReason,
+        //     inputattachment,
+        //     status,
+        // }
+
+        // var dataList = []
+        // dataList.push(test)
 
         //store as array
         // var ARRAY = [inputFname, inputLname, inputPhone, inputEmail, inputLeaveDate, inputBackDate, inputTotalleave, inputtitle, inputReason, inputattachment];
         // localStorage.setItem(inputtitle, JSON.stringify(ARRAY));
 
-        // store one by one as variable
-        localStorage.setItem("firstname", inputFname);
-        localStorage.setItem("lastname", inputLname);
-        localStorage.setItem("phone", inputPhone);
-        localStorage.setItem("email", inputEmail);
-        localStorage.setItem("From", inputLeaveDate);
-        localStorage.setItem("To", inputBackDate);
-        localStorage.setItem("TotalLeave", inputTotalleave);
-        localStorage.setItem("title", inputtitle);
-        localStorage.setItem("reason", inputReason);
-        localStorage.setItem("attachment", inputattachment);
-
+        // // store one by one as variable
+        // localStorage.setItem("DataList", JSON.stringify(dataList));
+        // localStorage.setItem("firstname", inputFname);
+        // localStorage.setItem("lastname", inputLname);
+        // localStorage.setItem("phone", inputPhone);
+        // localStorage.setItem("email", inputEmail);
+        // localStorage.setItem("From", inputLeaveDate);
+        // localStorage.setItem("To", inputBackDate);
+        // localStorage.setItem("TotalLeave", inputTotalleave);
+        // localStorage.setItem("title", inputtitle);
+        // localStorage.setItem("reason", inputReason);
+        // localStorage.setItem("attachment", inputattachment);
         const event = new Date();
 
         const years = {  year: 'numeric'};
@@ -101,10 +117,27 @@ function movepage(){
         const day = event.toLocaleDateString('en-Us', days);
         
         const submitDate= day + "/" + month + "/" + year;
-        localStorage.setItem("submitdate", submitDate); 
+        // localStorage.setItem("submitdate", submitDate); 
 
-        const status = "PENDING";
-        localStorage.setItem("status", status);
+        //store the form inout as the array
+        var test = {
+            inputFname,
+            inputLname,
+            inputPhone,
+            inputEmail,
+            inputLeaveDate,
+            inputTotalleave,
+            inputtitle,
+            inputReason,
+            inputattachment,
+            status,
+            submitDate,
+        }
+        var dataList = []
+        dataList.push(test)
+
+
+        localStorage.setItem("DataList", JSON.stringify(dataList));
 
         window.location.href = "Inbox.html";
     })
