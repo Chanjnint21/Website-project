@@ -13,7 +13,7 @@ document.getElementById("ModalTitle").innerHTML = localStorage.getItem("firstnam
     var lastname = localStorage.getItem("lastname");
     var title = localStorage.getItem("title");
     var subdate = localStorage.getItem("submitdate");
-    var review = "<button data-title='review'><img src='https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png' type='button' data-toggle='modal' data-target='#modal-pending'/></button ><button data-title='delete'>"; //<span class='material-icons'  data-toggle='modal' data-target='#deletRow-modal'>delete</span></button >
+    var review = "<button title='review' data-toggle='tooltip'><span class='material-icons' type='button' data-toggle='modal' data-target='#modal-pending'>rate_review</span></button ><button data-title='delete'>"; //<span class='material-icons'  data-toggle='modal' data-target='#deletRow-modal'>delete</span></button >
     var localstatus = localStorage.getItem("status");
     var req_status = "<button data-toggle='modal' data-target='#comfirm-modal' data-title='change status' ><span id='demo1' value=''>PENDING</span></button>";
     let num;
@@ -26,14 +26,14 @@ document.getElementById("ModalTitle").innerHTML = localStorage.getItem("firstnam
 
     // Automatically add a first row of data
     t.row.add([num + 1, 'Sokha', "chan", "Phcum Ben", "12/07/2022", req_status, review]).draw(false);
-    t.row.add([num + 2, 'MArk', "jackson", "title", "12/06/2022", req_status, review]).draw(false);
+    t.row.add([num + 2, 'MArk', "jackson", "Water festival", "12/06/2022", req_status, review]).draw(false);
     t.row.add([num + 3, 'Thida', "karl", "Phcum Ben", "12/07/2022", req_status, review]).draw(false);
-    t.row.add([num + 4, 'Daro', "krosa", "title", "12/05/2022", req_status, review]).draw(false);
-    t.row.add([num + 5, 'vireak', "chan", "Phcum Ben", "12/09/2022", req_status, review]).draw(false);
-    t.row.add([num + 6, 'Kosal', "vicheka", "title", "13/07/2022",req_status, review]).draw(false);
-    t.row.add([num + 7, 'Kjoool', "Rosa", "title", "24/05/2022", req_status, review]).draw(false);
-    t.row.add([num + 8, 'forlto', "chanao", "Phcum Ben", "31/09/2022", req_status, review]).draw(false);
-    t.row.add([num + 9, 'candaal', "ghiloo", "title", "12/10/2022", req_status, review]).draw(false);
+    t.row.add([num + 4, 'Daro', "krosa", "Khmer New yeat", "15/04/2022", req_status, review]).draw(false);
+    t.row.add([num + 5, 'vireak', "chan", "Funeral", "10/03/2022", req_status, review]).draw(false);
+    t.row.add([num + 6, 'Kosal', "vicheka", "title", "13/07/2021",req_status, review]).draw(false);
+    t.row.add([num + 7, 'Kjoool', "Rosa", "title", "24/05/2021", req_status, review]).draw(false);
+    t.row.add([num + 8, 'forlto', "chanao", "titlw", "31/1/2021", req_status, review]).draw(false);
+    t.row.add([num + 9, 'candaal', "ghiloo", "title", "12/1/2021", req_status, review]).draw(false);
     
 function Approve(){
     localStorage.removeItem("status");

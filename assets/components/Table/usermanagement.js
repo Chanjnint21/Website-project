@@ -17,18 +17,18 @@ if (newuser !== null){
 }
 
 //auto added data into table
-t.row.add([num + 1, 'Sokha', "chan", "Admin", "Phone numbe", "Email", action]).draw(false);
+t.row.add([num + 1, 'Sokha', "chan", "Admin", "Phone number", "Email", action]).draw(false);
 t.row.add([num + 2, 'MArk', "jackson", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num + 3, 'Thida', "karl", "General User", "Phone numbe", "Email", action]).draw(false);
+t.row.add([num + 3, 'Thida', "karl", "General User", "Phone number", "Email", action]).draw(false);
 t.row.add([num + 4, 'Daro', "krosa", "General User", "Phone number", "Email", action]).draw(false);
 t.row.add([num + 5, 'vireak', "chan", "General User", "Phone number", "Email", action]).draw(false);
 t.row.add([num + 6, 'Kosal', "vicheka", "General User", "Phone number","Email", action]).draw(false);
 t.row.add([num + 7, 'Kjoool', "Rosa", "General User", "Phone number", "Email", action]).draw(false);
 t.row.add([num + 8, 'forlto', "chanao", "General User", "Phone number", "Email", action]).draw(false);
 t.row.add([num+9, 'candaal', "ghiloo", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+10, 'Sokha', "chan", "General User", "Phone numbe", "Email", action]).draw(false);
+t.row.add([num+10, 'Sokha', "chan", "General User", "Phone number", "Email", action]).draw(false);
 t.row.add([num+11, 'MArk', "jackson", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+12, 'Thida', "karl", "General User", "Phone numbe", "Email", action]).draw(false);
+t.row.add([num+12, 'Thida', "karl", "General User", "Phone number", "Email", action]).draw(false);
 t.row.add([num+13, 'Daro', "krosa", "General User", "Phone number", "Email", action]).draw(false);
 t.row.add([num+14, 'vireak', "chan", "General User", "Phone number", "Email", action]).draw(false);
 t.row.add([num+15, 'Kosal', "vicheka", "General User", "Phone number","Email", action]).draw(false);
@@ -47,7 +47,7 @@ function createuser() {
     var pass = document.getElementById("new-pass").value;
     var Cpass = document.getElementById("new-cfpass").value;
     if (newFname == "" || newLname == "" || newPhone == "" || newEmail == "" || pass == "" || Cpass == ""){
-        document.getElementById("cf-password-validations").innerHTML= "Plz complete all the requirements";
+        document.getElementById("cf-password-validations").innerHTML= "Pl complete all the requirements";
     } else {
         CreatedNow();
     }

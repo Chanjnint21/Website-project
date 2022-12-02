@@ -6,10 +6,11 @@ var lastname = localStorage.getItem("H-lastname");
 var title = localStorage.getItem("H-title");
 var subdate = localStorage.getItem("H-submitdate");
 var H_status = localStorage.getItem("H-status");
+let DoneReviewed;
 if (H_status == "APPROVE"){
-    var DoneReviewed = "<span data-toggle='modal' id='status' data-target='#comfirm-modal' style='color: green;'>" + localStorage.getItem("H-status") + "</span>";
+    DoneReviewed = "<span  id='approve_status' data-toggle='modal' data-target='#comfirm-modal' style='color: green;' value='Approve'>APPROVE</span>";
 } else {
-    var DoneReviewed = "<span data-toggle='modal' id='status' data-target='#comfirm-modal' style='color: red;'>" + localStorage.getItem("H-status") + "</span>";
+    DoneReviewed = "<span  id='reject_status' data-toggle='modal' data-target='#comfirm-modal' style='color: red;' value='Reject'>REJECT</span>";
 }
 
 document.getElementById("ModalTitle").innerHTML = firstname +"'s form";
@@ -23,9 +24,9 @@ document.getElementById("req_reason").innerHTML = localStorage.getItem("H-reason
 document.getElementById("req_attachment").innerHTML = localStorage.getItem("H-attachment");
 
 
-var review = "<button data-title='review'><img src='https://icons.veryicon.com/png/o/education-technology/smart-campus-1/view-details-2.png' type='button' data-toggle='modal' data-target='#modal-reviewed'/></button ><button data-title='delete'><span class='material-icons mx-2'  data-toggle='modal' data-target='#deletRow-modal'>delete</span></button >";
-var approve = "<span data-toggle='modal' id='status' style='color: green;'>APPROVE</span>"; 
-var reject = "<span data-toggle='modal' data-target='#comfirm-modal' style='color: red;'>REJECT</span>";
+var review = "<button title='view detail' data-toggle='tooltip'><span class='material-icons' type='button' data-toggle='modal' data-target='#modal-reviewed'>visibility</span></button ><button title='delete' data-toggle='tooltip'><span class='material-icons mx-2 text-danger'  data-toggle='modal' data-target='#deletRow-modal'>cancel</span></button >";
+var approve = "<span style='color: green;'>APPROVE</span>"; 
+var reject = "<span style='color: red;'>REJECT</span>";
 let num;
 
 if (H_status !== null){
@@ -64,16 +65,12 @@ function DeleteRow(){
     }
 }
 
-function statuschange(){
-    var elem = document.getElementById("status");
-    if (elem.value=="Reject"){
-        elem.value = "Approve";
-        elem.style.color='green';
-        document.getElementById("status").innerHTML= "APPROVE";
+function StatusChange(){
+    let STaTus = document.getElementById("reject_status");
+    if (STaTus.value =="Reject"){
+        STaTus.innerHTML= "APPROVE";
     } 
     else {
-        elem.value = "Reject";
-        elem.style.color='red';
-        document.getElementById("status").innerHTML= "REJECT";
+        STaTus.innerHTML= "REJECT";
     }
 }
