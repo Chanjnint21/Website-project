@@ -59,40 +59,61 @@ function countdays () {
 
 //--------------------------------------------------- store form input into local storage ---------------------------------------------
 function movepage(){
+    // Parse the JSON stored in allEntriesP
+    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    if(existingEntries == null) existingEntries = [];
+
     const Paperform = document.getElementById("paperform");
+    var inputFname= document.getElementById("firstname").value;
+    var inputLname= document.getElementById("lastname").value;
+    var inputPhone= document.getElementById("phone").value;
+    var inputEmail= document.getElementById("email").value;
+    var inputLeaveDate= document.getElementById("leave_date").value  + ' to ' + document.getElementById("back_date").value;
+    var inputTotalleave= document.getElementById("noOfDays").value;
+    var inputtitle= document.getElementById("title").value;
+    var inputReason= document.getElementById("reason").value;
+    var inputattachment= document.getElementById("attachment").value;
+    var status = "PENDING";
+        const event = new Date();
 
-    Paperform.addEventListener('submit', function(e){
-        e.preventDefault();
-        var inputFname= document.getElementById("firstname").value;
-        var inputLname= document.getElementById("lastname").value;
-        var inputPhone= document.getElementById("phone").value;
-        var inputEmail= document.getElementById("email").value;
-        var inputLeaveDate= document.getElementById("leave_date").value  + ' to ' + document.getElementById("back_date").value;
-        // var inputBackDate= document.getElementById("back_date").value;
-        var inputTotalleave= document.getElementById("noOfDays").value;
-        var inputtitle= document.getElementById("title").value;
-        var inputReason= document.getElementById("reason").value;
-        var inputattachment= document.getElementById("attachment").value;
-        const status = "PENDING";
-        // var test = {
-        //     inputFname,
-        //     inputLname,
-        //     inputPhone,
-        //     inputEmail,
-        //     inputLeaveDate,
-        //     inputTotalleave,
-        //     inputtitle,
-        //     inputReason,
-        //     inputattachment,
-        //     status,
-        // }
+        const years = {  year: 'numeric'};
+        const months = { month: 'numeric' };
+        const days = { day: 'numeric' };
+        
+        const year = event.toLocaleDateString('en-Us', years);
+        const month = event.toLocaleDateString('en-Us', months);
+        const day = event.toLocaleDateString('en-Us', days);
+        
+        const submitDate= day + "/" + month + "/" + year;
 
-        // var dataList = []
-        // dataList.push(test)
+    const entry = {
+        "InpFname": inputFname,
+        "InpLname": inputLname,
+        "Inpphone": inputPhone,
+        "InpEmail": inputEmail,
+        "InpLeaveDate": inputLeaveDate,
+        "InpTotalleave": inputTotalleave,
+        "Inptitle": inputtitle,
+        "InpReason": inputReason,
+        "Inpattachment": inputattachment,
+        "Inpstatus": status,
+        "InpSubmitday": submitDate
+    };
+    localStorage.setItem("newentry", JSON.stringify(entry));
+    // Save allEntries back to local storage
+    existingEntries.unshift(entry);
+    localStorage.setItem("ToInbox", JSON.stringify(existingEntries));
+    localStorage.setItem("ToRequestbox", JSON.stringify(existingEntries));
 
-        //store as array
-        // var ARRAY = [inputFname, inputLname, inputPhone, inputEmail, inputLeaveDate, inputBackDate, inputTotalleave, inputtitle, inputReason, inputattachment];
-        // localStorage.setItem(inputtitle, JSON.stringify(ARRAY));
+    document.getElementById("submit_form").addEventListener("click", function() {
+        movepage();
+    }, false);
+
+    window.location.href = "Inbox.html";
+
+
+    // Paperform.addEventListener('submit', function(e){
+    //     e.preventDefault();
 
         // // store one by one as variable
         // localStorage.setItem("DataList", JSON.stringify(dataList));
@@ -106,41 +127,67 @@ function movepage(){
         // localStorage.setItem("title", inputtitle);
         // localStorage.setItem("reason", inputReason);
         // localStorage.setItem("attachment", inputattachment);
-        const event = new Date();
 
-        const years = {  year: 'numeric'};
-        const months = { month: 'numeric' };
-        const days = { day: 'numeric' };
+        // const event = new Date();
+
+        // const years = {  year: 'numeric'};
+        // const months = { month: 'numeric' };
+        // const days = { day: 'numeric' };
         
-        const year = event.toLocaleDateString('en-Us', years);
-        const month = event.toLocaleDateString('en-Us', months);
-        const day = event.toLocaleDateString('en-Us', days);
+        // const year = event.toLocaleDateString('en-Us', years);
+        // const month = event.toLocaleDateString('en-Us', months);
+        // const day = event.toLocaleDateString('en-Us', days);
         
-        const submitDate= day + "/" + month + "/" + year;
+        // const submitDate= day + "/" + month + "/" + year;
         // localStorage.setItem("submitdate", submitDate); 
 
-        //store the form inout as the array
-        var test = {
-            inputFname,
-            inputLname,
-            inputPhone,
-            inputEmail,
-            inputLeaveDate,
-            inputTotalleave,
-            inputtitle,
-            inputReason,
-            inputattachment,
-            status,
-            submitDate,
-        }
-        var dataList = []
-        dataList.push(test)
+        // Fake localStorage to make it work in the snippet
+        // LocalStorage = {
+        // getItem: (key) => this[key],
+        // setItem: (key, value) => this[key] = value
+        // };
 
+        // Make sure we get -something- back in case this is the first time we're accessing the storage.
+        // const oldRequest = JSON.parse(LocalStorage.getItem('data') || '[]');
 
-        localStorage.setItem("DataList", JSON.stringify(dataList));
+        // The creation of the new object can be done in 1 step.  
+        // const array = Object.entries({
+        //     Inpname: inputFname,
+        //     InpLname: inputLname,
+        //     Inpphone: inputPhone,
+        //     InpEmail: inputEmail,
+        //     InpLeaveDate: inputLeaveDate,
+        //     InpTotalleave: inputTotalleave,
+        //     Inptitle: inputtitle,
+        //     InpReason: inputReason,
+        //     Inpattachment: inputattachment,
+        //     Inpstatus: status,
+        //     InpSybmitedaL: submitDate,
+        // });
 
-        window.location.href = "Inbox.html";
-    })
+        // oldRequest.push(array); 
+        // localStorage.setItem('RequestData', JSON.stringify(oldRequest));
+        // LocalStorage.setItem('data', JSON.stringify(oldRequest));
+        // var test = {
+        //     inputFname,
+        //     inputLname,
+        //     inputPhone,
+        //     inputEmail,
+        //     inputLeaveDate,
+        //     inputTotalleave,
+        //     inputtitle,
+        //     inputReason,
+        //     inputattachment,
+        //     status,
+        //     submitDate,
+        // }
+        // var dataList = []
+        // dataList.push(test)
+
+        // localStorage.setItem("DataList", JSON.stringify(dataList));
+
+        // window.location.href = "Inbox.html";
+    // })
 }
 //------------------------------------------------------- Logout ---------------------------------------------------
 
