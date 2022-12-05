@@ -17,40 +17,56 @@ if (newuser !== null){
 }
 
 //auto added data into table
-t.row.add([num + 1, 'Sokha', "chan", "Admin", "Phone number", "Email", action]).draw(false);
-t.row.add([num + 2, 'MArk', "jackson", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num + 3, 'Thida', "karl", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num + 4, 'Daro', "krosa", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num + 5, 'vireak', "chan", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num + 6, 'Kosal', "vicheka", "General User", "Phone number","Email", action]).draw(false);
-t.row.add([num + 7, 'Kjoool', "Rosa", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num + 8, 'forlto', "chanao", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+9, 'candaal', "ghiloo", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+10, 'Sokha', "chan", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+11, 'MArk', "jackson", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+12, 'Thida', "karl", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+13, 'Daro', "krosa", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+14, 'vireak', "chan", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+15, 'Kosal', "vicheka", "General User", "Phone number","Email", action]).draw(false);
-t.row.add([num+16, 'Kjoool', "Rosa", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+17, 'forlto', "chanao", "General User", "Phone number", "Email", action]).draw(false);
-t.row.add([num+18, 'candaal', "ghiloo", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num + 1, 'Sokha', "chan", "Admin", "Phone number", "Email", action]).draw(false);
+// t.row.add([num + 2, 'MArk', "jackson", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num + 3, 'Thida', "karl", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num + 4, 'Daro', "krosa", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num + 5, 'vireak', "chan", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num + 6, 'Kosal', "vicheka", "General User", "Phone number","Email", action]).draw(false);
+// t.row.add([num + 7, 'Kjoool', "Rosa", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num + 8, 'forlto', "chanao", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num+9, 'candaal', "ghiloo", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num+10, 'Sokha', "chan", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num+11, 'MArk', "jackson", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num+12, 'Thida', "karl", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num+13, 'Daro', "krosa", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num+14, 'vireak', "chan", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num+15, 'Kosal', "vicheka", "General User", "Phone number","Email", action]).draw(false);
+// t.row.add([num+16, 'Kjoool', "Rosa", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num+17, 'forlto', "chanao", "General User", "Phone number", "Email", action]).draw(false);
+// t.row.add([num+18, 'candaal', "ghiloo", "General User", "Phone number", "Email", action]).draw(false);
 
 
 
 //create the user function
 function createuser() {
+    document.getElementById("submit_form").addEventListener("click", function() {
+        movepage();
+    }, false);
+    if (newFname == "" || newLname == "" || newPhone == "" || newEmail == "" || pass == "" || Cpass == ""){
+        document.getElementById("cf-password-validations").innerHTML= "Please complete all the requirements";
+    } else {
+        CreatedNow();
+    }
+    var AllUser = JSON.parse(localStorage.getItem("allEntries"));
+    if(AllUser == null) AllUser = [];
     var newFname = document.getElementById("new-Fname").value;
     var newLname =  document.getElementById("new-Lname").value;
     var newPhone = document.getElementById("new-phone").value;
     var newEmail = document.getElementById("new-email").value;
     var pass = document.getElementById("new-pass").value;
     var Cpass = document.getElementById("new-cfpass").value;
-    if (newFname == "" || newLname == "" || newPhone == "" || newEmail == "" || pass == "" || Cpass == ""){
-        document.getElementById("cf-password-validations").innerHTML= "Pl complete all the requirements";
-    } else {
-        CreatedNow();
-    }
+    const NewUser = {
+        "InpFname": newFname,
+        "InpLname": newLname,
+        "Inpphone": newPhone,
+        "InpEmail": newEmail,
+        "InpPassword": Cpass,
+        "InpRole": inputTotalleave,
+    };
+    // Save allEntries back to local storage
+    AllUser.unshift(NewUser);
+    localStorage.setItem("TotalUser", JSON.stringify(AllUser));
 }
 function CreatedNow(){
     var newFname = document.getElementById("new-Fname").value;
