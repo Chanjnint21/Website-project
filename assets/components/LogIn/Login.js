@@ -16,56 +16,33 @@ function visbility(){
 
 //--------------------------------------------------- user/admin log in account ---------------------------------------------------
 
-
 function LogIn(){
     const Login_form = document.getElementById("login_form");
     const inputname= document.getElementById("username").value;
     const inputpassword= document.getElementById("password").value;
-
+    var TotalUser = JSON.parse(localStorage.getItem("Total User"));
     Login_form.addEventListener('submit', function (e){
         e.preventDefault();
-
-        const newUser = localStorage.getItem("new-email");
-        const newPass = localStorage.getItem("new-pass");
-        const role = localStorage.getItem("new-role");
-
-        const user1 = "adminpage"
-        const pass1 = 12345;
-
-        const user2 = "userpage"
-        const pass2 = 54321;
-
-        if (user1 == inputname && pass1 == inputpassword){
-            var logincard = document.getElementById("login-card");
-            var loader = document.getElementById("load");
-            logincard.style.display = "none";
-            loader.style.display = "block";
-            timeout = setTimeout(switchtoAdmin, 3000);
-            // switchtoAdmin();
-        } else if (user2 == inputname && pass2 == inputpassword) {
-            var logincard = document.getElementById("login-card");
-            var loader = document.getElementById("load");
-            logincard.style.display = "none";
-            loader.style.display = "block";
-            timeout = setTimeout(switchtoUser, 3000);
-            // switchtoUser();
-        } else if(newUser == inputname && newPass == inputpassword){
-            if(role == "Admin"){
+        for(i = 0; i < TotalUser.length; i++) {
+            if(TotalUser[i].InpEmail == inputname && TotalUser[i].InpPassword == inputpassword && TotalUser[i].InpRole == "Admin" ){
                 var logincard = document.getElementById("login-card");
                 var loader = document.getElementById("load");
                 logincard.style.display = "none";
                 loader.style.display = "block";
                 timeout = setTimeout(switchtoAdmin, 2000);
-            } else {
+                console.log("Login succeed");
+            } else if(TotalUser[i].InpEmail == inputname && TotalUser[i].InpPassword == inputpassword && TotalUser[i].InpRole == "General User" ){
                 var logincard = document.getElementById("login-card");
                 var loader = document.getElementById("load");
                 logincard.style.display = "none";
                 loader.style.display = "block";
                 timeout = setTimeout(switchtoUser, 2000);
+                console.log("Login succeed");
+            } else {
+                document.getElementById("Invalid_inp").innerHTML= "*Invalid email or password*";
+                console.log("Login failed");
             }
-        } else {
-            document.getElementById("Invalid_inp").innerHTML= "*Invalid email or password*";
-        }
+        };
     } )   
 }
 
