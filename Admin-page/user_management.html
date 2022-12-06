@@ -14,9 +14,8 @@
         <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
         <link href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css" rel="stylesheet" >
     </head>
-
     <body onload="loadvalue()">
-        <div class="wrapper" id="wrapper">
+        <div class="wrapper" id="wrapper" >
             <!--toggle side bar-->
             <nav id="sidebar" class="overflow-hidden">
                 <div id="logo" class="text-center pt-3 pb-1 company-logo">
@@ -106,11 +105,11 @@
                                     </div>
                                     <div class="col-sm-12 col-md-8 col-lg-8">
                                         <div class="form-check form-check-inline">
-                                            <input type="radio" name="RadioOptions" id="inlineRadio2" value="General User" checked>
+                                            <input type="radio" name="RadioOptions" id="inlineRadio2" value="General User" required>
                                             <label class="form-check-label" for="inlineRadio2">General User</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input  type="radio" name="RadioOptions" id="inlineRadio1" value="Admin" required>
+                                            <input  type="radio" name="RadioOptions" id="inlineRadio1" value="Admin">
                                             <label class="form-check-label" for="inlineRadio1">Admin User</label>
                                         </div>
                                     </div>
@@ -324,11 +323,11 @@
                                     </div>
                                     <div class="col-sm-12 col-md-8 col-lg-8">
                                         <div class="form-check form-check-inline">
-                                            <input type="radio" name="RadioOptions" id="inlineRadio2" value="General User" checked>
+                                            <input type="radio" name="EditRadioOptions" id="inlineRadio2" value="General User">
                                             <label class="form-check-label" for="inlineRadio2">General User</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input  type="radio" name="RadioOptions" id="inlineRadio1" value="Admin" required>
+                                            <input  type="radio" name="EditRadioOptions" id="inlineRadio1" value="Admin" required>
                                             <label class="form-check-label" for="inlineRadio1">Admin User</label>
                                         </div>
                                     </div>
@@ -353,17 +352,3 @@
         <script>$('[data-toggle="tooltip"]').tooltip()</script>
     </body>
 </html>
-
-<!-- <style>
-    .page-item.disabled .page-link,
-    .page-item .page-link.next {
-        padding: 5px;
-    }
-    .page-item.active .page-link {
-        background-color: #f55252;
-        border-color: #f55252 ;
-    }
-    .page-link {
-        color: #f55252;
-    }
-</style> -->
