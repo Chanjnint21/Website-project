@@ -67,34 +67,72 @@
 //     }
 // }
 
-var RReview = "<button title='review' onclick='Reviewmodal()' data-toggle='tooltip'><span class='material-icons' type='button' data-toggle='modal' data-target='#modal-pending'>rate_review</span></button ><button data-title='delete'>"; //<span class='material-icons'  data-toggle='modal' data-target='#deletRow-modal'>delete</span></button >
+var RReview = "<button title='review' +data+ data-toggle='tooltip'><span class='material-icons' type='button' data-toggle='modal' data-target='#modal-pending'>rate_review</span></button ><button data-title='delete'>"; //<span class='material-icons'  data-toggle='modal' data-target='#deletRow-modal'>delete</span></button >
 
-var table = $('#display').DataTable();
+// var table = $('#display').DataTable();
 
 //import the data from local storage
 var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
 
 //display the data in table
-for (var i = 0; i <=Request_listData.length; i++ ){
-    table.row.add([i+1 , Request_listData[i].InpFname, Request_listData[i].InpLname, Request_listData[i].Inptitle, Request_listData[i].InpSubmitday, Request_listData[i].Inpstatus, RReview]).draw(false);
-}
+$('#display').dataTable( {
+    "data": Request_listData,
+    "autoWidth": false,
+    "columns": [ 
+        {"data": "InpFname"},        
+        {'data': 'InpFname'},
+        {'data': 'Inptitle'},
+        {'data': 'InpSubmitday'},
+        {'data': 'Inpstatus'},
+        {"data": "id",
+            "render": function ( data, type, row, meta ) { 
+                return RReview
+                }
+        }
+        
+     ]
+} )
+// for (var i = 0; i <=Request_listData.length; i++ ){
+//     table.row.add([i+1 , Request_listData[i].InpFname, Request_listData[i].InpLname, Request_listData[i].Inptitle, Request_listData[i].InpSubmitday, Request_listData[i].Inpstatus, RReview]).draw(false);
+// }
+// $(document).ready(function () {
+//     var table = $('#example').DataTable({
+//         ajax: 'data/arrays.txt',
+//         columnDefs: [
+//             {
+//                 targets: -1,
+//                 data: null,
+//                 defaultContent: '<button>Click!</button>',
+//             },
+//         ],
+//     });
+ 
+    // $('#display tbody').on('click', 'button', function () {
+    //     var data = table.row($(this).parents('tr')).data();
+    //     alert(data[0] + "'s salary is: " + data[5]);
+    // });
+// function deleteThis(e){
+//     const data = e.target.getAttribute('data-id')
+//     console.log(e.target.getAttribute('data-id'))
+// }
+var table = $('#display').DataTable();
 
-function Reviewmodal(){
-    var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
-    document.getElementById("ModalTitle").innerHTML = Request_listData[0].InpFname + "'s Request form";
-    document.getElementById("req_fname").innerHTML = Request_listData[0].InpFname;
-    document.getElementById("req_lname").innerHTML = Request_listData[0].InpLname;
-    document.getElementById("req_phone").innerHTML = Request_listData[0].Inpphone;
-    document.getElementById("req_email").innerHTML = Request_listData[0].InpEmail;
-    document.getElementById("req_totalleave").innerHTML = Request_listData[0].InpTotalleave + " day(s)";
-    document.getElementById("req_date").innerHTML = Request_listData[0].InpSubmitday;
-    document.getElementById("req_reason").innerHTML = Request_listData[0].InpReason;
-    if (Request_listData[0].Inpattachment.value == null){
+$('#display tbody').on( 'click', 'tr',  (event) =>  {
+    var data = table.row( event.currentTarget ).data()
+    document.getElementById("ModalTitle").innerHTML = data.InpFname + "'s Request form";
+    document.getElementById("req_fname").innerHTML = data.InpFname;
+    document.getElementById("req_lname").innerHTML = data.InpLname;
+    document.getElementById("req_phone").innerHTML = data.Inpphone;
+    document.getElementById("req_email").innerHTML = data.InpEmail;
+    document.getElementById("req_totalleave").innerHTML = data.InpTotalleave + " day(s)";
+    document.getElementById("req_date").innerHTML = data.InpSubmitday;
+    document.getElementById("req_reason").innerHTML = data.InpReason;
+    if (data.Inpattachment.value == null){
         document.getElementById("req_attachment").innerHTML = "None";
     } else {
-        document.getElementById("req_attachment").innerHTML = Request_listData[0].Inpattachment;
+        document.getElementById("req_attachment").innerHTML = data.Inpattachment;
     }
-};
+});
 
 function Approve() {
     const changestatus = {
