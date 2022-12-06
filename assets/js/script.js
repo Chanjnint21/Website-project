@@ -22,20 +22,6 @@
         document.getElementById("sidebar-details").classList.toggle("after-collape")
     });
 })();
-//----------------------------------------------------- button in request page ---------------------------------------------
-function status1(){
-    var elem = document.getElementById("demo1");
-    if (elem.value=="Reject"){
-        elem.value = "Approve";
-        elem.style.color='green';
-        document.getElementById("demo1").innerHTML= "Approve";
-    } 
-    else {
-        elem.value = "Reject";
-        elem.style.color='red';
-        document.getElementById("demo1").innerHTML= "Reject";
-    }
-}
 
 //----------------------------------------------------- date count ---------------------------------------------
 
@@ -48,22 +34,12 @@ function countdays () {
     document.getElementById("noOfDays").innerHTML = countdays + "days";
 }
 
-//--------------------------------------------------- comfirm modal ---------------------------------------------
-// function del(){
-//     document.getElementsByTagName("tr")[1].remove();
-//     document.getElementById("row1").innerHTML="1";
-//     document.getElementById("row2").innerHTML="2";
-//     document.getElementById("row3").innerHTML="3";
-
-// }
-
 //--------------------------------------------------- store form input into local storage ---------------------------------------------
 function movepage(){
     // Parse the JSON stored in allEntriesP
-    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    var existingEntries = JSON.parse(localStorage.getItem("ToInbox"));
     if(existingEntries == null) existingEntries = [];
 
-    const Paperform = document.getElementById("paperform");
     var inputFname= document.getElementById("firstname").value;
     var inputLname= document.getElementById("lastname").value;
     var inputPhone= document.getElementById("phone").value;
@@ -73,9 +49,10 @@ function movepage(){
     var inputtitle= document.getElementById("title").value;
     var inputReason= document.getElementById("reason").value;
     var inputattachment= document.getElementById("attachment").value;
-    var status = "PENDING";
-        const event = new Date();
+    var status = "REJECT";
 
+    //Get the date of submit form event
+        const event = new Date();
         const years = {  year: 'numeric'};
         const months = { month: 'numeric' };
         const days = { day: 'numeric' };
@@ -84,7 +61,7 @@ function movepage(){
         const month = event.toLocaleDateString('en-Us', months);
         const day = event.toLocaleDateString('en-Us', days);
         
-        const submitDate= day + "/" + month + "/" + year;
+        const submitDate = day + "/" + month + "/" + year;
 
     const entry = {
         "InpFname": inputFname,

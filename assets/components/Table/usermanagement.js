@@ -1,74 +1,20 @@
 //auto sort and pagination
-var t = $('#UsM').DataTable();
+var table = $('#UsM').DataTable();
+var action = "<button data-toggle='modal' data-target='#edit-UsM'><span class='material-icons' title='Edit' data-toggle='tooltip'>edit</span></button> <button  data-toggle='modal' data-target='#RemoveUser-modal'><span class='material-icons text-danger' title='Delete' data-toggle='tooltip' >cancel</span></button>";
 
-const new_Fname = localStorage.getItem("new-Fname");
-const new_Lname =localStorage.getItem("new-Lname");
-const new_Role = localStorage.getItem("new-role");
-const new_phone = localStorage.getItem("new-phone");
-const new_email = localStorage.getItem("new-email");
-const action = "<button data-toggle='modal' data-target='#edit-UsM'><span class='material-icons' title='Edit' data-toggle='tooltip'>edit</span></button> <button  data-toggle='modal' data-target='#RemoveUser-modal'><span class='material-icons text-danger' title='Delete' data-toggle='tooltip' >cancel</span></button>";
-var newuser = localStorage.getItem("new-email");
-let num;
-if (newuser !== null){
-    num = 1;
-    t.row.add([num + 0, new_Fname, new_Lname, new_Role, new_phone, new_email, action]).draw(false);
-} else {
-    num = 0;
+var UserList = JSON.parse(localStorage.getItem("Total User"));
+console.log(UserList);
+for (var i = 0; i <=UserList.length; i++ ){
+    table.row.add([i+1 , UserList[i].InpFname, UserList[i].InpLname, UserList[i].InpRole, UserList[i].Inpphone, UserList[i].InpEmail, action ]).draw(false);
 }
-
-//auto added data into table
-// t.row.add([num + 1, 'Sokha', "chan", "Admin", "Phone number", "Email", action]).draw(false);
-// t.row.add([num + 2, 'MArk', "jackson", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num + 3, 'Thida', "karl", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num + 4, 'Daro', "krosa", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num + 5, 'vireak', "chan", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num + 6, 'Kosal', "vicheka", "General User", "Phone number","Email", action]).draw(false);
-// t.row.add([num + 7, 'Kjoool', "Rosa", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num + 8, 'forlto', "chanao", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num+9, 'candaal', "ghiloo", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num+10, 'Sokha', "chan", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num+11, 'MArk', "jackson", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num+12, 'Thida', "karl", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num+13, 'Daro', "krosa", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num+14, 'vireak', "chan", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num+15, 'Kosal', "vicheka", "General User", "Phone number","Email", action]).draw(false);
-// t.row.add([num+16, 'Kjoool', "Rosa", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num+17, 'forlto', "chanao", "General User", "Phone number", "Email", action]).draw(false);
-// t.row.add([num+18, 'candaal', "ghiloo", "General User", "Phone number", "Email", action]).draw(false);
-
-
 
 //create the user function
 function createuser() {
-    document.getElementById("submit_form").addEventListener("click", function() {
-        movepage();
-    }, false);
-    if (newFname == "" || newLname == "" || newPhone == "" || newEmail == "" || pass == "" || Cpass == ""){
-        document.getElementById("cf-password-validations").innerHTML= "Please complete all the requirements";
-    } else {
-        CreatedNow();
-    }
-    var AllUser = JSON.parse(localStorage.getItem("allEntries"));
-    if(AllUser == null) AllUser = [];
-    var newFname = document.getElementById("new-Fname").value;
-    var newLname =  document.getElementById("new-Lname").value;
-    var newPhone = document.getElementById("new-phone").value;
-    var newEmail = document.getElementById("new-email").value;
-    var pass = document.getElementById("new-pass").value;
-    var Cpass = document.getElementById("new-cfpass").value;
-    const NewUser = {
-        "InpFname": newFname,
-        "InpLname": newLname,
-        "Inpphone": newPhone,
-        "InpEmail": newEmail,
-        "InpPassword": Cpass,
-        "InpRole": inputTotalleave,
-    };
-    // Save allEntries back to local storage
-    AllUser.unshift(NewUser);
-    localStorage.setItem("TotalUser", JSON.stringify(AllUser));
-}
-function CreatedNow(){
+    //open the array of total user that have been store in local storage
+    var TotalUser = JSON.parse(localStorage.getItem("Total User"));
+        if(TotalUser == null) TotalUser = [];
+    
+    //get value from modal input
     var newFname = document.getElementById("new-Fname").value;
     var newLname =  document.getElementById("new-Lname").value;
     var newPhone = document.getElementById("new-phone").value;
@@ -76,20 +22,37 @@ function CreatedNow(){
     var pass = document.getElementById("new-pass").value;
     var Cpass = document.getElementById("new-cfpass").value;
     var ele = document.getElementsByName('RadioOptions');
-    if (pass == Cpass){
-        localStorage.setItem("new-Fname", newFname);
-        localStorage.setItem("new-Lname", newLname);
-        localStorage.setItem("new-phone", newPhone);
-        localStorage.setItem("new-email", newEmail);
-        localStorage.setItem("new-pass", Cpass);
-        //check which radio is check
-        for(i = 0; i < ele.length; i++) {
-            if(ele[i].checked)
-            localStorage.setItem("new-role", ele[i].value);
+
+    // get the value from radio check admin or user
+    let Role;
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].checked){
+            Role = ele[i].value;
         }
-        location.reload(true);
-    } else{
+    };
+
+    if (newFname == "" || newLname == "" || newPhone == "" || newEmail == "" || pass == "" || Cpass == ""){
+        document.getElementById("cf-password-validations").innerHTML= "Please complete all the requirements";
+    } else if(Cpass !== pass){
         document.getElementById("cf-password-validations").innerHTML= "confirm password does not match";
+    } else {
+        const NewUser = {
+            "InpFname": newFname,
+            "InpLname": newLname,
+            "Inpphone": newPhone,
+            "InpEmail": newEmail,
+            "InpPassword": Cpass,
+            "InpRole": Role,
+        }
+        localStorage.setItem("Recent adde User", JSON.stringify(NewUser));
+        
+        // Save allEntries back to local storage
+        TotalUser.unshift(NewUser);
+        localStorage.setItem("Total User", JSON.stringify(TotalUser));
+        // document.getElementById("submit_form").addEventListener("click", function() {
+        //     createuser();
+        // }, false);
+        location.reload();
     }
 }
 

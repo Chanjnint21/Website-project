@@ -97,8 +97,15 @@ function Reviewmodal(){
 };
 
 function Approve() {
-    localStorage.removeItem(key)
-    const entry = {
+    const changestatus = {
+        "Inpstatus": "APPROVE",
+    };
+    var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
+    localStorage.setItem("ToHistory", JSON.stringify(Request_listData));
+}
+
+function Reject() {
+    const changestatus = {
         "Inpstatus": "APPROVE",
     };
     var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
