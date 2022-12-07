@@ -1,7 +1,7 @@
+
+
 //Import the list data of Inbox page from local storage
 var listData = JSON.parse(localStorage.getItem("ToInbox"));
-
-
 // Total Request display value
 let TotalData = listData.length;
 document.getElementById("UsertotalRequest").innerHTML= TotalData;

@@ -1,4 +1,7 @@
-
+// var Accept =  localStorage.getItem('fromButtonRedirect');
+// if (Accept !== 'yes') {
+//     window.location.href = "../login-page/LogIn.html";
+// }
 //Import the list data of Inbox page from local storage
 var Reqest_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
 var History_listData = JSON.parse(localStorage.getItem("ToHistory"));
@@ -46,3 +49,6 @@ const isFound = History_listData.some(element => {
 document.getElementById("AdminApprove").innerHTML= totalapprove;
 document.getElementById("AdminReject").innerHTML= totalreject;
 
+$(window).unload(function() {
+    localStorage.removeItem('fromButtonRedirect');
+});

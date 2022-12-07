@@ -74,13 +74,19 @@ var RReview = "<button title='review' +data+ data-toggle='tooltip'><span class='
 //import the data from local storage
 var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
 
+let num = 1;
 //display the data in table
 $('#display').dataTable( {
     "data": Request_listData,
     "autoWidth": false,
-    "columns": [ 
+    "columns": [
+        {"data": "id",
+            "render": function(){
+                return num++;
+            }
+        }, 
         {"data": "InpFname"},        
-        {'data': 'InpFname'},
+        {'data': 'InpLname'},
         {'data': 'Inptitle'},
         {'data': 'InpSubmitday'},
         {'data': 'Inpstatus'},
@@ -134,18 +140,18 @@ $('#display tbody').on( 'click', 'tr',  (event) =>  {
     }
 });
 
-function Approve() {
-    const changestatus = {
-        "Inpstatus": "APPROVE",
-    };
-    var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
-    localStorage.setItem("ToHistory", JSON.stringify(Request_listData));
-}
+// function Approve() {
+//     const changestatus = {
+//         "Inpstatus": "APPROVE",
+//     };
+//     var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
+//     localStorage.setItem("ToHistory", JSON.stringify(Request_listData));
+// }
 
-function Reject() {
-    const changestatus = {
-        "Inpstatus": "APPROVE",
-    };
-    var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
-    localStorage.setItem("ToHistory", JSON.stringify(Request_listData));
-}
+// function Reject() {
+//     const changestatus = {
+//         "Inpstatus": "APPROVE",
+//     };
+//     var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
+//     localStorage.setItem("ToHistory", JSON.stringify(Request_listData));
+// }
