@@ -1,3 +1,4 @@
+
 (function() {
     var menu_icon = document.getElementById("sidebarCollapse");
     var sidebar =document.getElementById("sidebar");
@@ -178,16 +179,25 @@ function LogOut(){
     //         window.location.href = '../login-page/LogIn.html';
     // }
 }
-
 function LogOutnow(){
     window.location.href = '../login-page/LogIn.html';
+    localStorage.removeItem('fromButtonRedirect');
 }
-
+function pageload(){
+    var Accept =  localStorage.getItem('fromButtonRedirect');
+    if (Accept !== 'yes') {
+        window.location.href = "../login-page/LogIn.html";
+    }
+}
 function loadvalue() {
+    var Accept =  localStorage.getItem('fromButtonRedirect');
+    if (Accept !== 'yes') {
+        window.location.href = "../login-page/LogIn.html";
+    }
         // document.getElementById("myDiv").style.display = "block";
         var myVar = setTimeout(showPage, 1000);
-    }
-    function showPage() {
+}
+function showPage() {
         document.getElementById("elem").style.display = "none";
         document.getElementById("myDiv").style.display = "block";
     }

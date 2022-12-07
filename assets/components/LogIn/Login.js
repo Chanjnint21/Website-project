@@ -47,10 +47,14 @@ function LogIn(){
 }
 
 function switchtoUser() {
+    localStorage.setItem('fromButtonRedirect', 'yes');
     window.location.href = '../User-page/UserMainPage.html';
+    ;
   }
 
 function switchtoAdmin() {
+    localStorage.setItem('fromButtonRedirect', 'yes');
     window.location.href = '../Admin-page/MainPage.html';
+    
   }
 

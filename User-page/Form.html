@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body onload="pageload()">
     <div class="wrapper" id="wrapper">
         <nav id="sidebar" class="overflow-hidden">
             <div id="logo" class="text-center pt-3 pb-1 company-logo">
@@ -220,3 +220,10 @@
     <script>$('[data-toggle="tooltip"]').tooltip()</script>
 </body>
 </html>
+<script>
+    if(localStorage.getItem("loggin") === "accept"){
+        window.parentPage = false;
+    } else {
+        window.parentPage = false;
+    }
+</script>
