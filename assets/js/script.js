@@ -23,7 +23,6 @@
         document.getElementById("sidebar-details").classList.toggle("after-collape")
     });
 })();
-
 //----------------------------------------------------- date count ---------------------------------------------
 
 function countdays () {
@@ -88,84 +87,6 @@ function movepage(){
     }, false);
 
     window.location.href = "Inbox.html";
-
-
-    // Paperform.addEventListener('submit', function(e){
-    //     e.preventDefault();
-
-        // // store one by one as variable
-        // localStorage.setItem("DataList", JSON.stringify(dataList));
-        // localStorage.setItem("firstname", inputFname);
-        // localStorage.setItem("lastname", inputLname);
-        // localStorage.setItem("phone", inputPhone);
-        // localStorage.setItem("email", inputEmail);
-        // localStorage.setItem("From", inputLeaveDate);
-        // localStorage.setItem("To", inputBackDate);
-        // localStorage.setItem("TotalLeave", inputTotalleave);
-        // localStorage.setItem("title", inputtitle);
-        // localStorage.setItem("reason", inputReason);
-        // localStorage.setItem("attachment", inputattachment);
-
-        // const event = new Date();
-
-        // const years = {  year: 'numeric'};
-        // const months = { month: 'numeric' };
-        // const days = { day: 'numeric' };
-        
-        // const year = event.toLocaleDateString('en-Us', years);
-        // const month = event.toLocaleDateString('en-Us', months);
-        // const day = event.toLocaleDateString('en-Us', days);
-        
-        // const submitDate= day + "/" + month + "/" + year;
-        // localStorage.setItem("submitdate", submitDate); 
-
-        // Fake localStorage to make it work in the snippet
-        // LocalStorage = {
-        // getItem: (key) => this[key],
-        // setItem: (key, value) => this[key] = value
-        // };
-
-        // Make sure we get -something- back in case this is the first time we're accessing the storage.
-        // const oldRequest = JSON.parse(LocalStorage.getItem('data') || '[]');
-
-        // The creation of the new object can be done in 1 step.  
-        // const array = Object.entries({
-        //     Inpname: inputFname,
-        //     InpLname: inputLname,
-        //     Inpphone: inputPhone,
-        //     InpEmail: inputEmail,
-        //     InpLeaveDate: inputLeaveDate,
-        //     InpTotalleave: inputTotalleave,
-        //     Inptitle: inputtitle,
-        //     InpReason: inputReason,
-        //     Inpattachment: inputattachment,
-        //     Inpstatus: status,
-        //     InpSybmitedaL: submitDate,
-        // });
-
-        // oldRequest.push(array); 
-        // localStorage.setItem('RequestData', JSON.stringify(oldRequest));
-        // LocalStorage.setItem('data', JSON.stringify(oldRequest));
-        // var test = {
-        //     inputFname,
-        //     inputLname,
-        //     inputPhone,
-        //     inputEmail,
-        //     inputLeaveDate,
-        //     inputTotalleave,
-        //     inputtitle,
-        //     inputReason,
-        //     inputattachment,
-        //     status,
-        //     submitDate,
-        // }
-        // var dataList = []
-        // dataList.push(test)
-
-        // localStorage.setItem("DataList", JSON.stringify(dataList));
-
-        // window.location.href = "Inbox.html";
-    // })
 }
 //------------------------------------------------------- Logout ---------------------------------------------------
 
@@ -194,18 +115,11 @@ function loadvalue() {
     if (Accept !== 'yes') {
         window.location.href = "../login-page/LogIn.html";
     }
-        // document.getElementById("myDiv").style.display = "block";
-        var myVar = setTimeout(showPage, 1000);
+    var myVar = setTimeout(showPage, 1000);
 }
+
 function showPage() {
         document.getElementById("elem").style.display = "none";
         document.getElementById("myDiv").style.display = "block";
     }
-
-//---count the row of request
-function dashboard(){
-    var table = document.getElementById("display");
-    var tbodyRowCount = table.tBodies[0].rows.length;
-    document.getElementById('').innerHTML = tbodyRowCount;
-}
 
