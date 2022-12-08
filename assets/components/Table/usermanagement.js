@@ -1,4 +1,3 @@
-//auto sort and pagination
 // var table = $('#UsM').DataTable();
 var action = "<button data-toggle='modal' +data+ data-target='#edit-UsM'><span class='material-icons' title='Edit' data-toggle='tooltip'>edit</span></button> <button  data-toggle='modal' data-target='#RemoveUser-modal'><span class='material-icons text-danger' title='Delete' data-toggle='tooltip' >cancel</span></button>";
 
@@ -33,6 +32,7 @@ var table = $('#UsM').DataTable();
 
 $('#UsM').on( 'click', 'tr',  (event) =>  {
     var data = table.row( event.currentTarget ).data()
+    // console.log(data.InpFname);
     document.getElementById("ModalTitle").innerHTML = data.InpFname + "'s Request form";
     document.getElementById("EditFname").value = data.InpFname;
     document.getElementById("EditLname").value = data.InpLname;
@@ -89,16 +89,17 @@ function createuser() {
     }
 }
 
+//Remove the user from the Total User list in local storage
 function RemoveUser(){
-    $('#UsM').on( 'click', 'tr',  (event) =>  {
-        var data = table.row( event.currentTarget ).data()
-        let keysToRemove = [data.InpFname, data.InpLname, data.Inpphone, data.InpEmail, data.InpPassword, data.InpRole];
-            for (key of keysToRemove) {
-                localStorage.removeItem(key);
-                location.reload();
-            }
-    });
-    
+    var UserList = JSON.parse(localStorage.getItem("Total User"));
+    var Useremail = document.getElementById("Editemail").value ;
+    for (var i = 0; i <= UserList.length; i++ ){
+        if (UserList[i].InpEmail == Useremail){
+            UserList.splice(i, 1);
+            localStorage.setItem('Total User', JSON.stringify(UserList));
+            location.reload();
+        }
+    }
 }
 
 function cancelAddeduser(){

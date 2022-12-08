@@ -1,19 +1,18 @@
 //--------------------------------------------------- hide/show password ---------------------------------------------
 function visbility(){
-    var Eye = document.getElementById("eye");
-    Eye.addEventListener('click', show_hide()) 
-    function show_hide(){
-        var password = document.getElementById("password");
-        if (password.type ==="password"){
-            password.type ="text";
-            document.getElementById("eye").innerHTML = "visibility";
-        } else {
-            password.type = "password";
-            document.getElementById("eye").innerHTML = "visibility_off";
-        }
+        var Eye = document.getElementById("eye");
+        Eye.addEventListener('click', show_hide()) 
+        function show_hide(){
+            var password = document.getElementById("password");
+            if (password.type ==="password"){
+                password.type ="text";
+                document.getElementById("eye").innerHTML = "visibility";
+            } else {
+                password.type = "password";
+                document.getElementById("eye").innerHTML = "visibility_off";
+            }
+    }
 }
-}
-
 //--------------------------------------------------- user/admin log in account ---------------------------------------------------
 
 function LogIn(){
