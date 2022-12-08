@@ -46,18 +46,14 @@ $('#display tbody').on( 'click', 'tr',  (event) =>  {
     }
 });
 
-//delete the request----------------------------
+//------------------- delete the request----------------------------
 function deleteRequest(){
     var Inbox_listData = JSON.parse(localStorage.getItem("ToInbox"));
-    var Useremail = document.getElementById("In_email").value ;
-    var UserFname = document.getElementById("In_fname").value;
-    var UserLname = document.getElementById("In_lname").value;
     var Userphone = document.getElementById("In_phone").value;
     var Usereason = document.getElementById("In_reason").value;
-    var Usertotalleave = document.getElementById("In_totalleave").value;
     var Userleavedate = document.getElementById("In_leavedate").value;
     for (var i = 0; i <= Inbox_listData.length; i++ ){
-        if (Inbox_listData[i].InpEmail == Useremail && Inbox_listData[i].InpFname == UserFname && Inbox_listData[i].InpLname == UserLname && Inbox_listData[i].Inpphone == Userphone && Inbox_listData[i].InpReason == Usereason && Inbox_listData[i].InpTotalleave == Usertotalleave && Inbox_listData[i].InpSubmitday == Userleavedate ){
+        if ( Inbox_listData[i].Inpphone == Userphone && Inbox_listData[i].InpReason == Usereason && Inbox_listData[i].InpSubmitday == Userleavedate ){
             Inbox_listData.splice(i, 1);
             localStorage.setItem('ToInbox', JSON.stringify(Inbox_listData));
             location.reload();

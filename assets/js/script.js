@@ -49,7 +49,7 @@ function movepage(){
     var inputtitle= document.getElementById("title").value;
     var inputReason= document.getElementById("reason").value;
     var inputattachment= document.getElementById("attachment").value;
-    var status = "REJECT";
+    var status = "PENDING";
 
     //Get the date of submit form event
         const event = new Date();
@@ -81,12 +81,8 @@ function movepage(){
     existingEntries.unshift(entry);
     localStorage.setItem("ToInbox", JSON.stringify(existingEntries));
     localStorage.setItem("ToRequestbox", JSON.stringify(existingEntries));
-
-    document.getElementById("submit_form").addEventListener("click", function() {
-        movepage();
-    }, false);
-
-    window.location.href = "Inbox.html";
+    //load to inbox page
+    window.location.href = "./Inbox.html";
 }
 //------------------------------------------------------- Logout ---------------------------------------------------
 
