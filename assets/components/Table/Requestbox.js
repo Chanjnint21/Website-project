@@ -1,75 +1,5 @@
-// document.getElementById("ModalTitle").innerHTML = localStorage.getItem("firstname")+"'s form";
-//     document.getElementById("req_fname").innerHTML = localStorage.getItem("firstname");
-//     document.getElementById("req_lname").innerHTML = localStorage.getItem("lastname");
-//     document.getElementById("req_phone").innerHTML = localStorage.getItem("phone");
-//     document.getElementById("req_email").innerHTML = localStorage.getItem("email");
-//     document.getElementById("req_totalleave").innerHTML = localStorage.getItem("TotalLeave") + "days";
-//     document.getElementById("req_date").innerHTML = localStorage.getItem("From") + " to " + localStorage.getItem("To");
-//     document.getElementById("req_reason").innerHTML = localStorage.getItem("reason");
-//     document.getElementById("req_attachment").innerHTML = localStorage.getItem("attachment");
-
-//     var t = $('#display').DataTable();
-//     var firstname = localStorage.getItem("firstname");
-//     var lastname = localStorage.getItem("lastname");
-//     var title = localStorage.getItem("title");
-//     var subdate = localStorage.getItem("submitdate");
-//     var review = "<button title='review' data-toggle='tooltip'><span class='material-icons' type='button' data-toggle='modal' data-target='#modal-pending'>rate_review</span></button ><button data-title='delete'>"; //<span class='material-icons'  data-toggle='modal' data-target='#deletRow-modal'>delete</span></button >
-//     var localstatus = localStorage.getItem("status");
-//     var req_status = "<button data-toggle='modal' data-target='#comfirm-modal' data-title='change status' ><span id='demo1' value=''>PENDING</span></button>";
-//     let num;
-//     if (localstatus !== null){
-//         num = 1;
-//         t.row.add([num, firstname, lastname, title, subdate, req_status, review]).draw(false);
-//     } else {
-//         num = 0;
-//     }
-
-//     // Automatically add a first row of data
-//     t.row.add([num + 1, 'Sokha', "chan", "Phcum Ben", "12/07/2022", req_status, review]).draw(false);
-//     t.row.add([num + 2, 'MArk', "jackson", "Water festival", "12/06/2022", req_status, review]).draw(false);
-//     t.row.add([num + 3, 'Thida', "karl", "Phcum Ben", "12/07/2022", req_status, review]).draw(false);
-//     t.row.add([num + 4, 'Daro', "krosa", "Khmer New yeat", "15/04/2022", req_status, review]).draw(false);
-//     t.row.add([num + 5, 'vireak', "chan", "Funeral", "10/03/2022", req_status, review]).draw(false);
-//     t.row.add([num + 6, 'Kosal', "vicheka", "title", "13/07/2021",req_status, review]).draw(false);
-//     t.row.add([num + 7, 'Kjoool', "Rosa", "title", "24/05/2021", req_status, review]).draw(false);
-//     t.row.add([num + 8, 'forlto', "chanao", "titlw", "31/1/2021", req_status, review]).draw(false);
-//     t.row.add([num + 9, 'candaal', "ghiloo", "title", "12/1/2021", req_status, review]).draw(false);
-    
-// function Approve(){
-//     localStorage.removeItem("status");
-//     localStorage.setItem("H-status", "APPROVE");
-//     movetohistory()
-// }
-
-// function Reject(){
-//     localStorage.removeItem("status");
-//     localStorage.setItem("H-status", "REJECT");
-//     movetohistory()
-// }
-
-// function movetohistory() {
-//     localStorage.setItem("H-firstname", firstname);
-//     localStorage.setItem("H-lastname", lastname);
-//     localStorage.setItem("H-title", title);
-//     localStorage.setItem("H-submitdate", subdate);
-//     localStorage.setItem("H-reason", localStorage.getItem("reason"));
-//     localStorage.setItem("H-email", localStorage.getItem("email"));
-//     localStorage.setItem("H-phone", localStorage.getItem("reason"));
-//     localStorage.setItem("H-From", localStorage.getItem("From"));
-//     localStorage.setItem("H-to", localStorage.getItem("To"));
-//     localStorage.setItem("H-to", localStorage.getItem("TotalLeave"));
-//     localStorage.setItem("H-attachment", localStorage.getItem("attachment"));
-
-//     let keysToRemove = ["firstname", "lastname", "title", "phone", "email", "TotalLeave", "From", "To", "reason", "attachment", "submitdate", "status"];
-//     for (key of keysToRemove) {
-//         localStorage.removeItem(key);
-//         location.reload();
-//     }
-// }
 
 var RReview = "<button title='review' +data+ data-toggle='tooltip'><span class='material-icons' type='button' data-toggle='modal' data-target='#modal-pending'>rate_review</span></button ><button data-title='delete'>"; //<span class='material-icons'  data-toggle='modal' data-target='#deletRow-modal'>delete</span></button >
-
-// var table = $('#display').DataTable();
 
 //import the data from local storage
 var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
@@ -133,6 +63,7 @@ $('#display tbody').on( 'click', 'tr',  (event) =>  {
     document.getElementById("req_totalleave").innerHTML = data.InpTotalleave + " day(s)";
     document.getElementById("req_date").innerHTML = data.InpSubmitday;
     document.getElementById("req_reason").innerHTML = data.InpReason;
+    document.getElementById("req_time").innerHTML = data.Inptime;
     if (data.Inpattachment.value == null){
         document.getElementById("req_attachment").innerHTML = "None";
     } else {
@@ -140,18 +71,134 @@ $('#display tbody').on( 'click', 'tr',  (event) =>  {
     }
 });
 
-// function Approve() {
-//     const changestatus = {
-//         "Inpstatus": "APPROVE",
-//     };
-//     var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
-//     localStorage.setItem("ToHistory", JSON.stringify(Request_listData));
-// }
+//------------------------click Approve request and send to history and Inbox--------------------------
+function Reject() {
+    var existingEntries = JSON.parse(localStorage.getItem("ToHistory"));
+    if(existingEntries == null) existingEntries = [];
 
-// function Reject() {
-//     const changestatus = {
-//         "Inpstatus": "APPROVE",
-//     };
-//     var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
-//     localStorage.setItem("ToHistory", JSON.stringify(Request_listData));
-// }
+    var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
+    var UserFname = document.getElementById("req_fname").innerHTML;
+    var Usertime = document.getElementById("req_time").innerHTML;
+    var Userdate = document.getElementById("req_date").innerHTML;
+    var historystatus = "REJECT";
+    var comment = document.getElementById("comment-text").innerHTML;
+    for (var i = 0; i <= Request_listData.length; i++ ){
+        if ( Request_listData[i].InpFname == UserFname && Request_listData[i].Inptime == Usertime && Request_listData[i].InpSubmitday == Userdate){
+            const entry = {
+                "InpFname": Request_listData[i].InpFname,
+                "InpLname": Request_listData[i].InpLname,
+                "Inpphone": Request_listData[i].Inpphone,
+                "InpEmail": Request_listData[i].InpEmail,
+                "InpLeaveDate": Request_listData[i].InpLeaveDate,
+                "InpTotalleave": Request_listData[i].InpTotalleave,
+                "Inptitle": Request_listData[i].Inptitle,
+                "InpReason": Request_listData[i].InpReason,
+                "Inpattachment": Request_listData[i].Inpattachment,
+                "Inpstatus": historystatus,
+                "InpSubmitday": Request_listData[i].InpSubmitday,
+                "Inpcomment" : comment
+            };
+            existingEntries.unshift(entry);
+            localStorage.setItem("ToHistory", JSON.stringify(existingEntries));
+            Request_listData.splice(i, 1);
+            localStorage.setItem('ToRequestbox', JSON.stringify(Request_listData));
+            SendReviewToInboxReject()
+            }
+        }
+}
+
+function SendReviewToInboxReject(){
+    var Inbox_listData = JSON.parse(localStorage.getItem("ToInbox"));
+    var Usertime = document.getElementById("req_time").innerHTML;
+    var Inboxstatus = "REJECT";
+    var comment = document.getElementById("comment-text").innerHTML;
+    for (var i = 0; i <= Inbox_listData.length; i++ ){
+        if ( Inbox_listData[i].Inptime == Usertime){
+            const entry = {
+                "InpFname": Inbox_listData[i].InpFname,
+                "InpLname": Inbox_listData[i].InpLname,
+                "Inpphone": Inbox_listData[i].Inpphone,
+                "InpEmail": Inbox_listData[i].InpEmail,
+                "InpLeaveDate": Inbox_listData[i].InpLeaveDate,
+                "InpTotalleave": Inbox_listData[i].InpTotalleave,
+                "Inptitle": Inbox_listData[i].Inptitle,
+                "InpReason": Inbox_listData[i].InpReason,
+                "Inpattachment": Inbox_listData[i].Inpattachment,
+                "Inpstatus": Inboxstatus,
+                "InpSubmitday": Inbox_listData[i].InpSubmitday,
+                "Inpcomment" : comment,
+            };
+            Inbox_listData.push(entry);
+            localStorage.setItem("ToInbox", JSON.stringify(Inbox_listData));
+            Inbox_listData.splice(i, 1);
+            localStorage.setItem('ToInbox', JSON.stringify(Inbox_listData));
+            location.reload()
+        }
+    }
+}
+
+//------------------------ click Reject request and send to history and Inbox--------------------------
+function Approve() {
+    var existingEntries = JSON.parse(localStorage.getItem("ToHistory"));
+    if(existingEntries == null) existingEntries = [];
+
+    var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
+    var UserFname = document.getElementById("req_fname").innerHTML;
+    var Usertime = document.getElementById("req_time").innerHTML;
+    var Userdate = document.getElementById("req_date").innerHTML;
+    var historystatus = "APPROVE";
+    var comment = document.getElementById("comment-text").innerHTML;
+    for (var i = 0; i <= Request_listData.length; i++ ){
+        if ( Request_listData[i].InpFname == UserFname && Request_listData[i].Inptime == Usertime && Request_listData[i].InpSubmitday == Userdate){
+            const entry = {
+                "InpFname": Request_listData[i].InpFname,
+                "InpLname": Request_listData[i].InpLname,
+                "Inpphone": Request_listData[i].Inpphone,
+                "InpEmail": Request_listData[i].InpEmail,
+                "InpLeaveDate": Request_listData[i].InpLeaveDate,
+                "InpTotalleave": Request_listData[i].InpTotalleave,
+                "Inptitle": Request_listData[i].Inptitle,
+                "InpReason": Request_listData[i].InpReason,
+                "Inpattachment": Request_listData[i].Inpattachment,
+                "Inpstatus": historystatus,
+                "InpSubmitday": Request_listData[i].InpSubmitday,
+                "Inpcomment" : comment
+            };
+            existingEntries.unshift(entry);
+            localStorage.setItem("ToHistory", JSON.stringify(existingEntries));
+            Request_listData.splice(i, 1);
+            localStorage.setItem('ToRequestbox', JSON.stringify(Request_listData));
+            SendReviewToInbox()
+            }
+        }
+}
+
+function SendReviewToInbox(){
+    var Inbox_listData = JSON.parse(localStorage.getItem("ToInbox"));
+    var Usertime = document.getElementById("req_time").innerHTML;
+    var Inboxstatus = "APPROVE";
+    var comment = document.getElementById("comment-text").innerHTML;
+    for (var i = 0; i <= Inbox_listData.length; i++ ){
+        if ( Inbox_listData[i].Inptime == Usertime){
+            const entry = {
+                "InpFname": Inbox_listData[i].InpFname,
+                "InpLname": Inbox_listData[i].InpLname,
+                "Inpphone": Inbox_listData[i].Inpphone,
+                "InpEmail": Inbox_listData[i].InpEmail,
+                "InpLeaveDate": Inbox_listData[i].InpLeaveDate,
+                "InpTotalleave": Inbox_listData[i].InpTotalleave,
+                "Inptitle": Inbox_listData[i].Inptitle,
+                "InpReason": Inbox_listData[i].InpReason,
+                "Inpattachment": Inbox_listData[i].Inpattachment,
+                "Inpstatus": Inboxstatus,
+                "InpSubmitday": Inbox_listData[i].InpSubmitday,
+                "Inpcomment" : comment,
+            };
+            Inbox_listData.push(entry);
+            localStorage.setItem("ToInbox", JSON.stringify(Inbox_listData));
+            Inbox_listData.splice(i, 1);
+            localStorage.setItem('ToInbox', JSON.stringify(Inbox_listData));
+            location.reload()
+        }
+    }
+}

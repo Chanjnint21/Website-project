@@ -100,116 +100,120 @@
                     </div>
             </div>
             <!-- View Details of Request Modal (STATUS) -->
-                <div class="modal fade bd-example-modal-lg" id="modal-reviewed" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="ModalTitle"></h5>
-                            <button type="button" class="close btn btn-light" data-dismiss="modal" aria-label="Close" data-title="close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <b>First name</b> 
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_fname"> </p>
-                                        </div>  
-                                    </div>   
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <b>Phone</b> 
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_phone"> </p>
-                                        </div>  
-                                    </div> 
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <b>Last Name</b> 
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_lname" > </p>
-                                        </div>  
-                                    </div>                                 
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <b>Email</b> 
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_email"> </p>
-                                        </div>  
+            <div class="modal fade bd-example-modal-lg" id="modal-reviewed" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalTitle" value=""></h5>
+                        <button type="button" class="close btn btn-light" data-dismiss="modal" aria-label="Close" data-title="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>First name</b> 
                                     </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <b>Request</b> 
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_totalleave"></p>
-                                        </div>  
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="H_fname"> </p>
+                                    </div>  
+                                </div>   
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Phone</b> 
                                     </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <b>Date</b> 
-                                        </div>
-                                        <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <p id="req_date"> 12/Nov/2022 - 15/Nov/2022</p>
-                                        </div>  
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="H_phone"> </p>
+                                    </div>  
+                                </div> 
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Last Name</b> 
                                     </div>
-                                </div>
-                                <!-- <hr/> -->
-                                <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-3 col-sm-12">
-                                            <b>Reason</b>
-                                        </div>
-                                        <div class="col-lg-10 col-md-9 col-sm-12">
-                                            <p id="req_reason">
-                                            </p>
-                                        </div>  
-                                    </div> 
-                                </div>
-                                <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
-                                    <div class="row">
-                                        <div class="col-lg-2 col-md-3 col-sm-12">
-                                            <b>Attachment</b>
-                                        </div>
-                                        <div class="col-lg-10 col-md-9 col-sm-12">
-                                            <a href="" id="req_attachment" target="_blank"></a>
-                                        </div>  
-                                    </div> 
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="H_lname" > </p>
+                                    </div>  
+                                </div>                                 
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Email</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="H_email"> </p>
+                                    </div>  
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="col">
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
                                 <div class="row">
-                                    <div class="col-lg-2 col-md-2 col-sm-12">
-                                        <b>Comment:</b>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Request</b> 
                                     </div>
-                                    <div class="col-lg-10 col-md-10 col-sm-12">
-                                        <textarea class="form-control" id="message-text" readonly>xxx</textarea>
-                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="H_totalleave"></p>
+                                    </div>  
                                 </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <b>Date</b> 
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <p id="H_date"> 12/Nov/2022 - 15/Nov/2022</p>
+                                        <p id="H_time" style="display: none;"></p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <!-- <hr/> -->
+                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-12">
+                                        <b>Reason</b>
+                                    </div>
+                                    <div class="col-lg-10 col-md-9 col-sm-12">
+                                        <p id="H_reason">
+                                        </p>
+                                    </div>  
+                                </div> 
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-sm-12">
+                                        <b>Attachment</b>
+                                    </div>
+                                    <div class="col-lg-10 col-md-9 col-sm-12">
+                                        <a href="" id="H_attachment" target="_blank"></a>
+                                    </div>  
+                                </div> 
                             </div>
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-12">
+                                    <b>Comment:</b>
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-12">
+                                        <textarea class="form-control" id="H-comment"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col text-end">
+                                <input type="button" class="btn btn-danger" value="Close"  data-dismiss="modal">
+                        </div>
                     </div>
                 </div>
+                </div>
+            </div>
                 <!-- Content -->
                 <section class="home-section" id="section">
                     <!-- navbar navigation component -->
@@ -276,19 +280,6 @@
                                 <h5>Do you want to change the status?</h5>
                                 <input type="button" class="btn btn-secondary" data-dismiss="modal" value="No">
                                 <input type="button" class="btn btn-danger" onclick="statuschange()" value="Yes" data-dismiss="modal">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div  class="modal" id="deletRow-modal">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-body text-center">
-                                <br>
-                                <h5>Are you sure?</h5>
-                                <br>
-                                <input type="button" class="btn btn-light" data-dismiss="modal" value="No">
-                                <input type="button" class="btn btn-light"  onclick="DeleteRow();" value="Yes" data-dismiss="modal">
                             </div>
                         </div>
                     </div>

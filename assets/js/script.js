@@ -37,8 +37,10 @@ function countdays () {
 //--------------------------------------------------- store form input into local storage ---------------------------------------------
 function movepage(){
     // Parse the JSON stored in allEntriesP
-    var existingEntries = JSON.parse(localStorage.getItem("ToInbox"));
-    if(existingEntries == null) existingEntries = [];
+    var InboxEntries = JSON.parse(localStorage.getItem("ToInbox"));
+    if(InboxEntries == null) InboxEntries = [];
+    var RequestEntries = JSON.parse(localStorage.getItem("ToRequestbox"));
+    if(RequestEntries == null) RequestEntries = [];
 
     var inputFname= document.getElementById("firstname").value;
     var inputLname= document.getElementById("lastname").value;
@@ -62,6 +64,7 @@ function movepage(){
         const day = event.toLocaleDateString('en-Us', days);
         
         const submitDate = day + "/" + month + "/" + year;
+        var current_time = event.getHours()+":"+event.getMinutes()+":"+ event.getSeconds();
 
     const entry = {
         "InpFname": inputFname,
@@ -74,13 +77,15 @@ function movepage(){
         "InpReason": inputReason,
         "Inpattachment": inputattachment,
         "Inpstatus": status,
-        "InpSubmitday": submitDate
+        "InpSubmitday": submitDate,
+        "Inptime" : current_time,
     };
-    localStorage.setItem("newentry", JSON.stringify(entry));
+
     // Save allEntries back to local storage
-    existingEntries.unshift(entry);
-    localStorage.setItem("ToInbox", JSON.stringify(existingEntries));
-    localStorage.setItem("ToRequestbox", JSON.stringify(existingEntries));
+    InboxEntries.unshift(entry);
+    RequestEntries.unshift(entry);
+    localStorage.setItem("ToInbox", JSON.stringify(InboxEntries));
+    localStorage.setItem("ToRequestbox", JSON.stringify(RequestEntries));
     //load to inbox page
     window.location.href = "./Inbox.html";
 }
