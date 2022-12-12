@@ -435,14 +435,14 @@ textarea{
       font-size: 15px;
       transform: translateY(-50%);
       left: 0.75rem;
-      color: #bfbfbf;
+      color: #5e5e5e;
       padding: 0 0.125rem;
       transition: 0.4s;
       font-weight: normal;
     }
     
     .form-type:focus{
-      border-color: #bfbfbf;
+      border-color: #ccc;
     }
     
     .form-type:focus + label,
@@ -450,7 +450,7 @@ textarea{
       top: 0;
       transition: 0.3s;
       background-color: #fff;
-      color: #ccc;
+      color: #5e5e5e;
       font-size: 12px;
     }
 
