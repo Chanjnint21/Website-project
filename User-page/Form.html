@@ -104,7 +104,7 @@
                             <li class="nav-item dropdown d-inlineblock">
                                 <div class="nav-dropdown">
                                     <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary d-inlineblock" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span class="text-uppercase">lim chanjnint</span>
+                                        <span class="text-uppercase" id="UserPageName">lim chanjnint</span>
                                         <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-end nav-link-menu">
@@ -124,7 +124,7 @@
                     <div class="container-fluid">
                         <div class="animate-content">
                             <div class="form-card">
-                                <form id="paperform">
+                                <form id="paperform" action="./Inbox.html">
                                     <div class="form-card-header">
                                         <p>Paper Form</p>
                                     </div>
@@ -216,14 +216,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/components/Form/form.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>$('[data-toggle="tooltip"]').tooltip()</script>
 </body>
 </html>
-<script>
-    if(localStorage.getItem("loggin") === "accept"){
-        window.parentPage = false;
-    } else {
-        window.parentPage = false;
-    }
-</script>
