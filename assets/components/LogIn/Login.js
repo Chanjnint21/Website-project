@@ -24,6 +24,11 @@ function LogIn(){
         e.preventDefault();
         for(i = 0; i < TotalUser.length; i++) {
             if(TotalUser[i].InpEmail == inputname && TotalUser[i].InpPassword == inputpassword && TotalUser[i].InpRole == "Admin" ){
+                var logginguser = {
+                    'Fname' : TotalUser[i].InpFname,
+                    'Lname' : TotalUser[i].InpLname
+                }
+                localStorage.setItem("Login User", JSON.stringify(logginguser));
                 var logincard = document.getElementById("login-card");
                 var loader = document.getElementById("load");
                 logincard.style.display = "none";
@@ -31,6 +36,11 @@ function LogIn(){
                 timeout = setTimeout(switchtoAdmin, 2000);
                 console.log("Login succeed");
             } else if(TotalUser[i].InpEmail == inputname && TotalUser[i].InpPassword == inputpassword && TotalUser[i].InpRole == "General User" ){
+                var logginguser = {
+                    'Fname' : TotalUser[i].InpFname,
+                    'Lname' : TotalUser[i].InpLname
+                }
+                localStorage.setItem("Login User", JSON.stringify(logginguser));
                 var logincard = document.getElementById("login-card");
                 var loader = document.getElementById("load");
                 logincard.style.display = "none";
