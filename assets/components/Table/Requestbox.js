@@ -112,6 +112,7 @@ function SendReviewToInboxReject(){
     var Usertime = document.getElementById("req_time").innerHTML;
     var Inboxstatus = "REJECT";
     var comment = document.getElementById("comment-text").innerHTML;
+    var after_review = "<button title='view detail' data-toggle='tooltip'><span class='material-icons' data-toggle='modal' data-target='#modal-reviewed'>visibility</span></button >";
     for (var i = 0; i <= Inbox_listData.length; i++ ){
         if ( Inbox_listData[i].Inptime == Usertime){
             const entry = {
@@ -126,6 +127,7 @@ function SendReviewToInboxReject(){
                 "Inpattachment": Inbox_listData[i].Inpattachment,
                 "Inpstatus": Inboxstatus,
                 "InpSubmitday": Inbox_listData[i].InpSubmitday,
+                "pendingmodal" : after_review,
                 "Inpcomment" : comment,
             };
             Inbox_listData.push(entry);
@@ -178,6 +180,7 @@ function SendReviewToInbox(){
     var Usertime = document.getElementById("req_time").innerHTML;
     var Inboxstatus = "APPROVE";
     var comment = document.getElementById("comment-text").innerHTML;
+    var after_review = "<button title='view detail' data-toggle='tooltip'><span class='material-icons' data-toggle='modal' data-target='#modal-reviewed'>visibility</span></button >";
     for (var i = 0; i <= Inbox_listData.length; i++ ){
         if ( Inbox_listData[i].Inptime == Usertime){
             const entry = {
@@ -192,6 +195,7 @@ function SendReviewToInbox(){
                 "Inpattachment": Inbox_listData[i].Inpattachment,
                 "Inpstatus": Inboxstatus,
                 "InpSubmitday": Inbox_listData[i].InpSubmitday,
+                "pendingmodal" : after_review,
                 "Inpcomment" : comment,
             };
             Inbox_listData.push(entry);
