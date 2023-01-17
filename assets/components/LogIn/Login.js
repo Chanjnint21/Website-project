@@ -47,7 +47,29 @@ function LogIn(){
                 loader.style.display = "block";
                 timeout = setTimeout(switchtoUser, 2000);
                 console.log("Login succeed");
-            } else {
+            } else if(inputname == "admintester@gmail.com" && inputpassword == "test1234"){
+                var logginguser = {
+                    'Fname' : "Tester",
+                    'Lname' : "Admin"
+                }
+                localStorage.setItem("Login User", JSON.stringify(logginguser));
+                var logincard = document.getElementById("login-card");
+                var loader = document.getElementById("load");
+                logincard.style.display = "none";
+                loader.style.display = "block";
+                timeout = setTimeout(switchtoAdmin, 2000);
+            } else if(inputname == "usertester@gmail.com" && inputpassword == "test4321"){
+                var logginguser = {
+                    'Fname' : "Tester",
+                    'Lname' : "User"
+                }
+                localStorage.setItem("Login User", JSON.stringify(logginguser));
+                var logincard = document.getElementById("login-card");
+                var loader = document.getElementById("load");
+                logincard.style.display = "none";
+                loader.style.display = "block";
+                timeout = setTimeout(switchtoUser, 2000);
+            }else {
                 document.getElementById("Invalid_inp").innerHTML= "*Invalid email or password*";
                 console.log("Login failed");
             }
