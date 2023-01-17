@@ -5,7 +5,7 @@ The Flowchart of requesting process :
 Try out the website i have done so far : 
 <a href="https://chanjnint21.github.io/Website-project/login-page/LogIn.html">test the website now</a>
 
-Can log in with the defults account :
+Can log in with the defaults account :
 <ul>
   <li>Admin :
       <ul>
