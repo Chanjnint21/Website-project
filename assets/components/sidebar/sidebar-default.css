@@ -1,9 +1,3 @@
-/*------------------------------------------------------------------
-* Bootstrap Simple Admin Template
-* Version: 3.0
-* Author: Alexis Luna
-* Website: https://github.com/alexis-luna/bootstrap-simple-admin-template
--------------------------------------------------------------------*/
 #sidebar {
     position: fixed;
     height: 100%;
@@ -166,3 +160,4 @@ a[aria-expanded="true"] {
 #logoutText{
     font-size: 1.2rem;
 }
+

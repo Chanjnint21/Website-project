@@ -55,32 +55,7 @@ body {
 }
 
 /*------------------------------------------------------------------
-[2. Header / #header]
-*/
-/* #body>.navbar {
-    padding: 0 1.5rem;
-    min-height: 54px;
-    box-shadow: none;
-    border-bottom: 1px solid rgba(101, 109, 119, .16);
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
-} */
-
-/*------------------------------------------------------------------
-[3. Navigation / #navbar] - see /components/navbar/navbar-dropdown.css
-*/
-/* .default-light-menu {
-    border: none !important;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
-    color: #fff;
-}
-
-.default-light-menu:hover {
-    background: #2196F3 !important;
-    color: #fff;
-} */
-
-/*------------------------------------------------------------------
-[4. Content / #content]
+[1. Content / #content]
 */
 .content{
     margin-top: 2rem;
@@ -122,7 +97,7 @@ body {
 }
 
 /*------------------------------------------------------------------
-[7. Dashboard Cards / .card] 
+[2. Dashboard Cards / .card] 
 */
 .card {
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
@@ -167,55 +142,8 @@ body {
 .card .content .card-icon{
     color: red;
 }
-
 /*------------------------------------------------------------------
-[8. Miscellaneous ] 
-*/
-/* .line {
-    border-bottom: 1px solid #E0E0E0;
-}
-
-.nav-pills {
-    padding: 15px;
-    background-color: #E0E0E0;
-    -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
-}
-
-.btn-rounded {
-    border-radius: 10em;
-    padding: 6px 8px;
-    font-size: small;
-    text-transform: none;
-    text-shadow: none !important;
-    background: #eaeaea;
-    border-color: transparent;
-    border: none;
-}
-
-.btn-rounded:hover {
-    border-color: transparent;
-    border: none;
-}
-
-#myTab {
-    margin-bottom: 15px;
-}
-
-.no-margin {
-    margin: 0;
-}
-
-.dfd {
-    width: 100%;
-}
-
-.bg-lighter-grey {
-    background: #FAFAFA;
-} */
-
-/*------------------------------------------------------------------
-[9. Adjustments to default behaviors] 
+[3. Adjustments anchor to default behaviors] 
 */
 a,
 a:hover,
@@ -225,94 +153,8 @@ a:focus {
     transition: all 0.3s;
 }
 
-.btn.focus,
-.btn:focus {
-    box-shadow: none;
-}
-
-.btn.btn-square {
-    border-radius: 0;
-}
-
-.nav-tabs {
-    border-bottom: 2px solid #dee2e6;
-}
-
-.nav-tabs .nav-item {
-    margin-bottom: -2px;
-}
-
-.nav-tabs .nav-link {
-    border: none;
-    -webkit-transition: color .1s ease;
-    transition: color .1s ease;
-    color: inherit;
-}
-
-.nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
-    color: #007bff;
-    background-color: #fff;
-    border-bottom: 2px solid #22a1f9;
-}
-
-.tab-content {
-    padding: 15px;
-}
-
-.svg-inline--fa {
-    min-width: 15px;
-}
-
-.display-absolute {
-    position: absolute;
-}
-
-.large-icon {
-    font-size: 3em;
-}
-
-.license span {
-    margin-bottom: 1em;
-}
-
-.navbar img{
-    width: 200px;
-}
-
 /*------------------------------------------------------------------
-[10. Colors / .teal, .olive, .violet, .orange, .darkgray, .blue, .grey] 
-*/
-.teal {
-    color: #00b5ad !important;
-}
-
-.olive {
-    color: #b5cc18 !important;
-}
-
-.violet {
-    color: #6435c9 !important;
-}
-
-.orange {
-    color: #f2711c !important;
-}
-
-.darkgray {
-    color: darkgray !important;
-}
-
-.blue {
-    color: #2185d0 !important;
-}
-
-.grey {
-    color: #767676 !important;
-}
-
-/*------------------------------------------------------------------
-[11. Responsive properties] 
+[4. Responsive properties] 
 */
 @media (max-width: 768px) {
     .display-absolute {
@@ -371,7 +213,7 @@ a:focus {
 }
 
 /*------------------------------------------------------------------
-[12. Adjuct icon] 
+[5. Adjuct icon] 
 */
 
 span.material-icons {
@@ -381,7 +223,7 @@ span.material-icons {
 }
 
 /*------------------------------------------------------------------
-[12. Paper Form card / material] 
+[6. Paper Form card / material] 
 */
 
 input {
@@ -455,7 +297,7 @@ textarea{
     }
 
 /*------------------------------------------------------------------
-[12. log out loading] 
+[7. log out loading] 
 */
 
 #loader {
@@ -516,8 +358,10 @@ textarea{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  
-  /* Add animation to "page content" */
+
+/*------------------------------------------------------------------
+[8.  animation to "page content" ] 
+*/
   .animate-content {
     position: relative;
     -webkit-animation: animatebottom 0.7s;
@@ -545,7 +389,9 @@ textarea{
     width: 100%;
 }
 
-/* pagination color and style */
+/*------------------------------------------------------------------
+[9.  pagination color and style" ] 
+*/
 .page-item.active .page-link {
     background-color: #f55252;
     border-color: #f55252 ;
