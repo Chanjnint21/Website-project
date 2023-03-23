@@ -1,101 +1,172 @@
-html, body{    
+body {
+  background-color: #ff4343;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background-color: white;
+  padding: 1rem;
+  /* border: 1px solid black; */
+  border-radius: 1.5rem;
+}
+
+/*---------------------------Responsive component-------------------------------*/
+
+@media(min-width : 500px) {
+  body {
     background-color: #ff4343;
-}
-.login-card{
-    background-color: white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0;  
+  }
+
+  .login-card {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+  }
+
+  .login-card-header img {
+    width: 500px;
+  }
+
+  .forgetPass {
+    display: flex;
+    justify-content: end;
+  }
+
+  .anotherOpt {
+    font-size: 1rem;
+  }
+
 }
+
+@media(max-width : 500px) {
+  body {
+    background-color: #ffffff;
+  }
+
+  .login-card-header img {
+    width: 330px;
+  }
+
+  .forgetPass {
+    display: flex;
+    justify-content: Start;
+  }
+
+  .anotherOpt {
+    font-size: 0.8rem;
+  }
+
+  .logIn_btn {
+    width: 100%;
+  }
+}
+
+/*----------------------------------------------------------*/
+.AnotherTool {
+  padding: 0 0.5rem;
+}
+
+#forgetPassword {
+  cursor: pointer;
+  color: rgb(35, 104, 253);
+}
+
+#forgetPassword:hover {
+
+  text-decoration: underline;
+}
+
+.login_section {
+  display: flex;
+  justify-content: center;
+}
+
+.rememeberMe {
+  display: flex;
+  justify-content: start;
+}
+
 span.material-icons {
   width: 30px;
   vertical-align: middle;
 }
 
-.login-card img {
-    width: 500px;
-}
-
 .login-card-header {
-    padding: 20px;
+  padding: 0.8rem;
 }
 
-.login-card-body{
-    padding: 0 50px;
-}
-
-.login-card-body h2{
-  padding: 10px;
-  color: #ff4343;
+.login-card-body {
+  padding: 0 0.8rem;
 }
 
 input {
   border: none;
   outline: none;
   padding: 0.3rem 0.75rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .form-group {
-    position: relative;
-    margin: 1.5rem 0;
-  }
-  
-.username,
-.password {
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-    width: 100%;
-}
-  
-  .username + label,
-  .password +label {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0.75rem;
-    color: #ccc;
-    padding: 0 0.125rem;
-    transition: 0.4s;
-  }
-  
-  .username:focus,
-  .password:focus {
-    border-color: #f64545;
-  }
-  
-  .username:focus + label,
-  .username:not(:placeholder-shown) + label{
-    top: 0;
-    transition: 0.3s;
-    background-color: #fff;
-    color: #f64545;
-    font-size: 12px;
-  }
-  .password:focus + label,
-  .password:not(:placeholder-shown) + label {
-    top: 0;
-    transition: 0.3s;
-    background-color: #fff;
-    color: #f64545;
-    font-size: 12px;
-  }
-  .login-card input[type="checkbox"]{
-    border-radius: 50%;
+  position: relative;
+  margin: 1.5rem 0;
 }
 
-i{
+.username,
+.password {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.username+label,
+.password+label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.75rem;
+  color: #ccc;
+  padding: 0 0.125rem;
+  transition: 0.4s;
+}
+
+.username:focus,
+.password:focus {
+  border-color: #f64545;
+}
+
+.username:focus+label,
+.username:not(:placeholder-shown)+label {
+  top: 0;
+  transition: 0.3s;
+  background-color: #fff;
+  color: #f64545;
+  font-size: 0.8rem;
+}
+
+.password:focus+label,
+.password:not(:placeholder-shown)+label {
+  top: 0;
+  transition: 0.3s;
+  background-color: #fff;
+  color: #f64545;
+  font-size: 0.8rem;
+}
+
+i {
   color: #ccc;
   cursor: pointer;
   position: absolute;
   transform: translate(0, -50%);
   right: 10px;
   top: 50%;
-  /* opacity: 0.5; */
 }
 
 #loader {
@@ -115,12 +186,21 @@ i{
 }
 
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+  0% {
+    transform: rotate(0deg);
+  }
 
+  100% {
+    transform: rotate(360deg);
+  }
+}
