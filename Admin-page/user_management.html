@@ -35,27 +35,36 @@
     <div class="wrapper" id="wrapper">
       <!--toggle side bar-->
       <nav id="sidebar" class="overflow-hidden">
-        <div id="logo" class="text-center pt-3 pb-1 company-logo">
-          <img
-            id="afterCollape"
-            class="after-collape"
-            width="210"
-            height="25"
-            src="../assets/img/soramitsu_6years.png"
-            alt="Soramitsu Logo"
-            class="app-logo"
-          />
-          <img
-            id="beforeCollape"
-            width="30"
-            height="25"
-            src="https://static.tildacdn.com/tild3763-6339-4363-b336-383130646539/menu_logo_2.svg"
-            alt="Soramitsu Logo"
-            class="app-logo"
-          />
+        <div id="logo" class="row text-center pt-3 pb-1 company-logo d-flex">
+          <div class="col app-logo">
+            <img
+              id="afterCollape"
+              class="after-collape"
+              width="210"
+              height="25"
+              src="../assets/img/soramitsu_6years.png"
+              alt="Soramitsu Logo"
+            />
+            <img
+              id="beforeCollape"
+              width="30"
+              height="25"
+              src="https://static.tildacdn.com/tild3763-6339-4363-b336-383130646539/menu_logo_2.svg"
+              alt="Soramitsu Logo"
+            />
+            <!-- class="app-logo" -->
+          </div>
+          <div class="MbMenu col-3">
+            <span
+              class="material-icons mx-3"
+              class="sidebarCollapse"
+              id="MenusidebarCollapse"
+              >menu</span
+            >
+          </div>
         </div>
         <hr
-          class="mx-3"
+          class="logo_underline mx-3"
           style="color: #f55252; opacity: 1; height: 5px; border-radius: 5px"
         />
         <ul class="list-unstyled components text-secondary mt-4">

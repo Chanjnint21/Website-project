@@ -1,35 +1,94 @@
+/* Responsive property */
+@media(max-width : 500px) {
+    #sidebar {
+        min-width: 0px;
+        max-width: 0px;
+    }
+
+    .MbMenu {
+        color: #555555;
+        display: block;
+    }
+
+    .app-logo {
+        display: flex;
+        justify-content: end;
+    }
+
+    #sidebar.active {
+        min-width: 100%;
+        max-width: 100%;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: #fff;
+        transition: all 0.3s;
+        border-right: 1px solid #e6ecf5;
+        /* z-index: 1030; */
+    }
+
+    .fixed-bottom {
+        display: none;
+    }
+
+    .fixed-bottom.after-collape {
+        display: inline-block;
+        width: 100%;
+    }
+
+}
+
+@media(min-width : 500px) {
+    #sidebar {
+        min-width: 75px;
+        max-width: 75px;
+    }
+
+    .MbMenu {
+        display: none;
+    }
+
+    #sidebar.active {
+        min-width: 250px;
+        max-width: 250px;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: #fff;
+        transition: all 0.3s;
+        border-right: 1px solid #e6ecf5;
+        /* z-index: 1030; */
+    }
+
+    .fixed-bottom {
+        width: 75px;
+        background: #f55252;
+    }
+
+    .fixed-bottom.after-collape {
+        width: 250px;
+    }
+
+}
+
+
+/* defualt property */
 #sidebar {
     position: fixed;
     height: 100%;
     top: 0;
     left: 0;
-    min-width: 75px;
-    max-width: 75px;
-    background: #fff;
+    background: #ffffff;
     color: #fff;
     transition: all 0.3s;
     border-right: 1px solid #e6ecf5;
-    /* box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%); */
     z-index: 1030;
 }
 
-#sidebar.active {
-    min-width: 250px;
-    max-width: 250px;
-    /* test */
-    position: fixed;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #fff;
-    color: #fff;
-    transition: all 0.3s;
-    border-right: 1px solid #e6ecf5;
-    /* box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%); */
-    z-index: 1030;
-}
-
-.after-collape, .before-collape {
+.after-collape,
+.before-collape {
     display: none;
 }
 
@@ -55,12 +114,6 @@
     cursor: pointer;
 }
 
-#sidebar ul li a .fas {
-    min-width: 20px;
-    margin-right: 5px;
-    text-align: center;
-}
-
 #sidebar ul li a:hover,
 #sidebar ul li a.active {
     color: #ffffff;
@@ -78,10 +131,6 @@ a[aria-expanded="true"] {
     background: #EEEEEE;
 }
 
-#sidebar a[data-toggle="collapse"] {
-    position: relative;
-}
-
 #sidebar .dropdown-toggle::after {
     display: block;
     position: absolute;
@@ -91,29 +140,14 @@ a[aria-expanded="true"] {
     display: none;
 }
 
-@media (max-width: 768px) {
-    #sidebarCollapse span {
-        display: none;
-    }
-}
-
-.sidebar-header img{
+.sidebar-header img {
     width: 200px;
 }
 
-.item{
-    color:white;
+.item {
+    color: white;
     background: #f55252;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%)
-}
-
-.fixed-bottom{
-    width: 75px;
-    background: #f55252;
-}
-
-.fixed-bottom.after-collape{
-    width: 250px;
 }
 
 .badge {
@@ -123,41 +157,53 @@ a[aria-expanded="true"] {
     margin-left: 0.5rem;
     border-radius: 50%;
 }
-.sidebartext{
+
+.sidebartext {
     display: none;
 }
-.sidebartext.after-collape{
+
+.sidebartext.after-collape {
     display: inline-block;
     animation: fadeInAnimation ease 0.7s;
     padding-top: 0.15rem;
     font-weight: 200;
     margin-left: .8rem;
 }
-.home-section{
+
+
+@media(min-width : 500px) {
+    .home-section {
+        left: 75px;
+        width: calc(100% - 75px);
+    }
+}
+
+.home-section {
     position: relative;
-    background: #f4f6fa ;
+    background: #f4f6fa;
     min-height: 100vh;
     top: 0;
-    left: 75px;
-    width: calc(100% - 75px);
     transition: all 0.3s ease;
     z-index: 2;
-  }
-.home-section.active{
+}
+
+/* home section responsive */
+.home-section.active {
     left: 250px;
     width: calc(100% - 250px);
-  }
+}
 
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
-     }
+    }
 }
 
-#logoutText{
+/* log out in side bar */
+#logoutText {
     font-size: 1.2rem;
 }
-

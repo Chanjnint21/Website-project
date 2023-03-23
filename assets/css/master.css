@@ -1,11 +1,7 @@
-
 @import "../components/navbar/navbar-dropdowns.css";
 @import "../components/sidebar/sidebar-default.css";
 @import "../components/Table/table.css";
 @import "../components/Modal/modal.css";
-@import "../components/LogIn/Login_style.css";
-
-
 
 @font-face {
     font-family: "Lato";
@@ -44,9 +40,11 @@ body {
     font-size: 1rem;
     color: #444;
 }
+
 .wrapper {
     width: 100%;
 }
+
 #body {
     width: 100%;
     padding: 0;
@@ -57,9 +55,10 @@ body {
 /*------------------------------------------------------------------
 [1. Content / #content]
 */
-.content{
+.content {
     margin-top: 2rem;
 }
+
 #body>.content {
     position: relative;
     padding: .5rem;
@@ -69,29 +68,17 @@ body {
     margin: 1rem 0;
 }
 
-.page-header {
-    margin: 0.5rem 0;
-    background-color: white;
-    padding: 0.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
-}
-
-.page-title {
-    margin: 0;
-    font-size: 1.5rem;
-    line-height: 1.5555556;
-}
-
 .detail-subtitle {
     font-size: 1rem;
     text-transform: uppercase;
     line-height: 1.6;
 }
-.container-fluid{
+
+.container-fluid {
     padding: 0vw 2vw;
 }
-.detail{
+
+.detail {
     display: flex;
     justify-content: center;
 }
@@ -120,7 +107,7 @@ body {
     font-weight: bolder;
 }
 
-.card .content .header{
+.card .content .header {
     display: flex;
     justify-content: center;
 }
@@ -139,9 +126,10 @@ body {
     color: #a9a9a9;
 }
 
-.card .content .card-icon{
+.card .content .card-icon {
     color: red;
 }
+
 /*------------------------------------------------------------------
 [3. Adjustments anchor to default behaviors] 
 */
@@ -156,7 +144,7 @@ a:focus {
 /*------------------------------------------------------------------
 [4. Responsive properties] 
 */
-@media (max-width: 768px) {
+/* @media (min-width: 500px) {
     .display-absolute {
         position: relative;
     }
@@ -210,7 +198,7 @@ a:focus {
         -ms-flex-direction: row;
         flex-direction: row;
     }
-}
+} */
 
 /*------------------------------------------------------------------
 [5. Adjuct icon] 
@@ -233,12 +221,12 @@ input {
     font-size: 1.5rem;
 }
 
-textarea{
+textarea {
     width: 10px;
     height: 15vh;
 }
 
-.form-card{
+.form-card {
     background-color: white;
     /* height: 85vh; */
     padding: 1rem;
@@ -246,55 +234,61 @@ textarea{
     border-radius: 10px;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
 }
-.form-card-header{
+
+.form-card-header {
     font-size: 20px;
     text-align: center;
     margin-top: 30px;
 }
 
-.form-card-body{
+.form-card-body {
     padding: 0 50px;
     font-size: medium;
 }
+
 .input-group {
     position: relative;
     margin: 1.5rem 0;
-  }
+}
 
 .required {
     color: red;
-  }
+}
 
 .form-type {
-      border: 1px solid #bfbfbf;
-      width: 100%;
-      font-size: 1rem;
-  }
-    
-.form-type + label{
-      position: absolute;
-      top: 50%;
-      font-size: 15px;
-      transform: translateY(-50%);
-      left: 0.75rem;
-      color: #5e5e5e;
-      padding: 0 0.125rem;
-      transition: 0.4s;
-      font-weight: normal;
-    }
-    
-    .form-type:focus{
-      border-color: #ccc;
-    }
-    
-    .form-type:focus + label,
-    .form-type:not(:placeholder-shown) + label{
-      top: 0;
-      transition: 0.3s;
-      background-color: #fff;
-      color: #5e5e5e;
-      font-size: 12px;
-    }
+    border: 1px solid #bfbfbf;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.form-type+label {
+    position: absolute;
+    top: 50%;
+    font-size: 15px;
+    transform: translateY(-50%);
+    left: 0.75rem;
+    color: #5e5e5e;
+    padding: 0 0.125rem;
+    transition: 0.4s;
+    font-weight: normal;
+}
+
+.form-type:focus {
+    border-color: #ccc;
+}
+
+.form-type:focus+label,
+.form-type:not(:placeholder-shown)+label {
+    top: 0;
+    transition: 0.3s;
+    background-color: #fff;
+    color: #5e5e5e;
+    font-size: 12px;
+}
+
+select {
+    padding: 0.5rem 0.75rem;
+}
 
 /*------------------------------------------------------------------
 [7. log out loading] 
@@ -314,23 +308,33 @@ textarea{
     -webkit-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
     box-shadow: 0 0rem 1rem rgb(255, 255, 255);
-  }
-  
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
 
-.paginate_button{
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.paginate_button {
     border: none;
 }
 
-#display tr{
+#display tr {
     background: none;
 }
 
@@ -348,42 +352,67 @@ textarea{
     border-bottom: 10px solid rgb(255, 61, 61);
     -webkit-animation: anime 0.7s linear infinite;
     animation: anime 0.7s linear infinite;
-}  
-  @-webkit-keyframes anime {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  
-  @keyframes anime {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@-webkit-keyframes anime {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes anime {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /*------------------------------------------------------------------
 [8.  animation to "page content" ] 
 */
-  .animate-content {
+.animate-content {
     position: relative;
     -webkit-animation: animatebottom 0.7s;
     animation: animatebottom 0.7s;
-  }
-  
-  @-webkit-keyframes animatebottom {
-    from { bottom:-50px; opacity:0 } 
-    to { bottom:0px; opacity:1 }
-  }
-  
-  @keyframes animatebottom { 
-    from{ bottom:-50px; opacity:0 } 
-    to{ bottom:0; opacity:1 }
-  }
-  
-  #myDiv {
-    display: none;
-  }
+}
 
-.added-user{
-    border: 1px solid rgb(201, 201, 201) ;
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -50px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -50px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#myDiv {
+    display: none;
+}
+
+.added-user {
+    border: 1px solid rgb(201, 201, 201);
     border-radius: 10px;
     font-size: 1rem;
     width: 100%;
@@ -394,8 +423,9 @@ textarea{
 */
 .page-item.active .page-link {
     background-color: #f55252;
-    border-color: #f55252 ;
+    border-color: #f55252;
 }
+
 .page-link {
     color: #f55252;
 }
