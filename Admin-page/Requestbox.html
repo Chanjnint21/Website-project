@@ -318,22 +318,23 @@
                   </div>
                 </div>
                 <div class="col text-end">
-                  <input
+                  <form action=""></form>
+                  <button
                     type="button"
                     class="btn btn-danger"
-                    onclick="Reject()"
-                    value="Reject"
                     data-dismiss="modal"
-                    id="Reject"
-                  />
-                  <input
+                    id="rejectBtn"
+                  >
+                    Reject
+                  </button>
+                  <button
                     type="button"
                     class="btn btn-success"
-                    onclick="Approve()"
-                    value="Approve"
                     data-dismiss="modal"
-                    id="Approve"
-                  />
+                    id="approveBtn"
+                  >
+                    Approve
+                  </button>
                 </div>
               </div>
             </div>
@@ -341,66 +342,84 @@
         </div>
         <!-- Content -->
         <section class="home-section" id="section">
+          <!-- <button type="button" class="btn btn-danger" id="RejectBtn">
+            Reject
+          </button> -->
           <!-- navbar navigation component -->
-          <nav class="navbar navbar-expand-lg navbar-white bg-white">
-            <span class="material-icons mx-3" id="sidebarCollapse">menu</span>
+          <nav class="navbar navbar-white bg-white">
+            <span
+              class="material-icons mx-3"
+              class="sidebarCollapse"
+              id="sidebarCollapse"
+              >menu</span
+            >
             <div class="page-head">
-              <span class="page-title">Request Box</span>
+              <h2 class="page-title">DashBoard</h2>
             </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="nav navbar-nav ms-auto">
-                <li class="nav-item dropdown d-inlineblock">
-                  <div class="nav-dropdown">
-                    <a
-                      href="#"
-                      id="nav2"
-                      class="nav-item nav-link dropdown-toggle text-secondary d-inlineblock"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span class="text-uppercase" id="UserPageName"></span>
-                      <img
-                        src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-                      />
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end nav-link-menu">
-                      <ul class="nav-list">
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            data-toggle="modal"
-                            data-target="#myModal"
-                            ><span type="button" class="material-icons"
-                              >person</span
-                            >
-                            Profile</a
+            <ul class="nav navbar-nav ms-auto">
+              <li class="nav-item dropdown d-inlineblock">
+                <div class="nav-dropdown">
+                  <a
+                    href="#"
+                    id="nav2"
+                    class="nav-item nav-link dropdown-toggle text-secondary d-inlineblock"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="text-uppercase" id="UserPageName"></span>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                    />
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                    <ul class="nav-list">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-toggle="modal"
+                          data-target="#myModal"
+                          ><span type="button" class="material-icons"
+                            >person</span
                           >
-                        </li>
-                        <li>
-                          <a
-                            href="../User-page/UserMainPage.html"
-                            class="dropdown-item"
-                            ><span type="button" class="material-icons"
-                              >commit</span
-                            >
-                            Switch role</a
+                          Profile</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-toggle="modal"
+                          data-target="#notification"
+                          ><span type="button" class="material-icons"
+                            >notifications</span
                           >
-                        </li>
-                        <div class="dropdown-divider"></div>
-                        <li>
-                          <a class="dropdown-item" onclick="LogOut()"
-                            ><span type="button" class="material-icons"
-                              >logout</span
-                            >
-                            Logout</a
+                          Notifications<span class="badge">2</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="../User-page/UserMainPage.html"
+                          class="dropdown-item"
+                          ><span type="button" class="material-icons"
+                            >commit</span
                           >
-                        </li>
-                      </ul>
-                    </div>
+                          Switch role</a
+                        >
+                      </li>
+
+                      <div class="dropdown-divider"></div>
+                      <li>
+                        <a class="dropdown-item" onclick="LogOut()"
+                          ><span type="button" class="material-icons"
+                            >logout</span
+                          >
+                          Logout</a
+                        >
+                      </li>
+                    </ul>
                   </div>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+            </ul>
           </nav>
           <!-- end of navbar navigation -->
           <div class="content">
@@ -409,7 +428,10 @@
               <div class="animate-content" id="myDiv">
                 <div class="table-box px-4 pt-4">
                   <div class="table-card pb-5">
-                    <table id="display" class="table table-hover display">
+                    <table
+                      id="display"
+                      class="table table-responsive table-hover display"
+                    >
                       <thead
                         class="table-head position-sticky"
                         style="
@@ -430,6 +452,11 @@
                         </tr>
                       </thead>
                     </table>
+                  </div>
+                </div>
+                <div class="chartCard mt-3">
+                  <div class="chartBox">
+                    <canvas id="myChart"></canvas>
                   </div>
                 </div>
               </div>
@@ -504,8 +531,14 @@
         src="https://static.tildacdn.com/tild3431-3861-4239-a362-623363623863/favicon-3.ico"
       />
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
     <script src="../assets/components/Table/Requestbox.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
