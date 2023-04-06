@@ -32,6 +32,19 @@ function sidebartoggle() {
   document.getElementById("sidebar-details").classList.toggle("after-collape");
 }
 
+//----------------------------------------------------- Display title in admin page ---------------------------------------------
+
+document.querySelector("#editform").addEventListener("click", () => {
+  const titlebox = JSON.parse(localStorage.getItem("Titles"));
+  const TitleList = document.querySelector("#titleList");
+  for (let i = 0; i < titlebox.length; i++) {
+    const newLI = document.createElement("li");
+    newLI.innerHTML =
+      titlebox[i].title + "<span class='material-icons fs-6 mx-1'>close</span>";
+    TitleList.appendChild(newLI);
+  }
+});
+
 //----------------------------------------------------- date count ---------------------------------------------
 
 function countdays() {

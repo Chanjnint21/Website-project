@@ -22,6 +22,13 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <style>
+      .newtitle #addNEWtitle {
+        font-size: 1rem;
+        border-bottom: 1px solid grey;
+        padding: 0.1rem;
+      }
+    </style>
   </head>
   <body onload="pageload()">
     <div class="wrapper" id="wrapper">
@@ -183,6 +190,149 @@
             </div>
           </div>
         </div>
+        <div class="modal" id="editForm">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="headergg p-3 d-flex justify-content-between">
+                <h5 class="modal-title font-weight-bold text-uppercase p-1">
+                  Manage the Form
+                </h5>
+                <!-- <span class="pb-3"
+                  >Check the box which you want to add in the form :</span
+                > -->
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="row p-3">
+                <form action="#" id="EditUserForm">
+                  <div class="row pb-2">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                      <input
+                        type="checkbox"
+                        value="CheckFname"
+                        disabled
+                        checked
+                      />
+                      <label>FirstName</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                      <input
+                        type="checkbox"
+                        value="CheckLname"
+                        disabled
+                        checked
+                      />
+                      <label>Lastname</label>
+                    </div>
+                  </div>
+                  <div class="row pb-2">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                      <input type="checkbox" value="CheckPhone" checked />
+                      <label>Phone Number</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                      <input type="checkbox" value="CheckEmail" checked />
+                      <label>Email</label>
+                    </div>
+                  </div>
+                  <div class="row pb-2">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                      <input
+                        type="checkbox"
+                        value="CheckDate"
+                        disabled
+                        checked
+                      />
+                      <label>Date of leave</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                      <input type="checkbox" value="Fname" checked />
+                      <label>Attachment</label>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="row pb-2">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                      <label>Title :</label>
+                      <input
+                        class="border-bottom p-0"
+                        type="text"
+                        id="addtitle"
+                        placeholder="add new title..."
+                        autocomplete="off"
+                      />
+                      <button class="btn btn-primary py-0" id="addNewtitle">
+                        Add
+                      </button>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 mt-2">
+                      <ul id="titleList"></ul>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="row pb-2 d-flex justify-content-center">
+                    <div class="col d-flex justify-content-center"></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="notification">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="header p-3 d-flex justify-content-between">
+                <h5 class="modal-title font-weight-bold text-uppercase p-1">
+                  Notification Box
+                </h5>
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" style="width: 100%; height: 400px">
+                <div
+                  class="col-lg-12 col-md-12 col-sm-12 p-3 mb-2"
+                  style="
+                    width: 100%;
+                    background-color: rgb(236, 236, 236);
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid rgb(236, 236, 236);
+                    border-radius: 5px;
+                  "
+                >
+                  <input type="checkbox" name="deletenoti" id="deletenoti" />
+                  <span>Your form have been approved !!</span>
+                </div>
+                <div
+                  class="col-lg-12 col-md-12 col-sm-12 p-3"
+                  style="
+                    width: 100%;
+                    background-color: rgb(236, 236, 236);
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid rgb(236, 236, 236);
+                    border-radius: 5px;
+                  "
+                >
+                  <input type="checkbox" name="deletenoti" id="deletenoti" />
+                  <span>Your form have been Reject !!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="home-section" id="section">
           <!-- navbar navigation component -->
           <nav class="navbar navbar-white bg-white">
@@ -224,11 +374,26 @@
                         >
                       </li>
                       <li>
-                        <a class="dropdown-item"
+                        <a
+                          class="dropdown-item"
+                          data-toggle="modal"
+                          data-target="#notification"
                           ><span type="button" class="material-icons"
                             >notifications</span
                           >
                           Notifications<span class="badge">2</span></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          data-toggle="modal"
+                          data-target="#editForm"
+                          id="editform"
+                          ><span type="button" class="material-icons"
+                            >edit</span
+                          >
+                          Manage Form</a
                         >
                       </li>
                       <li>
@@ -430,3 +595,21 @@
     </script>
   </body>
 </html>
+<script>
+  document.getElementById("addNewtitle").addEventListener("click", () => {
+    var titlebox = JSON.parse(localStorage.getItem("Titles"));
+    if (titlebox == null) titlebox = [];
+
+    const newtitle = { title: document.getElementById("addtitle").value };
+    titlebox.push(newtitle);
+    localStorage.setItem("Titles", JSON.stringify(titlebox));
+    const TitleList = document.querySelector("#titleList");
+    const newLI = document.createElement("li");
+    newLI.innerHTML =
+      document.getElementById("addtitle").value +
+      "<span class='material-icons fs-6 mx-1'>close</span>";
+    TitleList.appendChild(newLI);
+
+    document.getElementById("addtitle").value = "";
+  });
+</script>
