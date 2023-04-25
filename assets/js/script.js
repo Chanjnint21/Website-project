@@ -34,7 +34,7 @@ function sidebartoggle() {
 
 //----------------------------------------------------- Display title in admin page ---------------------------------------------
 
-document.querySelector("#editform").addEventListener("click", () => {
+function loadtitle() {
   const titlebox = JSON.parse(localStorage.getItem("Titles"));
   const TitleList = document.querySelector("#titleList");
   for (let i = 0; i < titlebox.length; i++) {
@@ -43,7 +43,7 @@ document.querySelector("#editform").addEventListener("click", () => {
       titlebox[i].title + "<span class='material-icons fs-6 mx-1'>close</span>";
     TitleList.appendChild(newLI);
   }
-});
+}
 
 //----------------------------------------------------- date count ---------------------------------------------
 
@@ -79,6 +79,7 @@ function pageload() {
   if (Accept !== "yes") {
     window.location.href = "../login-page/LogIn.html";
   }
+  loadtitle();
 }
 function loadvalue() {
   var Accept = localStorage.getItem("fromButtonRedirect");
