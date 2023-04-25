@@ -23,6 +23,7 @@ $("#display").dataTable({
     { data: "Inpstatus" },
     { data: "pendingmodal" },
   ],
+  scrollX: true,
 });
 
 //----Assign the color of status

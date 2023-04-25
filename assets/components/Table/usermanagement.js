@@ -30,6 +30,7 @@ $("#UsM").dataTable({
       },
     },
   ],
+  scrollX: true,
 });
 var table = $("#UsM").DataTable();
 

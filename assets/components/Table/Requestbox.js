@@ -28,6 +28,7 @@ $("#display").dataTable({
       },
     },
   ],
+  scrollX: true,
 });
 var table = $("#display").DataTable();
 
