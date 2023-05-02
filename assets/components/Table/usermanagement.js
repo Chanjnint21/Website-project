@@ -30,9 +30,12 @@ $("#UsM").dataTable({
       },
     },
   ],
-  scrollX: true,
+  //scrollX: true,
 });
+
 var table = $("#UsM").DataTable();
+// const Adduserbutton = <label>Search:<input type="search" class="form-control form-control-sm" placeholder aria-controls="UsM"/></label> <span class="material-icons mb-2" data-toggle="modal" data-target="#create-user">person_add</span>;
+// document.querySelector("#UsM_filter").append(Adduserbutton);
 
 $("#UsM").on("click", "tr", (event) => {
   var data = table.row(event.currentTarget).data();

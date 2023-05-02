@@ -23,7 +23,7 @@ $("#display").dataTable({
     { data: "Inpstatus" },
     { data: "pendingmodal" },
   ],
-  scrollX: true,
+  //scrollX: true,
 });
 
 //----Assign the color of status
@@ -41,7 +41,7 @@ var table = $("#display").DataTable();
 
 $("#display tbody").on("click", "tr", (event) => {
   var data = table.row(event.currentTarget).data();
-  document.getElementById("ModalTitle").value =
+  document.getElementById("PendingModalTitle").innerHTML =
     data.InpFname + "'s Request form";
   document.getElementById("In_fname").value = data.InpFname;
   document.getElementById("In_lname").value = data.InpLname;

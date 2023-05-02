@@ -6,7 +6,7 @@ var Request_listData = JSON.parse(localStorage.getItem("ToRequestbox"));
 
 let num = 1;
 //display the data in table
-$("#display").dataTable({
+$("#display").DataTable({
   data: Request_listData,
   autoWidth: false,
   columns: [
@@ -28,7 +28,7 @@ $("#display").dataTable({
       },
     },
   ],
-  scrollX: true,
+  //scrollX: true,
 });
 var table = $("#display").DataTable();
 
